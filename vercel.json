@@ -12,7 +12,7 @@
     "functions": {
         "api/index.py": {
             "includeFiles": "templates/**,static/**,scripts/**,*.json",
-            "maxDuration": 10
+            "maxDuration": 60
         }
     }
 }

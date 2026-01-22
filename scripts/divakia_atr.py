@@ -213,6 +213,9 @@ def guardar_en_csv(datos, archivo_salida):
 
 
 # === PROGRAMA PRINCIPAL ===
+import concurrent.futures
+
+# === PROGRAMA PRINCIPAL ===
 def main():
     print("Iniciando proceso de extracción de facturas ATR...")
     
@@ -222,23 +225,42 @@ def main():
     # 2. Configuración Holded
     holded_key = os.getenv("HOLDED_API_KEY")
 
-    # 3. Datos Holded
-    facturas_holded = set()
-    if holded_key:
-        print("Obteniendo facturas de Holded (últimos 3 meses)...")
-        facturas_holded = obtener_compras_holded(holded_key)
-    else:
-        print("No se configuró HOLDED_API_KEY. Se omitirá el filtrado.")
-
-    # 4. Obtención de Datos Divakia con common
+    # 4. Obtención de Datos Divakia con common (Token only)
     token = common.get_orka_token()
     
     if not token:
         print("❌ No se pudo obtener token de ORKA. Verifica credenciales en .env.")
         return
 
-    data_facturas = obtener_facturas(token)
+    # PARALLEL EXECUTION
+    print("Obteniendo datos de Holded y ORKA en paralelo...")
     
+    facturas_holded = set()
+    data_facturas = None
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+        future_holded = None
+        if holded_key:
+            future_holded = executor.submit(obtener_compras_holded, holded_key)
+        else:
+            print("No se configuró HOLDED_API_KEY. Se omitirá el filtrado.")
+
+        future_orka = executor.submit(obtener_facturas, token)
+        
+        # Wait for results
+        if future_holded:
+            try:
+                facturas_holded = future_holded.result()
+                print(f"Datos Holded recibidos: {len(facturas_holded)} facturas previas.")
+            except Exception as e:
+                print(f"❌ Error obteniendo datos Holded: {e}")
+
+        try:
+            data_facturas = future_orka.result()
+            print("Datos ORKA recibidos.")
+        except Exception as e:
+            print(f"❌ Error obteniendo datos ORKA: {e}")
+
     if not data_facturas:
         print("❌ No se obtuvieron datos de facturas. Abortando.")
         return
