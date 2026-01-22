@@ -5,6 +5,7 @@ import requests
 import os
 import re
 import sys
+import openpyxl
 
 # Ensure we can import common
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
@@ -32,8 +33,6 @@ COLUMNAS = [
 # ==== FUNCIONES ====
 def limpiar_y_convertir(valor):
     # Usamos common.clean_float pero mantenemos la logica especifica si es necesaria
-    # Common usa replace('.', '') -> replace(',', '.') 
-    # Aquí parece igual: replace('.', '') -> replace(',', '.')
     return common.clean_float(valor)
 
 def encontrar_zip_mas_reciente():
@@ -113,10 +112,10 @@ def procesar_zip(ruta_zip):
             "Concepto": concepto_str,
             "Descripción del producto": "",
             "SKU": "",
-            "Precio unidad": str(precio_unidad).replace('.', ','), # Excel esp format
-            "Unidades": "1",
+            "Precio unidad": precio_unidad, # KEEP AS FLOAT/NUMBER
+            "Unidades": 1,
             "Descuento %": "",
-            "IVA %": str(iva_porcentaje).replace('.', ','),
+            "IVA %": iva_porcentaje, # KEEP AS FLOAT/NUMBER
             "Retención %": "",
             "Inv. Suj. Pasivo (1/0)": "",
             "Operación": "general",
@@ -127,11 +126,41 @@ def procesar_zip(ruta_zip):
             "Nombre cuenta de gasto": "Compras OMIE",
             "Num. Cuenta de gasto": "60000002",
             "Moneda": "EUR",
-            "Cambio de moneda": "1"
+            "Cambio de moneda": 1
         }
         facturas_data.append(datos_factura)
 
     return facturas_data
+
+def guardar_en_excel(datos, archivo_salida):
+    """Guarda los datos en un archivo XLSX usando openpyxl."""
+    if not datos:
+        print("Lista de datos vacía, no se generará archivo XLSX.")
+        return
+
+    try:
+        output_dir = os.path.dirname(archivo_salida)
+        os.makedirs(output_dir, exist_ok=True)
+
+        wb = openpyxl.Workbook()
+        ws = wb.active
+        ws.title = "Facturas OMIE"
+        
+        # Headers
+        ws.append(COLUMNAS)
+        
+        for row_data in datos:
+            row_values = []
+            for h in COLUMNAS:
+                val = row_data.get(h, "")
+                row_values.append(val)
+            ws.append(row_values)
+            
+        wb.save(archivo_salida)
+        print(f"Archivo XLSX guardado exitosamente en: {archivo_salida}")
+
+    except Exception as e:
+        print(f"Error al guardar el archivo XLSX: {e}")
 
 def obtener_facturas_holded():
     headers = {"accept": "application/json", "key": HOLD_API_KEY}
@@ -179,14 +208,10 @@ def main():
             print("⚠️ HOLDED_API_KEY no configurado. No se filtrarán duplicados.")
 
         if facturas:
-            output_filename = os.path.join(CARPETA_DESCARGAS, "compras_omie.csv")
+            output_filename = os.path.join(CARPETA_DESCARGAS, "compras_omie.xlsx")
             
-            with open(output_filename, 'w', newline='', encoding='utf-8') as csvfile:
-                writer = csv.DictWriter(csvfile, fieldnames=COLUMNAS, delimiter=';')
-                writer.writeheader()
-                writer.writerows(facturas)
+            guardar_en_excel(facturas, output_filename)
                 
-            print(f"✅ CSV generado en: {output_filename}")
             common.trigger_download_via_stdout(output_filename)
         else:
             print("ℹ️ No hay facturas nuevas para procesar.")
