@@ -7,6 +7,9 @@ import requests
 from datetime import datetime, timedelta
 from decimal import Decimal, ROUND_HALF_UP
 
+import unicodedata
+import openpyxl
+
 # Ensure we can import common
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 import common
@@ -31,14 +34,22 @@ HOLDED_API_URL = "https://api.holded.com/api/invoicing/v1/documents/purchase"
 # Mapeo de prefijos de facturas a contactos
 PROVEEDORES = {
     "17": {"nombre": "EDISTRIBUCION REDES DIGITALES SL", "nif": "B82846817"},
-    "03": {"nombre": "I-DE Redes Eléctricas Inteligentes, S.A.U", "nif": "A95075578"},
-    "J":  {"nombre": "UFD Distribución Electricidad, S.A.", "nif": "A63222533"},
+    "03": {"nombre": "I-DE Redes Electricas Inteligentes, S.A.U", "nif": "A95075578"},
+    "J":  {"nombre": "UFD Distribucion Electricidad, S.A.", "nif": "A63222533"},
 }
 PROVEEDOR_DEFAULT = {"nombre": "Desconocido", "nif": "NA"}
 
 # IVA fijo solicitado
 IVA_PORCENTAJE = Decimal("21")
 IVA_FACTOR = Decimal("1") + (IVA_PORCENTAJE / Decimal("100"))
+
+def normalize_text(text):
+    """Normalize text to ASCII (remove accents/diacritics)."""
+    if not text:
+        return ""
+    # Normalize unicode characters to closest ASCII equivalent
+    return ''.join(c for c in unicodedata.normalize('NFD', str(text))
+                   if unicodedata.category(c) != 'Mn')
 
 def obtener_facturas(token):
     """Obtiene las facturas paginadas desde el API."""
@@ -154,8 +165,8 @@ def procesar_datos(data):
             "Num factura": num_factura,
             "Fecha dd/mm/yyyy": factura_atr.get("fecha_emision", ""),
             "Fecha de vencimiento dd/mm/yyyy": factura_atr.get("fecha_limite_pago", ""),
-            "Descripción": factura_atr.get("motivo_facturacion", ""),
-            "Nombre del contacto": datos_contacto["nombre"],
+            "Descripción": normalize_text(factura_atr.get("motivo_facturacion", "")),
+            "Nombre del contacto": normalize_text(datos_contacto["nombre"]),
             "NIF": datos_contacto["nif"],
             "Dirección": "",
             "Población": "",
@@ -185,31 +196,42 @@ def procesar_datos(data):
         
     return registros
 
-def guardar_en_csv(datos, archivo_salida):
-    """Guarda los datos en un archivo CSV."""
+def guardar_en_excel(datos, archivo_salida):
+    """Guarda los datos en un archivo XLSX usando openpyxl."""
     if not datos:
-        logger.warning("Lista de datos vacía, no se generará archivo CSV.")
+        print("Lista de datos vacía, no se generará archivo XLSX.")
         return
 
     try:
         output_dir = os.path.dirname(archivo_salida)
         os.makedirs(output_dir, exist_ok=True)
 
-        # Obtener columnas del primer registro o definir fijas
-        if datos:
-            columnas = list(datos[0].keys())
-        else:
-            return
-
-        with open(archivo_salida, 'w', newline='', encoding='utf-8') as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=columnas, delimiter=';')
-            writer.writeheader()
-            writer.writerows(datos)
+        wb = openpyxl.Workbook()
+        ws = wb.active
+        ws.title = "Facturas ATR"
+        
+        # Headers (normalized) to be safe for Excel
+        headers = list(datos[0].keys())
+        # Normalize header names too just in case
+        headers_normalized = [normalize_text(h) for h in headers]
+        
+        ws.append(headers_normalized)
+        
+        for row_data in datos:
+            row_values = []
+            for h in headers:
+                val = row_data.get(h, "")
+                # Convert Decimals to float for Excel to recognize as numbers
+                if isinstance(val, Decimal):
+                    val = float(val)
+                row_values.append(val)
+            ws.append(row_values)
             
-        logger.info(f"Archivo CSV guardado exitosamente en: {archivo_salida}")
+        wb.save(archivo_salida)
+        print(f"Archivo XLSX guardado exitosamente en: {archivo_salida}")
 
     except Exception as e:
-        logger.error(f"Error al guardar el archivo CSV: {e}")
+        print(f"Error al guardar el archivo XLSX: {e}")
 
 
 # === PROGRAMA PRINCIPAL ===
@@ -299,9 +321,9 @@ def main():
         final_cnt = len(registros)
         print(f"Se filtraron {inicial_cnt - final_cnt} facturas que ya existían en Holded.")
 
-    # 6. Guardado (cambiar extensión a csv)
-    archivo_salida = archivo_salida.replace(".xlsx", ".csv")
-    guardar_en_csv(registros, archivo_salida)
+    # 6. Guardado (Excel)
+    # archivo_salida = archivo_salida.replace(".xlsx", ".csv") # No longer needed
+    guardar_en_excel(registros, archivo_salida)
     
     # Trigger download
     common.trigger_download_via_stdout(archivo_salida)
