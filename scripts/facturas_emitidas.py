@@ -90,11 +90,11 @@ def obtener_facturas_holded():
 
 def generar_csv_facturas(facturas, facturas_holded, output_path):
     columnas = [
-        "Num factura", "Formato de numeración", "Fecha dd/mm/yyyy", "Fecha de vencimiento dd/mm/yyyy", "Descripción", 
-        "Nombre del contacto", "NIF del contacto", "Dirección", "Población", "Código postal", "Provincia", "País", 
-        "Concepto", "Descripción del producto", "SKU", "Precio unidad", "Unidades", "Descuento %", "IVA %", 
-        "Retención %", "Rec. de eq. %", "Operación", "Forma de pago (ID)", "Cantidad cobrada", "Fecha de cobro", 
-        "Cuenta de pago", "Tags separados por -", "Nombre canal de venta", "Cuenta canal de venta", "Moneda", "Cambio de moneda", "Almacén"
+        "Num factura", "Formato de numeracion", "Fecha dd/mm/yyyy", "Fecha de vencimiento dd/mm/yyyy", "Descripcion", 
+        "Nombre del contacto", "NIF del contacto", "Direccion", "Poblacion", "Codigo postal", "Provincia", "Pais", 
+        "Concepto", "Descripcion del producto", "SKU", "Precio unidad", "Unidades", "Descuento %", "IVA %", 
+        "Retencion %", "Rec. de eq. %", "Operacion", "Forma de pago (ID)", "Cantidad cobrada", "Fecha de cobro", 
+        "Cuenta de pago", "Tags separados por -", "Nombre canal de venta", "Cuenta canal de venta", "Moneda", "Cambio de moneda", "Almacen"
     ]
 
     # Filtrar facturas
@@ -136,7 +136,7 @@ def generar_csv_facturas(facturas, facturas_holded, output_path):
                     except:
                         pass
                         
-                descripcion = f"Período de medida: {fc.get('fecha_desde', '')} - {fc.get('fecha_hasta', '')}"
+                descripcion = f"Periodo de medida: {fc.get('fecha_desde', '')} - {fc.get('fecha_hasta', '')}"
                 
                 # Unir nombre
                 parts = [
@@ -165,27 +165,27 @@ def generar_csv_facturas(facturas, facturas_holded, output_path):
 
                 row = {
                     "Num factura": f.get("codigo_factura_cliente", ""),
-                    "Formato de numeración": f"{datetime.now().year}%%%%", 
+                    "Formato de numeracion": "2025%%%%", 
                     "Fecha dd/mm/yyyy": fecha_emision,
                     "Fecha de vencimiento dd/mm/yyyy": fecha_venc,
-                    "Descripción": descripcion,
+                    "Descripcion": descripcion,
                     "Nombre del contacto": nombre_contacto,
                     "NIF del contacto": f.get("identificador", ""),
-                    "Dirección": f.get("direccion_punto_suministro", ""),
-                    "Población": f.get("poblacion", ""),
-                    "Código postal": f.get("codigo_postal", ""),
+                    "Direccion": f.get("direccion_punto_suministro", ""),
+                    "Poblacion": f.get("poblacion", ""),
+                    "Codigo postal": f.get("codigo_postal", ""),
                     "Provincia": f.get("provincia", ""),
-                    "País": f.get("pais", ""),
+                    "Pais": f.get("pais", ""),
                     "Concepto": "",
-                    "Descripción del producto": "",
+                    "Descripcion del producto": "",
                     "SKU": "",
                     "Precio unidad": str(precio_unidad).replace('.', ','), # Excel esp format
                     "Unidades": "1",
                     "Descuento %": "",
                     "IVA %": str(iva_valor),
-                    "Retención %": "",
+                    "Retencion %": "",
                     "Rec. de eq. %": "",
-                    "Operación": "",
+                    "Operacion": "",
                     "Forma de pago (ID)": "",
                     "Cantidad cobrada": "",
                     "Fecha de cobro": "",
@@ -195,7 +195,7 @@ def generar_csv_facturas(facturas, facturas_holded, output_path):
                     "Cuenta canal de venta": "",
                     "Moneda": "eur",
                     "Cambio de moneda": "1",
-                    "Almacén": ""
+                    "Almacen": ""
                 }
                 writer.writerow(row)
         return True
