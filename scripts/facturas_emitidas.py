@@ -203,7 +203,7 @@ def generar_csv_facturas(facturas, facturas_holded, output_path):
         return False
 
 # Alias de compatibilidad
-generar_excel_emitidas = generar_excel_facturas
+
 
 def main():
     print("Iniciando generación de facturas emitidas...")
