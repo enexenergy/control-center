@@ -6,6 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enex Control Center</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .card {
+            position: relative;
+        }
+
+        .drag-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 255, 0, 0.2);
+            border: 2px dashed #0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #fff;
+            pointer-events: none;
+            border-radius: 12px;
+            backdrop-filter: blur(2px);
+        }
+
+        .btn-secondary {
+            background-color: #444;
+        }
+
+        .btn-secondary:hover {
+            background-color: #666;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,13 +56,23 @@
         <h2 class="section-title">Scripts</h2>
         <div class="cards-grid">
             <!-- Card 1: Omie Holded -->
-            <div class="card">
+            <!-- Card 1: Omie Holded -->
+            <div class="card" id="card-omie">
                 <div>
                     <div class="card-icon">⚡</div>
                     <h2>OMIE</h2>
-                    <p>Ejecutar proceso de descarga y actualización de datos de Omie a Holded.</p>
+                    <p>Arrastra el ZIP aquí o haz clic en "Subir" para procesar datos.</p>
                 </div>
-                <button class="btn" onclick="runScript('omie_holded.py')">Ejecutar</button>
+                <div style="display: flex; gap: 10px; flex-direction: column; margin-top: 10px;">
+                    <input type="file" id="file-omie" accept=".zip" style="display:none"
+                        onchange="handleFileSelect('omie_holded.py', this.files)">
+                    <button class="btn" onclick="document.getElementById('file-omie').click()">Subir ZIP y
+                        Procesar</button>
+                    <button class="btn btn-secondary" onclick="runScript('omie_holded.py')">Ejecutar (Buscar en
+                        Descargas)</button>
+                </div>
+                <!-- Overlay for drag feedback -->
+                <div id="drag-overlay-omie" class="drag-overlay" style="display:none;">📂 Soltar para Procesar</div>
             </div>
 
             <!-- Card 2: Divakia ATR -->
@@ -203,6 +244,98 @@
                 outputArea.textContent += `\n[ERROR] Fallo al crear archivo: ${e.message}`;
             }
         }
+
+        // === UPLOAD LOGIC ===
+
+        async function runUploadScript(scriptName, file) {
+            modal.style.display = 'flex';
+            modalTitle.innerHTML = `Subiendo y ejecutando ${scriptName}... <div class="spinner"></div>`;
+            outputArea.textContent = 'Subiendo archivo...';
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch(`/run-upload/${scriptName}`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+                // Process stream exactly like runScript
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder("utf-8");
+
+                outputArea.textContent = 'Archivo subido. Procesando...\n';
+                let partialLine = "";
+
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) {
+                        if (partialLine) processLine(partialLine);
+                        break;
+                    }
+
+                    const chunk = decoder.decode(value, { stream: true });
+                    const lines = (partialLine + chunk).split('\n');
+                    partialLine = lines.pop();
+
+                    for (const line of lines) {
+                        processLine(line);
+                    }
+                }
+
+                modalTitle.textContent = `${scriptName} Finalizado`;
+            } catch (error) {
+                console.error("Upload Execution error:", error);
+                outputArea.textContent += `\n[FATAL ERROR] ${error.name}: ${error.message}`;
+                modalTitle.textContent = 'Error en Ejecución';
+            }
+        }
+
+        function handleFileSelect(scriptName, files) {
+            if (files.length > 0) {
+                runUploadScript(scriptName, files[0]);
+            }
+        }
+
+        function setupDragAndDrop(cardId, overlayId, scriptName) {
+            const card = document.getElementById(cardId);
+            const overlay = document.getElementById(overlayId);
+
+            if (!card || !overlay) return;
+
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                card.addEventListener(eventName, preventDefaults, false);
+            });
+
+            function preventDefaults(e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+
+            // Highlight
+            ['dragenter', 'dragover'].forEach(eventName => {
+                card.addEventListener(eventName, () => overlay.style.display = 'flex', false);
+            });
+
+            // Unhighlight
+            ['dragleave', 'drop'].forEach(eventName => {
+                card.addEventListener(eventName, () => overlay.style.display = 'none', false);
+            });
+
+            card.addEventListener('drop', (e) => {
+                const dt = e.dataTransfer;
+                const files = dt.files;
+                handleFileSelect(scriptName, files);
+            }, false);
+        }
+
+        // Initialize D&D for OMIE
+        document.addEventListener('DOMContentLoaded', () => {
+            setupDragAndDrop('card-omie', 'drag-overlay-omie', 'omie_holded.py');
+        });
 
         function closeModal() {
             modal.style.display = 'none';

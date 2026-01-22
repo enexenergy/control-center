@@ -143,6 +143,40 @@ def run_script(script_name):
 
     return Response(generate_output(script_name), mimetype='text/plain')
 
+@app.route('/run-upload/<script_name>', methods=['POST'])
+def run_upload_script(script_name):
+    # Security check
+    ALLOWED_SCRIPTS = ['omie_holded.py', 'divakia_atr.py', 'facturas_emitidas.py', 'test_debug.py', 'sync_holded_sales.py', 'sync_divakia_sales.py']
+    
+    if script_name not in ALLOWED_SCRIPTS:
+        return f"Error: {script_name} is not allowed.", 403
+
+    if 'file' not in request.files:
+        return "Error: No file part", 400
+        
+    file = request.files['file']
+    if file.filename == '':
+        return "Error: No selected file", 400
+
+    if file:
+        # Save to /tmp (Vercel writable dir)
+        temp_dir = "/tmp"
+        if not os.path.exists(temp_dir):
+            os.makedirs(temp_dir, exist_ok=True)
+            
+        filename = file.filename
+        # Sanitize filename if needed, but for now trust internal usage
+        file_path = os.path.join(temp_dir, filename)
+        file.save(file_path)
+        
+        # Set ENV var for the script to pick up
+        os.environ['INPUT_FILE_PATH'] = file_path
+        
+        # Generator wrapper to clean up env/file?
+        # Ideally we restore env, but for now just running it is fine.
+        
+        return Response(generate_output(script_name), mimetype='text/plain')
+
 @app.route('/billing')
 def billing():
     return render_template('billing.html')

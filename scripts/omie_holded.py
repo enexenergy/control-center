@@ -152,16 +152,19 @@ def obtener_facturas_holded():
 # ==== PROGRAMA PRINCIPAL ====
 def main():
     try:
-        try:
-            ruta_zip = encontrar_zip_mas_reciente()
-        except FileNotFoundError:
-             # Try running the download logic if not present?
-             # The original script assumed file existed.
-             # User probably uploads it or it's fetched? The script doesn't fetch from OMIE.
-             # Ah, the script description says "Descarga y actualización".
-             # But the code just looks for files.
-             print("❌ No se encontró archivo ZIP. Asegúrate de cargarlo.")
-             return
+        # Check if file was provided via upload (env var)
+        uploaded_file = os.getenv('INPUT_FILE_PATH')
+        
+        if uploaded_file and os.path.exists(uploaded_file):
+            ruta_zip = uploaded_file
+            print(f"📥 Usando archivo subido: {ruta_zip}")
+        else:
+            try:
+                ruta_zip = encontrar_zip_mas_reciente()
+            except FileNotFoundError:
+                 print("❌ No se encontró archivo ZIP. Asegúrate de cargarlo.")
+                 return
+
 
         print(f"📂 Procesando archivo: {ruta_zip}")
 
