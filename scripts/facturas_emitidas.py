@@ -205,8 +205,7 @@ def generar_csv_facturas(facturas, facturas_holded, output_path):
 # Alias de compatibilidad
 generar_excel_emitidas = generar_excel_facturas
 
-# === EJECUCIÓN LOCAL ===
-if __name__ == "__main__":
+def main():
     print("Iniciando generación de facturas emitidas...")
     
     token = common.get_orka_token()
@@ -231,4 +230,8 @@ if __name__ == "__main__":
             print("ℹ️ No se encontraron facturas en el rango de fechas.")
     else:
         print("❌ No se pudo obtener el token de ORKA. Verifica las credenciales en .env")
+
+# === EJECUCIÓN LOCAL ===
+if __name__ == "__main__":
+    main()
 

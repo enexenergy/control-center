@@ -21,6 +21,11 @@ app = Flask(__name__,
             static_folder=os.path.join(BASE_DIR, 'static'))
 
 # Helper to execute script and stream output
+import importlib.util
+import io
+import contextlib
+
+# Helper to execute script and stream output (In-Process)
 def generate_output(script_name):
     # Updated to look in scripts/ folder using BASE_DIR
     script_path = os.path.join(BASE_DIR, 'scripts', script_name)
@@ -29,7 +34,48 @@ def generate_output(script_name):
         yield f"Error: Script {script_name} not found at {script_path}.\n"
         return
 
-    # ... (rest of function)
+    # In-process execution to avoid subprocess issues on Vercel
+    yield f"Iniciando {script_name} (in-process)...\n"
+    
+    # Add scripts dir to sys.path so internal imports (like `import common`) work
+    scripts_dir = os.path.dirname(script_path)
+    if scripts_dir not in sys.path:
+        sys.path.insert(0, scripts_dir)
+        
+    # Capture Stdout
+    output_capture = io.StringIO()
+    
+    try:
+        # Load Module Dynamically
+        spec = importlib.util.spec_from_file_location("dynamic_script", script_path)
+        module = importlib.util.module_from_spec(spec)
+        
+        # Redirect stdout/stderr
+        with contextlib.redirect_stdout(output_capture), contextlib.redirect_stderr(output_capture):
+            try:
+                spec.loader.exec_module(module)
+                
+                # Check if it has a main() function
+                if hasattr(module, 'main'):
+                    module.main()
+                else:
+                    print("⚠️ El script no tiene una función main(). Ejecutando nivel módulo solamente.")
+                    
+            except SystemExit as e:
+                print(f"Script finalizó con SystemExit: {e}")
+            except Exception as e:
+                print(f"Error ejecutando script: {e}")
+                import traceback
+                traceback.print_exc()
+        
+        # Yield result
+        yield output_capture.getvalue()
+        yield "\n[EXITO] Proceso finalizado."
+
+    except Exception as e:
+        yield f"\n[EXCEPCION CRITICA] Fallo al cargar el script: {str(e)}"
+    finally:
+        output_capture.close()
 
 @app.route('/debug-files')
 def debug_files():
@@ -46,42 +92,6 @@ def debug_files():
             output.append(f"{rel_path} ({size} bytes)")
             
     return "<pre>" + "\n".join(output) + "</pre>"
-
-
-    # Use the same python interpreter as the current process
-    python_executable = sys.executable
-
-    # Prepare environment with UTF-8 encoding enforcement
-    env = os.environ.copy()
-    env["PYTHONIOENCODING"] = "utf-8"
-
-    try:
-        # Popen allows capturing output in real-time
-        process = subprocess.Popen(
-            [python_executable, "-u", script_path], # -u for unbuffered output
-            stdout=subprocess.PIPE,
-            stderr=subprocess.STDOUT,
-            text=True,
-            bufsize=1,
-            encoding='utf-8',       # Force UTF-8 decoding of script output
-            errors='replace',       # Replace errors instead ofcrashing
-            env=env                 # Pass environment variables
-        )
-
-        yield f"Iniciando {script_name}...\n"
-
-        for line in process.stdout:
-            yield line
-
-        process.wait()
-        
-        if process.returncode == 0:
-            yield f"\n[EXITO] El script finalizó correctamente."
-        else:
-            yield f"\n[ERROR] El script falló con código {process.returncode}."
-
-    except Exception as e:
-        yield f"\n[EXCEPCION] Error al ejecutar el script: {str(e)}"
 
 # === AUTHENTICATION ===
 app.secret_key = os.environ.get("SECRET_KEY", "super_secret_key_123") # USE ENV VAR IN PROD
