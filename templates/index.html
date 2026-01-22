@@ -111,7 +111,6 @@
         const modalTitle = document.getElementById('modal-title');
 
         async function runScript(scriptName) {
-            // Show modal
             modal.style.display = 'flex';
             modalTitle.innerHTML = `Ejecutando ${scriptName} <div class="spinner"></div>`;
             outputArea.textContent = 'Iniciando proceso...';
@@ -123,16 +122,25 @@
                 const reader = response.body.getReader();
                 const decoder = new TextDecoder("utf-8");
 
-                outputArea.textContent = ''; // Clear previous
+                outputArea.textContent = '';
+                let partialLine = "";
 
                 while (true) {
                     const { done, value } = await reader.read();
-                    if (done) break;
-                    // stream: true handles multi-byte characters correctly across chunks
-                    const text = decoder.decode(value, { stream: true });
-                    outputArea.textContent += text;
-                    // Auto scroll to bottom
-                    outputArea.scrollTop = outputArea.scrollHeight;
+                    if (done) {
+                        if (partialLine) processLine(partialLine);
+                        break;
+                    }
+
+                    const chunk = decoder.decode(value, { stream: true });
+                    const lines = (partialLine + chunk).split('\n');
+
+                    // The last element is the partial line for the next chunk
+                    partialLine = lines.pop();
+
+                    for (const line of lines) {
+                        processLine(line);
+                    }
                 }
 
                 modalTitle.textContent = `${scriptName} Finalizado`;
@@ -142,6 +150,57 @@
                 outputArea.textContent += `\n[FATAL ERROR] ${error.name}: ${error.message}`;
                 if (error.stack) outputArea.textContent += `\n${error.stack}`;
                 modalTitle.textContent = 'Error en Ejecución';
+            }
+        }
+
+        function processLine(line) {
+            const tokenMarker = "__FILE_DOWNLOAD__;;";
+            if (line.includes(tokenMarker)) {
+                try {
+                    const startIndex = line.indexOf(tokenMarker);
+                    const relevantPart = line.substring(startIndex);
+                    const parts = relevantPart.split(";;");
+                    // 0: __FILE_DOWNLOAD__
+                    // 1: filename
+                    // 2: mime
+                    // 3: base64
+                    if (parts.length >= 4) {
+                        const filename = parts[1];
+                        const mime = parts[2];
+                        const b64 = parts[3];
+                        triggerDownload(filename, mime, b64);
+                        outputArea.textContent += `\n[INFO] Descarga iniciada: ${filename}`;
+                    }
+                } catch (e) {
+                    console.error("Download parsing error", e);
+                    outputArea.textContent += `\n[ERROR] Fallo al procesar descarga: ${e.message}`;
+                }
+            } else {
+                outputArea.textContent += line + "\n";
+                outputArea.scrollTop = outputArea.scrollHeight;
+            }
+        }
+
+        function triggerDownload(filename, mime, base64Data) {
+            try {
+                const byteCharacters = atob(base64Data);
+                const byteNumbers = new Array(byteCharacters.length);
+                for (let i = 0; i < byteCharacters.length; i++) {
+                    byteNumbers[i] = byteCharacters.charCodeAt(i);
+                }
+                const byteArray = new Uint8Array(byteNumbers);
+                const blob = new Blob([byteArray], { type: mime });
+
+                const link = document.createElement('a');
+                link.href = window.URL.createObjectURL(blob);
+                link.download = filename;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                window.URL.revokeObjectURL(link.href);
+            } catch (e) {
+                console.error("Blob error", e);
+                outputArea.textContent += `\n[ERROR] Fallo al crear archivo: ${e.message}`;
             }
         }
 

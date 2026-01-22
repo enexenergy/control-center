@@ -224,6 +224,7 @@ if __name__ == "__main__":
             
             if generar_csv_facturas(facturas, facturas_holded, out_path):
                 print(f"✅ Archivo CSV generado con éxito: {out_path}")
+                common.trigger_download_via_stdout(out_path)
             else:
                 print("❌ Fallo al generar el archivo CSV")
         else:

@@ -256,6 +256,9 @@ def main():
     # 6. Guardado (cambiar extensión a csv)
     archivo_salida = archivo_salida.replace(".xlsx", ".csv")
     guardar_en_csv(registros, archivo_salida)
+    
+    # Trigger download
+    common.trigger_download_via_stdout(archivo_salida)
 
     # 2. Configuración Holded
     holded_key = os.getenv("HOLDED_API_KEY")

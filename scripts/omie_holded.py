@@ -174,6 +174,7 @@ if __name__ == "__main__":
                 writer.writerows(facturas)
                 
             print(f"✅ CSV generado en: {output_filename}")
+            common.trigger_download_via_stdout(output_filename)
         else:
             print("ℹ️ No hay facturas nuevas para procesar.")
             

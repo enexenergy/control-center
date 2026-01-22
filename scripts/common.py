@@ -116,3 +116,31 @@ def get_downloads_dir():
     if os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME"):
         return "/tmp"
     return os.path.join(os.path.expanduser("~"), "Downloads")
+
+def trigger_download_via_stdout(file_path):
+    """
+    Reads a file and prints a magic string to stdout that the frontend
+    will intercept to trigger a file download.
+    Format: __FILE_DOWNLOAD__;;filename;;mimetype;;base64_data
+    """
+    if not os.path.exists(file_path):
+        logger.error(f"Cannot trigger download: File not found {file_path}")
+        return
+
+    try:
+        filename = os.path.basename(file_path)
+        # Determine mime type roughly
+        mime = "application/octet-stream"
+        if filename.endswith(".csv"): mime = "text/csv"
+        elif filename.endswith(".xlsx"): mime = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        elif filename.endswith(".json"): mime = "application/json"
+        
+        with open(file_path, "rb") as f:
+            data = f.read()
+            b64 = base64.b64encode(data).decode('utf-8')
+            
+        print(f"__FILE_DOWNLOAD__;;{filename};;{mime};;{b64}")
+        logger.info(f"Triggered frontend download for {filename}")
+        
+    except Exception as e:
+        logger.error(f"Error triggering download: {e}")
