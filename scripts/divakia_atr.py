@@ -211,8 +211,10 @@ def guardar_en_csv(datos, archivo_salida):
     except Exception as e:
         logger.error(f"Error al guardar el archivo CSV: {e}")
 
+
+# === PROGRAMA PRINCIPAL ===
 def main():
-    logger.info("Iniciando proceso de extracción de facturas ATR...")
+    print("Iniciando proceso de extracción de facturas ATR...")
     
     # 1. Configuración de Salida
     archivo_salida = os.path.join(common.get_downloads_dir(), "facturas_resultados.xlsx")
@@ -223,29 +225,29 @@ def main():
     # 3. Datos Holded
     facturas_holded = set()
     if holded_key:
-        logger.info("Obteniendo facturas de Holded (últimos 3 meses)...")
+        print("Obteniendo facturas de Holded (últimos 3 meses)...")
         facturas_holded = obtener_compras_holded(holded_key)
     else:
-        logger.info("No se configuró HOLDED_API_KEY. Se omitirá el filtrado.")
+        print("No se configuró HOLDED_API_KEY. Se omitirá el filtrado.")
 
     # 4. Obtención de Datos Divakia con common
     token = common.get_orka_token()
     
     if not token:
-        logger.error("No se pudo obtener token de ORKA. Verifica credenciales en .env.")
+        print("❌ No se pudo obtener token de ORKA. Verifica credenciales en .env.")
         return
 
     data_facturas = obtener_facturas(token)
     
     if not data_facturas:
-        logger.error("No se obtuvieron datos de facturas. Abortando.")
+        print("❌ No se obtuvieron datos de facturas. Abortando.")
         return
 
     # 5. Procesamiento
     registros = procesar_datos(data_facturas)
     
     if registros:
-        logger.info("Filtrando facturas antiguas (más de 3 meses de antigüedad)...")
+        print("Filtrando facturas antiguas (más de 3 meses de antigüedad)...")
         fecha_limite = datetime.now() - timedelta(days=90)
         inicial_cnt = len(registros)
         
@@ -266,14 +268,14 @@ def main():
         registros = registros_filtrados
         final_cnt = len(registros)
         
-        logger.info(f"Se descartaron {inicial_cnt - final_cnt} facturas anteriores a {fecha_limite.strftime('%d/%m/%Y')}.")
+        print(f"Se descartaron {inicial_cnt - final_cnt} facturas anteriores a {fecha_limite.strftime('%d/%m/%Y')}.")
 
     if registros and facturas_holded:
-        logger.info("Filtrando facturas ya existentes en Holded...")
+        print("Filtrando facturas ya existentes en Holded...")
         inicial_cnt = len(registros)
         registros = [r for r in registros if r["Num factura"] not in facturas_holded]
         final_cnt = len(registros)
-        logger.info(f"Se filtraron {inicial_cnt - final_cnt} facturas que ya existían en Holded.")
+        print(f"Se filtraron {inicial_cnt - final_cnt} facturas que ya existían en Holded.")
 
     # 6. Guardado (cambiar extensión a csv)
     archivo_salida = archivo_salida.replace(".xlsx", ".csv")
@@ -282,7 +284,7 @@ def main():
     # Trigger download
     common.trigger_download_via_stdout(archivo_salida)
     
-    logger.info("Proceso finalizado.")
+    print("✅ Proceso finalizado.")
 
 if __name__ == "__main__":
     main()
