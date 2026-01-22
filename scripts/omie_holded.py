@@ -41,17 +41,23 @@ def limpiar_y_convertir(valor):
     if not val_str:
         return 0.0
         
+    result = 0.0
     try:
-        # Si tiene coma, asumimos formato Español (1.000,00 o 1000,00)
-        if ',' in val_str:
-            return common.clean_float(val_str)
-        
-        # Si NO tiene coma, asumimos formato Estándar (1000.00)
-        # common.clean_float elimina puntos, lo cual rompe 1000.00 -> 100000.
-        # Así que aquí usamos conversión directa.
-        return float(val_str)
-    except (ValueError, TypeError):
-        return 0.0
+        # Try standard float first (handles 123.45)
+        result = float(val_str)
+    except ValueError:
+        # Try Spanish format (1.234,56)
+        try:
+            # Remove dots, replace comma
+            clean_s = val_str.replace('.', '').replace(',', '.')
+            result = float(clean_s)
+        except ValueError:
+             print(f"⚠️ No se pudo convertir a numero: '{val_str}'")
+             return 0.0
+    
+    # Debug log (Remove later if too noisy, but needed now)
+    # print(f"DEBUG: '{val_str}' -> {result}") 
+    return result
 
 def encontrar_zip_mas_reciente():
     try:
