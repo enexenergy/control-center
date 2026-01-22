@@ -1,0 +1,4586 @@
+[
+    {
+        "name": "TOTAL MERCADO",
+        "sales_gwh": 704025.015443,
+        "sales_2024": 704025.015443,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 1
+    },
+    {
+        "name": "ENDESA ENERGÍA, S.A.",
+        "sales_gwh": 73888.26122,
+        "sales_2024": 73888.26122,
+        "sales_2023": 81899.43,
+        "change_pct": -9.78,
+        "rank": 2
+    },
+    {
+        "name": "IBERDROLA CLIENTES SOCIEDAD ANONIMA",
+        "sales_gwh": 51386.71303,
+        "sales_2024": 51386.71303,
+        "sales_2023": 53014.16,
+        "change_pct": -3.07,
+        "rank": 3
+    },
+    {
+        "name": "GAS NATURAL COMERCIALIZADORA, S.A.",
+        "sales_gwh": 33650.713,
+        "sales_2024": 33650.713,
+        "sales_2023": 36562.53,
+        "change_pct": -7.96,
+        "rank": 4
+    },
+    {
+        "name": "GALP ENERGIA ESPAÑA S.A.U.",
+        "sales_gwh": 31517.377459,
+        "sales_2024": 31517.377459,
+        "sales_2023": 25856.357502,
+        "change_pct": 21.89,
+        "rank": 5
+    },
+    {
+        "name": "NATURGY IBERIA, S.A",
+        "sales_gwh": 14853.757,
+        "sales_2024": 14853.757,
+        "sales_2023": 19643.0,
+        "change_pct": -24.38,
+        "rank": 6
+    },
+    {
+        "name": "COMERCIALIZADORA REGULADA GAS & POWER SA",
+        "sales_gwh": 10492.21,
+        "sales_2024": 10492.21,
+        "sales_2023": 10226.0,
+        "change_pct": 2.6,
+        "rank": 7
+    },
+    {
+        "name": "EDP CLIENTES SOCIEDAD ANÓNIMA",
+        "sales_gwh": 10489.436414,
+        "sales_2024": 10489.436414,
+        "sales_2023": 11914.3,
+        "change_pct": -11.96,
+        "rank": 8
+    },
+    {
+        "name": "ENERGÍA XXI Comercializadora de Referencia, S.L.U.",
+        "sales_gwh": 10248.09497,
+        "sales_2024": 10248.09497,
+        "sales_2023": 10178.8,
+        "change_pct": 0.68,
+        "rank": 9
+    },
+    {
+        "name": "AXPO IBERIA SL",
+        "sales_gwh": 9234.139186,
+        "sales_2024": 9234.139186,
+        "sales_2023": 12459.78,
+        "change_pct": -25.89,
+        "rank": 10
+    },
+    {
+        "name": "CURENERGIA COMERCIALIZADOR DE ULTIMO RECURSO, S.A.U.",
+        "sales_gwh": 8865.58792,
+        "sales_2024": 8865.58792,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 11
+    },
+    {
+        "name": "ACCIONA GREEN ENERGY DEVELOPMENTS SL",
+        "sales_gwh": 7806.733198,
+        "sales_2024": 7806.733198,
+        "sales_2023": 8334.307399,
+        "change_pct": -6.33,
+        "rank": 12
+    },
+    {
+        "name": "TOTALENERGIES ELECTRICIDAD Y GAS ESPAÑA SA",
+        "sales_gwh": 7424.628758,
+        "sales_2024": 7424.628758,
+        "sales_2023": 6760.0,
+        "change_pct": 9.83,
+        "rank": 13
+    },
+    {
+        "name": "FORTIA ENERGIA SL",
+        "sales_gwh": 6417.048407,
+        "sales_2024": 6417.048407,
+        "sales_2023": 6390.167,
+        "change_pct": 0.42,
+        "rank": 14
+    },
+    {
+        "name": "REPSOL COMERCIALIZADORA DE ELECTRICIDAD Y GAS, S.L.U",
+        "sales_gwh": 6398.907,
+        "sales_2024": 6398.907,
+        "sales_2023": 5634.0,
+        "change_pct": 13.58,
+        "rank": 15
+    },
+    {
+        "name": "SHELL ESPAÑA SA",
+        "sales_gwh": 3985.587852,
+        "sales_2024": 3985.587852,
+        "sales_2023": 2997.45502,
+        "change_pct": 32.97,
+        "rank": 16
+    },
+    {
+        "name": "BP GAS & POWER IBERIA, S.A.U.",
+        "sales_gwh": 3912.669248,
+        "sales_2024": 3912.669248,
+        "sales_2023": 2862.449344,
+        "change_pct": 36.69,
+        "rank": 17
+    },
+    {
+        "name": "ENI PLENITUDE IBERIA, SL",
+        "sales_gwh": 3668.290837,
+        "sales_2024": 3668.290837,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 18
+    },
+    {
+        "name": "TOTALENERGIES CLIENTES SAU (antes EDP\nCOMERCIALIZADORA SAU)",
+        "sales_gwh": 3280.656811,
+        "sales_2024": 3280.656811,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 19
+    },
+    {
+        "name": "MET ENERGÍA ESPAÑA",
+        "sales_gwh": 3144.022182,
+        "sales_2024": 3144.022182,
+        "sales_2023": 2360.242,
+        "change_pct": 33.21,
+        "rank": 20
+    },
+    {
+        "name": "ENGIE ESPAÑA S.L.U",
+        "sales_gwh": 2795.248835,
+        "sales_2024": 2795.248835,
+        "sales_2023": 3331.068,
+        "change_pct": -16.09,
+        "rank": 21
+    },
+    {
+        "name": "DYNEFF ESPAÑA, SLU",
+        "sales_gwh": 2672.464,
+        "sales_2024": 2672.464,
+        "sales_2023": 3608.756,
+        "change_pct": -25.95,
+        "rank": 22
+    },
+    {
+        "name": "MOEVE GAS AND POWER, S.A.U. (antes Cepsa gas y\nelectricidad)",
+        "sales_gwh": 2612.70773,
+        "sales_2024": 2612.70773,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 23
+    },
+    {
+        "name": "BASER COMERCIALIZADORA DE REFERENCIA S.A.",
+        "sales_gwh": 2454.937291,
+        "sales_2024": 2454.937291,
+        "sales_2023": 2320.0,
+        "change_pct": 5.82,
+        "rank": 24
+    },
+    {
+        "name": "ELECTRICIDAD ELEIA S.L.U",
+        "sales_gwh": 2392.148551,
+        "sales_2024": 2392.148551,
+        "sales_2023": 2476.664,
+        "change_pct": -3.41,
+        "rank": 25
+    },
+    {
+        "name": "ENERGYA VM GESTIÓN DE ENERGÍA, S.L.U.",
+        "sales_gwh": 2331.032204,
+        "sales_2024": 2331.032204,
+        "sales_2023": 1644.28,
+        "change_pct": 41.77,
+        "rank": 26
+    },
+    {
+        "name": "FACTOR ENERGIA SA",
+        "sales_gwh": 2199.73911,
+        "sales_2024": 2199.73911,
+        "sales_2023": 2133.347,
+        "change_pct": 3.11,
+        "rank": 27
+    },
+    {
+        "name": "NEXUS ENERGIA SA",
+        "sales_gwh": 2149.720299,
+        "sales_2024": 2149.720299,
+        "sales_2023": 2547.831,
+        "change_pct": -15.63,
+        "rank": 28
+    },
+    {
+        "name": "FENIE ENERGIA SA",
+        "sales_gwh": 1956.61663,
+        "sales_2024": 1956.61663,
+        "sales_2023": 1975.023,
+        "change_pct": -0.93,
+        "rank": 29
+    },
+    {
+        "name": "NATURGY CLIENTES, S.A.",
+        "sales_gwh": 1625.267,
+        "sales_2024": 1625.267,
+        "sales_2023": 9.334,
+        "change_pct": 17312.33,
+        "rank": 30
+    },
+    {
+        "name": "THE YELLOW ENERGY, SL",
+        "sales_gwh": 1338.958,
+        "sales_2024": 1338.958,
+        "sales_2023": 1056.961,
+        "change_pct": 26.68,
+        "rank": 31
+    },
+    {
+        "name": "IBERDROLA SERVICIOS ENERGÉTICOS, S.A.U.",
+        "sales_gwh": 1333.12,
+        "sales_2024": 1333.12,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 32
+    },
+    {
+        "name": "SERVIGAS S XXI SA",
+        "sales_gwh": 1280.408232,
+        "sales_2024": 1280.408232,
+        "sales_2023": 922.35,
+        "change_pct": 38.82,
+        "rank": 33
+    },
+    {
+        "name": "ALPIQ ENERGIA ESPAÑA SAU",
+        "sales_gwh": 1213.069,
+        "sales_2024": 1213.069,
+        "sales_2023": 1663.490329,
+        "change_pct": -27.08,
+        "rank": 34
+    },
+    {
+        "name": "GAOLANIA SERVICIOS SL",
+        "sales_gwh": 1141.87722,
+        "sales_2024": 1141.87722,
+        "sales_2023": 796.46,
+        "change_pct": 43.37,
+        "rank": 35
+    },
+    {
+        "name": "FOENER ENERGÍA S.L.",
+        "sales_gwh": 1052.127706,
+        "sales_2024": 1052.127706,
+        "sales_2023": 462.286,
+        "change_pct": 127.59,
+        "rank": 36
+    },
+    {
+        "name": "LOOP ELECTRICIDAD Y GAS S.L",
+        "sales_gwh": 776.223835,
+        "sales_2024": 776.223835,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 37
+    },
+    {
+        "name": "INGENIERIA Y COMERCIALIZACION DEL GAS SA",
+        "sales_gwh": 755.791667,
+        "sales_2024": 755.791667,
+        "sales_2023": 687.3237,
+        "change_pct": 9.96,
+        "rank": 38
+    },
+    {
+        "name": "GESTERNOVA SA",
+        "sales_gwh": 694.427226,
+        "sales_2024": 694.427226,
+        "sales_2023": 523.797554,
+        "change_pct": 32.58,
+        "rank": 39
+    },
+    {
+        "name": "AUDAX RENOVABLES SA",
+        "sales_gwh": 651.232541,
+        "sales_2024": 651.232541,
+        "sales_2023": 1039.913,
+        "change_pct": -37.38,
+        "rank": 40
+    },
+    {
+        "name": "HOLALUZ CLIDOM SA",
+        "sales_gwh": 638.746,
+        "sales_2024": 638.746,
+        "sales_2023": 821.85923,
+        "change_pct": -22.28,
+        "rank": 41
+    },
+    {
+        "name": "ENERGIA NUFRI SL",
+        "sales_gwh": 623.57412,
+        "sales_2024": 623.57412,
+        "sales_2023": 419.493,
+        "change_pct": 48.65,
+        "rank": 42
+    },
+    {
+        "name": "OCTOPUS ENERGY ESPAÑA S.L.U.",
+        "sales_gwh": 516.39743,
+        "sales_2024": 516.39743,
+        "sales_2023": 138.12094,
+        "change_pct": 273.87,
+        "rank": 43
+    },
+    {
+        "name": "CIDE HCEnergía, S.A.",
+        "sales_gwh": 516.372793,
+        "sales_2024": 516.372793,
+        "sales_2023": 578.229082,
+        "change_pct": -10.7,
+        "rank": 44
+    },
+    {
+        "name": "ATLAS ENERGIA COMERCIAL, S.L.",
+        "sales_gwh": 504.956,
+        "sales_2024": 504.956,
+        "sales_2023": 337.004,
+        "change_pct": 49.84,
+        "rank": 45
+    },
+    {
+        "name": "UNIELECTRICA ENERGIA SA",
+        "sales_gwh": 491.97911,
+        "sales_2024": 491.97911,
+        "sales_2023": 447.747,
+        "change_pct": 9.88,
+        "rank": 46
+    },
+    {
+        "name": "ENERGIA COLECTIVA SOCIEDAD LIMITADA",
+        "sales_gwh": 485.10138,
+        "sales_2024": 485.10138,
+        "sales_2023": 293.066,
+        "change_pct": 65.53,
+        "rank": 47
+    },
+    {
+        "name": "BIROU GAS SL",
+        "sales_gwh": 468.651539,
+        "sales_2024": 468.651539,
+        "sales_2023": 311.36,
+        "change_pct": 50.52,
+        "rank": 48
+    },
+    {
+        "name": "POTENZIA COMERCIALIZADORA SL",
+        "sales_gwh": 422.412074,
+        "sales_2024": 422.412074,
+        "sales_2023": 179.791764,
+        "change_pct": 134.95,
+        "rank": 49
+    },
+    {
+        "name": "ADELFAS ENERGIA SL",
+        "sales_gwh": 401.005425,
+        "sales_2024": 401.005425,
+        "sales_2023": 232.803801,
+        "change_pct": 72.25,
+        "rank": 50
+    },
+    {
+        "name": "WIND TO MARKET SA",
+        "sales_gwh": 399.060725,
+        "sales_2024": 399.060725,
+        "sales_2023": 310.114,
+        "change_pct": 28.68,
+        "rank": 51
+    },
+    {
+        "name": "NABALIA ENERGIA 2000, S.A.",
+        "sales_gwh": 397.488095,
+        "sales_2024": 397.488095,
+        "sales_2023": 377.637,
+        "change_pct": 5.26,
+        "rank": 52
+    },
+    {
+        "name": "LONJAS TECNOLOGIA SA",
+        "sales_gwh": 380.97959,
+        "sales_2024": 380.97959,
+        "sales_2023": 294.411,
+        "change_pct": 29.4,
+        "rank": 53
+    },
+    {
+        "name": "FACTOR ENERGIA ESPAÑA SA",
+        "sales_gwh": 378.449,
+        "sales_2024": 378.449,
+        "sales_2023": 330.736,
+        "change_pct": 14.43,
+        "rank": 54
+    },
+    {
+        "name": "DISA ENERGIA ELECTRICA S.L.",
+        "sales_gwh": 362.12402,
+        "sales_2024": 362.12402,
+        "sales_2023": 225.732,
+        "change_pct": 60.42,
+        "rank": 55
+    },
+    {
+        "name": "ESCANDINAVA DE ELECTRICIDAD, SLU",
+        "sales_gwh": 354.421087,
+        "sales_2024": 354.421087,
+        "sales_2023": 243.837942,
+        "change_pct": 45.35,
+        "rank": 56
+    },
+    {
+        "name": "ADX RENOVABLES, S.L.",
+        "sales_gwh": 324.050449,
+        "sales_2024": 324.050449,
+        "sales_2023": 12.734,
+        "change_pct": 2444.77,
+        "rank": 57
+    },
+    {
+        "name": "ON DEMAND FACILITIES SL",
+        "sales_gwh": 317.612753,
+        "sales_2024": 317.612753,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 58
+    },
+    {
+        "name": "SOM ENERGIA SCCL",
+        "sales_gwh": 306.224987,
+        "sales_2024": 306.224987,
+        "sales_2023": 311.765126,
+        "change_pct": -1.78,
+        "rank": 59
+    },
+    {
+        "name": "GEO ALTERNATIVA SL",
+        "sales_gwh": 303.03562,
+        "sales_2024": 303.03562,
+        "sales_2023": 250.91,
+        "change_pct": 20.77,
+        "rank": 60
+    },
+    {
+        "name": "CYE ENERGIA SOCIEDAD LIMITADA",
+        "sales_gwh": 302.57204,
+        "sales_2024": 302.57204,
+        "sales_2023": 222.78094,
+        "change_pct": 35.82,
+        "rank": 61
+    },
+    {
+        "name": "ROFEICA ENERGIA, SA",
+        "sales_gwh": 300.794165,
+        "sales_2024": 300.794165,
+        "sales_2023": 231.131905,
+        "change_pct": 30.14,
+        "rank": 62
+    },
+    {
+        "name": "INTEGRACION EUROPEA DE ENERGIA SA",
+        "sales_gwh": 298.701452,
+        "sales_2024": 298.701452,
+        "sales_2023": 300.53184,
+        "change_pct": -0.61,
+        "rank": 63
+    },
+    {
+        "name": "ENERXÍA GALEGA MÁIS, S.L.",
+        "sales_gwh": 295.745525,
+        "sales_2024": 295.745525,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 64
+    },
+    {
+        "name": "SWAP ENERGIA SA",
+        "sales_gwh": 294.86695,
+        "sales_2024": 294.86695,
+        "sales_2023": 266.896,
+        "change_pct": 10.48,
+        "rank": 65
+    },
+    {
+        "name": "NEOELECTRA ENERGIA SLU",
+        "sales_gwh": 289.945043,
+        "sales_2024": 289.945043,
+        "sales_2023": 302.197609,
+        "change_pct": -4.05,
+        "rank": 66
+    },
+    {
+        "name": "TRACTAMENT I SELECCIO DE RESIDUS SA",
+        "sales_gwh": 267.215359,
+        "sales_2024": 267.215359,
+        "sales_2023": 257.881876,
+        "change_pct": 3.62,
+        "rank": 67
+    },
+    {
+        "name": "ELECTRICA GUIXES ENERGIA SL",
+        "sales_gwh": 264.581827,
+        "sales_2024": 264.581827,
+        "sales_2023": 262.33595,
+        "change_pct": 0.86,
+        "rank": 68
+    },
+    {
+        "name": "RÉGSITI COMERCIALIZADORA REGULADA, S.L.U.",
+        "sales_gwh": 253.3,
+        "sales_2024": 253.3,
+        "sales_2023": 249.0,
+        "change_pct": 1.73,
+        "rank": 69
+    },
+    {
+        "name": "COMERCIALIZADORA DE ELECTRICIDAD Y GAS DEL\nMEDITERRANEO SL",
+        "sales_gwh": 232.452214,
+        "sales_2024": 232.452214,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 70
+    },
+    {
+        "name": "ENERGIA LIBRE COMERCIALIZADORA SL",
+        "sales_gwh": 231.209,
+        "sales_2024": 231.209,
+        "sales_2023": 243.39,
+        "change_pct": -5.0,
+        "rank": 71
+    },
+    {
+        "name": "ESTABANELL IMPULSA, SA",
+        "sales_gwh": 225.906,
+        "sales_2024": 225.906,
+        "sales_2023": 236.753,
+        "change_pct": -4.58,
+        "rank": 72
+    },
+    {
+        "name": "BON PREU, SAU",
+        "sales_gwh": 216.62271,
+        "sales_2024": 216.62271,
+        "sales_2023": 188.689324,
+        "change_pct": 14.8,
+        "rank": 73
+    },
+    {
+        "name": "CANDELA COMERCIALIZADORA SL",
+        "sales_gwh": 210.232122,
+        "sales_2024": 210.232122,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 74
+    },
+    {
+        "name": "CORPORACION ALIMENTARIA GUISSONA, S.A.",
+        "sales_gwh": 204.91982,
+        "sales_2024": 204.91982,
+        "sales_2023": 174.62,
+        "change_pct": 17.35,
+        "rank": 75
+    },
+    {
+        "name": "HANWHA EN4RGY RETAIL SPAIN SL",
+        "sales_gwh": 200.859,
+        "sales_2024": 200.859,
+        "sales_2023": 214.46,
+        "change_pct": -6.34,
+        "rank": 76
+    },
+    {
+        "name": "ELECTRA CALDENSE ENERGIA SA",
+        "sales_gwh": 195.209538,
+        "sales_2024": 195.209538,
+        "sales_2023": 191.619,
+        "change_pct": 1.87,
+        "rank": 77
+    },
+    {
+        "name": "FOX ENERGIA SA",
+        "sales_gwh": 193.390635,
+        "sales_2024": 193.390635,
+        "sales_2023": 214.818,
+        "change_pct": -9.97,
+        "rank": 78
+    },
+    {
+        "name": "INER ENERGIA CASTILLA LA MANCHA SOCIEDAD LIMITADA",
+        "sales_gwh": 192.565681,
+        "sales_2024": 192.565681,
+        "sales_2023": 133.474454,
+        "change_pct": 44.27,
+        "rank": 79
+    },
+    {
+        "name": "GARCIA MUNTE ENERGIA, S.L.",
+        "sales_gwh": 182.199277,
+        "sales_2024": 182.199277,
+        "sales_2023": 327.02,
+        "change_pct": -44.28,
+        "rank": 80
+    },
+    {
+        "name": "HELIOLEC ENERGIA ELECTRICA, S.L.",
+        "sales_gwh": 180.50483,
+        "sales_2024": 180.50483,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 81
+    },
+    {
+        "name": "RECICLAJES ECOLOGICOS NAGINI S.L.",
+        "sales_gwh": 170.740569,
+        "sales_2024": 170.740569,
+        "sales_2023": 193.273032,
+        "change_pct": -11.66,
+        "rank": 82
+    },
+    {
+        "name": "GASILUZ ECO ENERCIA S.L.",
+        "sales_gwh": 167.499807,
+        "sales_2024": 167.499807,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 83
+    },
+    {
+        "name": "ALCANZIA ENERGIA SOCIEDAD LIMITADA",
+        "sales_gwh": 165.380335,
+        "sales_2024": 165.380335,
+        "sales_2023": 162.335,
+        "change_pct": 1.88,
+        "rank": 84
+    },
+    {
+        "name": "ENERGREEN MOBILITY S.L .",
+        "sales_gwh": 163.717753,
+        "sales_2024": 163.717753,
+        "sales_2023": 183.054,
+        "change_pct": -10.56,
+        "rank": 85
+    },
+    {
+        "name": "IRIS ENERGIA EFICIENTE S.A.",
+        "sales_gwh": 163.527474,
+        "sales_2024": 163.527474,
+        "sales_2023": 169.705,
+        "change_pct": -3.64,
+        "rank": 86
+    },
+    {
+        "name": "RESPIRA ENERGIA MEDITERRANIA, SA",
+        "sales_gwh": 160.475,
+        "sales_2024": 160.475,
+        "sales_2023": 160.624,
+        "change_pct": -0.09,
+        "rank": 87
+    },
+    {
+        "name": "VISALIA ENERGIA S.L.",
+        "sales_gwh": 154.032014,
+        "sales_2024": 154.032014,
+        "sales_2023": 2.056,
+        "change_pct": 7391.83,
+        "rank": 88
+    },
+    {
+        "name": "COMERCIALIZADOR DE REFERENCIA ENERGÉTICO, S.L.U.",
+        "sales_gwh": 148.022588,
+        "sales_2024": 148.022588,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 89
+    },
+    {
+        "name": "GASELEC DIVERSIFICACION SL",
+        "sales_gwh": 138.504101,
+        "sales_2024": 138.504101,
+        "sales_2023": 141.107881,
+        "change_pct": -1.85,
+        "rank": 90
+    },
+    {
+        "name": "NIEVES ENERGIA SL",
+        "sales_gwh": 138.003125,
+        "sales_2024": 138.003125,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 91
+    },
+    {
+        "name": "AHORRELUZ SERVICIOS ONLINE S.L",
+        "sales_gwh": 136.413097,
+        "sales_2024": 136.413097,
+        "sales_2023": 80.825,
+        "change_pct": 68.78,
+        "rank": 92
+    },
+    {
+        "name": "XENERA COMPAÑIA ELECTRICA SAU",
+        "sales_gwh": 131.40761,
+        "sales_2024": 131.40761,
+        "sales_2023": 117.058333,
+        "change_pct": 12.26,
+        "rank": 93
+    },
+    {
+        "name": "ARACAN ENERGIA SL",
+        "sales_gwh": 127.692028,
+        "sales_2024": 127.692028,
+        "sales_2023": 151.262,
+        "change_pct": -15.58,
+        "rank": 94
+    },
+    {
+        "name": "EMAYA",
+        "sales_gwh": 127.625497,
+        "sales_2024": 127.625497,
+        "sales_2023": 61.057342,
+        "change_pct": 109.03,
+        "rank": 95
+    },
+    {
+        "name": "BASSOLS ENERGIA COMERCIAL ,SL",
+        "sales_gwh": 127.1778,
+        "sales_2024": 127.1778,
+        "sales_2023": 86.91581,
+        "change_pct": 46.32,
+        "rank": 96
+    },
+    {
+        "name": "CONECTA2 ENERGIA SL",
+        "sales_gwh": 125.326,
+        "sales_2024": 125.326,
+        "sales_2023": 116.033,
+        "change_pct": 8.01,
+        "rank": 97
+    },
+    {
+        "name": "TELECOR SA",
+        "sales_gwh": 124.796475,
+        "sales_2024": 124.796475,
+        "sales_2023": 85.19855,
+        "change_pct": 46.48,
+        "rank": 98
+    },
+    {
+        "name": "GLOBAL BIOSFERA PROTEC S.L",
+        "sales_gwh": 121.887418,
+        "sales_2024": 121.887418,
+        "sales_2023": 68.556,
+        "change_pct": 77.79,
+        "rank": 99
+    },
+    {
+        "name": "AGRI-ENERGIA S.A.",
+        "sales_gwh": 119.542772,
+        "sales_2024": 119.542772,
+        "sales_2023": 122.811,
+        "change_pct": -2.66,
+        "rank": 100
+    },
+    {
+        "name": "COMERCIALIZADORA ELECTRICA DE CADIZ, S.A.",
+        "sales_gwh": 118.828848,
+        "sales_2024": 118.828848,
+        "sales_2023": 128.533766,
+        "change_pct": -7.55,
+        "rank": 101
+    },
+    {
+        "name": "GREENING SMART ENERGY SL",
+        "sales_gwh": 108.5803,
+        "sales_2024": 108.5803,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 102
+    },
+    {
+        "name": "GEOATLANTER SL",
+        "sales_gwh": 99.79848,
+        "sales_2024": 99.79848,
+        "sales_2023": 95.188,
+        "change_pct": 4.84,
+        "rank": 103
+    },
+    {
+        "name": "ALUMBRA CORPORACION, S.L.",
+        "sales_gwh": 96.458903,
+        "sales_2024": 96.458903,
+        "sales_2023": 48.498,
+        "change_pct": 98.89,
+        "rank": 104
+    },
+    {
+        "name": "CATGAS ENERGIA SA",
+        "sales_gwh": 95.904635,
+        "sales_2024": 95.904635,
+        "sales_2023": 123.813374,
+        "change_pct": -22.54,
+        "rank": 105
+    },
+    {
+        "name": "INDEXO ENERGIA SL",
+        "sales_gwh": 95.335376,
+        "sales_2024": 95.335376,
+        "sales_2023": 70.899534,
+        "change_pct": 34.47,
+        "rank": 106
+    },
+    {
+        "name": "MY ENERGIA ONER SL",
+        "sales_gwh": 87.892314,
+        "sales_2024": 87.892314,
+        "sales_2023": 56.753035,
+        "change_pct": 54.87,
+        "rank": 107
+    },
+    {
+        "name": "GOIENER, S. COOP.",
+        "sales_gwh": 86.71856,
+        "sales_2024": 86.71856,
+        "sales_2023": 85.568339,
+        "change_pct": 1.34,
+        "rank": 108
+    },
+    {
+        "name": "EMPRESA DE ALUMBRADO ELÉCTRICO DE CEUTA ENERGIA,\nS.L.U.",
+        "sales_gwh": 86.713903,
+        "sales_2024": 86.713903,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 109
+    },
+    {
+        "name": "ATENCO ENERGIA, SOCIEDAD LIMITADA",
+        "sales_gwh": 84.023984,
+        "sales_2024": 84.023984,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 110
+    },
+    {
+        "name": "ADEINNOVA ENERGIA SL",
+        "sales_gwh": 83.498009,
+        "sales_2024": 83.498009,
+        "sales_2023": 73.127241,
+        "change_pct": 14.18,
+        "rank": 111
+    },
+    {
+        "name": "HORECA ENERGIA SL",
+        "sales_gwh": 82.71121,
+        "sales_2024": 82.71121,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 112
+    },
+    {
+        "name": "RENOVAE CONSULTING SL",
+        "sales_gwh": 79.301,
+        "sales_2024": 79.301,
+        "sales_2023": 41.568,
+        "change_pct": 90.77,
+        "rank": 113
+    },
+    {
+        "name": "ENERGIA VIVA SPAIN SL",
+        "sales_gwh": 77.756709,
+        "sales_2024": 77.756709,
+        "sales_2023": 57.506882,
+        "change_pct": 35.21,
+        "rank": 114
+    },
+    {
+        "name": "ESTRATEGIAS ELECTRICAS INTEGRALES SA",
+        "sales_gwh": 76.64964,
+        "sales_2024": 76.64964,
+        "sales_2023": 60.69635,
+        "change_pct": 26.28,
+        "rank": 115
+    },
+    {
+        "name": "RESPIRA ENERGIA ESPAÑA SL",
+        "sales_gwh": 75.59,
+        "sales_2024": 75.59,
+        "sales_2023": 82.231,
+        "change_pct": -8.08,
+        "rank": 116
+    },
+    {
+        "name": "AIRE LIMPIO S.L.",
+        "sales_gwh": 71.559704,
+        "sales_2024": 71.559704,
+        "sales_2023": 15.945838,
+        "change_pct": 348.77,
+        "rank": 117
+    },
+    {
+        "name": "ARSUS ENERGIA SL",
+        "sales_gwh": 69.67529,
+        "sales_2024": 69.67529,
+        "sales_2023": 75.31784,
+        "change_pct": -7.49,
+        "rank": 118
+    },
+    {
+        "name": "IBERELECTRICA COMERCIALIZADORA SOCIEDAD LIMITADA",
+        "sales_gwh": 68.329692,
+        "sales_2024": 68.329692,
+        "sales_2023": 34.494343,
+        "change_pct": 98.09,
+        "rank": 119
+    },
+    {
+        "name": "ELECTRICA SOLLERENSE SA",
+        "sales_gwh": 66.6763,
+        "sales_2024": 66.6763,
+        "sales_2023": 99.200042,
+        "change_pct": -32.79,
+        "rank": 120
+    },
+    {
+        "name": "ENARA GESTION Y MEDIACION SOCIEDAD LIMITADA",
+        "sales_gwh": 65.9731,
+        "sales_2024": 65.9731,
+        "sales_2023": 57.07,
+        "change_pct": 15.6,
+        "rank": 121
+    },
+    {
+        "name": "ENERGY STROM XXI SL",
+        "sales_gwh": 65.70798,
+        "sales_2024": 65.70798,
+        "sales_2023": 52.984328,
+        "change_pct": 24.01,
+        "rank": 122
+    },
+    {
+        "name": "AB ENERGIA 1903 S.L.",
+        "sales_gwh": 63.794659,
+        "sales_2024": 63.794659,
+        "sales_2023": 50.004347,
+        "change_pct": 27.58,
+        "rank": 123
+    },
+    {
+        "name": "MULTISERVICIOS TECNOLOGICOS SA",
+        "sales_gwh": 63.495412,
+        "sales_2024": 63.495412,
+        "sales_2023": 64.445958,
+        "change_pct": -1.47,
+        "rank": 124
+    },
+    {
+        "name": "LOVE ENERGY, S.L.",
+        "sales_gwh": 63.088722,
+        "sales_2024": 63.088722,
+        "sales_2023": 42.006,
+        "change_pct": 50.19,
+        "rank": 125
+    },
+    {
+        "name": "ELEK COMERCIALIZADORA ELECTRICA",
+        "sales_gwh": 61.127979,
+        "sales_2024": 61.127979,
+        "sales_2023": 45.2,
+        "change_pct": 35.24,
+        "rank": 126
+    },
+    {
+        "name": "STIN,SA",
+        "sales_gwh": 57.9497,
+        "sales_2024": 57.9497,
+        "sales_2023": 33.0168,
+        "change_pct": 75.52,
+        "rank": 127
+    },
+    {
+        "name": "ENERGIES RENOVABLES PUBLIQUES DE CATALUNYA, SAU",
+        "sales_gwh": 57.733017,
+        "sales_2024": 57.733017,
+        "sales_2023": 0.0079,
+        "change_pct": 730697.68,
+        "rank": 128
+    },
+    {
+        "name": "POWER WATT ENERGY ISLAND, SL",
+        "sales_gwh": 57.2507,
+        "sales_2024": 57.2507,
+        "sales_2023": 42.20353,
+        "change_pct": 35.65,
+        "rank": 129
+    },
+    {
+        "name": "COX ENERGIA COMERCIALIZADORA ESPAÑA",
+        "sales_gwh": 55.066814,
+        "sales_2024": 55.066814,
+        "sales_2023": 42.625411,
+        "change_pct": 29.19,
+        "rank": 130
+    },
+    {
+        "name": "ETER ENERGIA S.L.",
+        "sales_gwh": 54.358743,
+        "sales_2024": 54.358743,
+        "sales_2023": 21.748,
+        "change_pct": 149.95,
+        "rank": 131
+    },
+    {
+        "name": "ENSTROGA S.L.U.",
+        "sales_gwh": 54.025563,
+        "sales_2024": 54.025563,
+        "sales_2023": 32.35535,
+        "change_pct": 66.98,
+        "rank": 132
+    },
+    {
+        "name": "INGEBAU, SOLUCIONES DE MEDIDA SL",
+        "sales_gwh": 53.131725,
+        "sales_2024": 53.131725,
+        "sales_2023": 13.2985,
+        "change_pct": 299.53,
+        "rank": 133
+    },
+    {
+        "name": "PLENA ENERGIA RENOVABLE, S.L.",
+        "sales_gwh": 52.977655,
+        "sales_2024": 52.977655,
+        "sales_2023": 40.939702,
+        "change_pct": 29.4,
+        "rank": 134
+    },
+    {
+        "name": "NOBE SOLUCIONES Y ENERGIA SLU",
+        "sales_gwh": 52.875,
+        "sales_2024": 52.875,
+        "sales_2023": 40.825,
+        "change_pct": 29.52,
+        "rank": 135
+    },
+    {
+        "name": "ENERPLUS ENERGIA SA",
+        "sales_gwh": 52.420671,
+        "sales_2024": 52.420671,
+        "sales_2023": 41.31433,
+        "change_pct": 26.88,
+        "rank": 136
+    },
+    {
+        "name": "ELECTRICA SEROSENSE SL",
+        "sales_gwh": 51.75,
+        "sales_2024": 51.75,
+        "sales_2023": 50.37,
+        "change_pct": 2.74,
+        "rank": 137
+    },
+    {
+        "name": "CARVISA ENERGIA SL",
+        "sales_gwh": 51.6313,
+        "sales_2024": 51.6313,
+        "sales_2023": 42.19297,
+        "change_pct": 22.37,
+        "rank": 138
+    },
+    {
+        "name": "LA UNIION ELECTRO-INDUSTRIAL SL",
+        "sales_gwh": 51.137163,
+        "sales_2024": 51.137163,
+        "sales_2023": 52.469377,
+        "change_pct": -2.54,
+        "rank": 139
+    },
+    {
+        "name": "PASION ENERGIA SA",
+        "sales_gwh": 51.062652,
+        "sales_2024": 51.062652,
+        "sales_2023": 27.338,
+        "change_pct": 86.78,
+        "rank": 140
+    },
+    {
+        "name": "GLOBELIGHT ENERGY SL",
+        "sales_gwh": 50.644005,
+        "sales_2024": 50.644005,
+        "sales_2023": 49.671376,
+        "change_pct": 1.96,
+        "rank": 141
+    },
+    {
+        "name": "LUZIA ENERGIA SOCIEDAD LIMITADA",
+        "sales_gwh": 50.623627,
+        "sales_2024": 50.623627,
+        "sales_2023": 38.850915,
+        "change_pct": 30.3,
+        "rank": 142
+    },
+    {
+        "name": "COMERCIALIZADORA ADI ESPAÑA SL",
+        "sales_gwh": 49.323375,
+        "sales_2024": 49.323375,
+        "sales_2023": 44.935,
+        "change_pct": 9.77,
+        "rank": 143
+    },
+    {
+        "name": "BLUBAT PULSAR SL",
+        "sales_gwh": 48.227944,
+        "sales_2024": 48.227944,
+        "sales_2023": 29.489539,
+        "change_pct": 63.54,
+        "rank": 144
+    },
+    {
+        "name": "INER EUSKADI, S.L.",
+        "sales_gwh": 47.150206,
+        "sales_2024": 47.150206,
+        "sales_2023": 27.186949,
+        "change_pct": 73.43,
+        "rank": 145
+    },
+    {
+        "name": "ALPEX IBERICA DE ENERGIA, S.L.",
+        "sales_gwh": 46.58511,
+        "sales_2024": 46.58511,
+        "sales_2023": 31.027,
+        "change_pct": 50.14,
+        "rank": 146
+    },
+    {
+        "name": "HIDROELECTRICA DEL VALIRA SL",
+        "sales_gwh": 46.579,
+        "sales_2024": 46.579,
+        "sales_2023": 45.5,
+        "change_pct": 2.37,
+        "rank": 147
+    },
+    {
+        "name": "NEON ENERGIA EFICIENTE S.L.",
+        "sales_gwh": 46.149327,
+        "sales_2024": 46.149327,
+        "sales_2023": 4.194,
+        "change_pct": 1000.37,
+        "rank": 148
+    },
+    {
+        "name": "PETRO NAVARRA, S.L.",
+        "sales_gwh": 45.946567,
+        "sales_2024": 45.946567,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 149
+    },
+    {
+        "name": "ALUZ ENERGIA ELECTRICA SL",
+        "sales_gwh": 44.60568,
+        "sales_2024": 44.60568,
+        "sales_2023": 34.278,
+        "change_pct": 30.13,
+        "rank": 150
+    },
+    {
+        "name": "ENERGIAS RENOVADORAS SL",
+        "sales_gwh": 43.099486,
+        "sales_2024": 43.099486,
+        "sales_2023": 16.52414,
+        "change_pct": 160.83,
+        "rank": 151
+    },
+    {
+        "name": "ELECTRA ENERGIA SA",
+        "sales_gwh": 43.006933,
+        "sales_2024": 43.006933,
+        "sales_2023": 36.083894,
+        "change_pct": 19.19,
+        "rank": 152
+    },
+    {
+        "name": "AVANZALIA ENERGIA COMERCIALIZADORA SA",
+        "sales_gwh": 42.980872,
+        "sales_2024": 42.980872,
+        "sales_2023": 46.929615,
+        "change_pct": -8.41,
+        "rank": 153
+    },
+    {
+        "name": "EVOLVE ENERGIA SL",
+        "sales_gwh": 41.66,
+        "sales_2024": 41.66,
+        "sales_2023": 28.6,
+        "change_pct": 45.66,
+        "rank": 154
+    },
+    {
+        "name": "ENERGÍA NÓRDICA GAS Y ELECTRICIDAD SLU",
+        "sales_gwh": 41.63346,
+        "sales_2024": 41.63346,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 155
+    },
+    {
+        "name": "DOMESTICA GAS Y ELECTRICIDAD, S.L.U.",
+        "sales_gwh": 40.810832,
+        "sales_2024": 40.810832,
+        "sales_2023": 27.08,
+        "change_pct": 50.7,
+        "rank": 156
+    },
+    {
+        "name": "ALQUILER SEGURO ENERGÍA SA",
+        "sales_gwh": 39.815421,
+        "sales_2024": 39.815421,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 157
+    },
+    {
+        "name": "COOP ELECTRICA BENEF SAN FRANCISCO DE ASIS S. COOP",
+        "sales_gwh": 39.183974,
+        "sales_2024": 39.183974,
+        "sales_2023": 38.90673,
+        "change_pct": 0.71,
+        "rank": 158
+    },
+    {
+        "name": "VIVO ENERGIA FUTURA SA",
+        "sales_gwh": 38.7898,
+        "sales_2024": 38.7898,
+        "sales_2023": 52.175,
+        "change_pct": -25.65,
+        "rank": 159
+    },
+    {
+        "name": "DRK ENERGIA S.L.",
+        "sales_gwh": 38.271089,
+        "sales_2024": 38.271089,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 160
+    },
+    {
+        "name": "ELEGA ENERGIA SL",
+        "sales_gwh": 38.239605,
+        "sales_2024": 38.239605,
+        "sales_2023": 22.507509,
+        "change_pct": 69.9,
+        "rank": 161
+    },
+    {
+        "name": "ACENHOL ENERGIA SL",
+        "sales_gwh": 36.125801,
+        "sales_2024": 36.125801,
+        "sales_2023": 10.56741,
+        "change_pct": 241.86,
+        "rank": 162
+    },
+    {
+        "name": "LUZY ENERGIA RENOVABLE, S.L.",
+        "sales_gwh": 35.595,
+        "sales_2024": 35.595,
+        "sales_2023": 14.174467,
+        "change_pct": 151.12,
+        "rank": 163
+    },
+    {
+        "name": "CAPWATT COMERCIAL SLU",
+        "sales_gwh": 35.097181,
+        "sales_2024": 35.097181,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 164
+    },
+    {
+        "name": "MASQLUZ 2020, S.L.",
+        "sales_gwh": 35.085962,
+        "sales_2024": 35.085962,
+        "sales_2023": 63.656,
+        "change_pct": -44.88,
+        "rank": 165
+    },
+    {
+        "name": "AUSARTA PRIMA SL.",
+        "sales_gwh": 33.651687,
+        "sales_2024": 33.651687,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 166
+    },
+    {
+        "name": "LABOIL ENERGIA SOCIEDAD LIMITADA",
+        "sales_gwh": 32.82054,
+        "sales_2024": 32.82054,
+        "sales_2023": 23.08707,
+        "change_pct": 42.16,
+        "rank": 167
+    },
+    {
+        "name": "ABOUTWHITE SL",
+        "sales_gwh": 32.323094,
+        "sales_2024": 32.323094,
+        "sales_2023": 28.046467,
+        "change_pct": 15.25,
+        "rank": 168
+    },
+    {
+        "name": "ACCIONA COMERCIALIZADORA B2C, S.L.",
+        "sales_gwh": 32.31116,
+        "sales_2024": 32.31116,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 169
+    },
+    {
+        "name": "ELEVA 2 COMERCIALIZADORA SL",
+        "sales_gwh": 32.275798,
+        "sales_2024": 32.275798,
+        "sales_2023": 25.722306,
+        "change_pct": 25.48,
+        "rank": 170
+    },
+    {
+        "name": "WEKIWI SL",
+        "sales_gwh": 31.565608,
+        "sales_2024": 31.565608,
+        "sales_2023": 4.2312,
+        "change_pct": 646.02,
+        "rank": 171
+    },
+    {
+        "name": "ENERGY TRADER SOLUTIONS SL",
+        "sales_gwh": 31.143192,
+        "sales_2024": 31.143192,
+        "sales_2023": 36.727842,
+        "change_pct": -15.21,
+        "rank": 172
+    },
+    {
+        "name": "COMERCIALIZADORA DE ENERGIA DIRECTA SL",
+        "sales_gwh": 31.0658,
+        "sales_2024": 31.0658,
+        "sales_2023": 23.88,
+        "change_pct": 30.09,
+        "rank": 173
+    },
+    {
+        "name": "DAIMUZ ENERGIA SOCIEDAD LIMITADA",
+        "sales_gwh": 29.4702,
+        "sales_2024": 29.4702,
+        "sales_2023": 27.181689,
+        "change_pct": 8.42,
+        "rank": 174
+    },
+    {
+        "name": "ACSOL ENERGIA GLOBAL SA",
+        "sales_gwh": 28.673796,
+        "sales_2024": 28.673796,
+        "sales_2023": 31.831,
+        "change_pct": -9.92,
+        "rank": 175
+    },
+    {
+        "name": "ENERGIA ECOLOGICA ECONOMICA S L",
+        "sales_gwh": 28.03128,
+        "sales_2024": 28.03128,
+        "sales_2023": 26.813,
+        "change_pct": 4.54,
+        "rank": 176
+    },
+    {
+        "name": "ELECNOVA SIGLO XXI SL",
+        "sales_gwh": 28.017941,
+        "sales_2024": 28.017941,
+        "sales_2023": 14.891359,
+        "change_pct": 88.15,
+        "rank": 177
+    },
+    {
+        "name": "IM3 ENERGIA SL",
+        "sales_gwh": 27.560329,
+        "sales_2024": 27.560329,
+        "sales_2023": 16.289872,
+        "change_pct": 69.19,
+        "rank": 178
+    },
+    {
+        "name": "MULTIENERGÍAS MLC SL",
+        "sales_gwh": 25.623161,
+        "sales_2024": 25.623161,
+        "sales_2023": 32.130333,
+        "change_pct": -20.25,
+        "rank": 179
+    },
+    {
+        "name": "ELECTRA ALTO MIÑO COMERCIALIZADORA DE ENERGÍA S.L.U.",
+        "sales_gwh": 24.05,
+        "sales_2024": 24.05,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 180
+    },
+    {
+        "name": "PROT ENERGIA COMERCIALIZACION SL",
+        "sales_gwh": 23.715421,
+        "sales_2024": 23.715421,
+        "sales_2023": 22.978251,
+        "change_pct": 3.21,
+        "rank": 181
+    },
+    {
+        "name": "JUAN ENERGY SL",
+        "sales_gwh": 23.692935,
+        "sales_2024": 23.692935,
+        "sales_2023": 21.659,
+        "change_pct": 9.39,
+        "rank": 182
+    },
+    {
+        "name": "AHORA LUZ ENERGIA SOCIEDAD LIMITADA",
+        "sales_gwh": 23.562923,
+        "sales_2024": 23.562923,
+        "sales_2023": 8.11,
+        "change_pct": 190.54,
+        "rank": 183
+    },
+    {
+        "name": "INICIATIVA E.NOVA SLU",
+        "sales_gwh": 23.4132,
+        "sales_2024": 23.4132,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 184
+    },
+    {
+        "name": "ELECTRA DEL CARDENER ENERGIA SA",
+        "sales_gwh": 22.10013,
+        "sales_2024": 22.10013,
+        "sales_2023": 22.1851,
+        "change_pct": -0.38,
+        "rank": 185
+    },
+    {
+        "name": "EVERGREEN ELECTRICA SL",
+        "sales_gwh": 21.08105,
+        "sales_2024": 21.08105,
+        "sales_2023": 27.200161,
+        "change_pct": -22.5,
+        "rank": 186
+    },
+    {
+        "name": "ELECTED ENERGY SOCIEDAD LIMITADA",
+        "sales_gwh": 20.757,
+        "sales_2024": 20.757,
+        "sales_2023": 14.823,
+        "change_pct": 40.03,
+        "rank": 187
+    },
+    {
+        "name": "TUNERGIA EFICIENCIA ENERGETICA Y RENOVABLE SOCIEDAD\nLIMITADA",
+        "sales_gwh": 20.610162,
+        "sales_2024": 20.610162,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 188
+    },
+    {
+        "name": "ADURIZ ENERGIA SL",
+        "sales_gwh": 20.48357,
+        "sales_2024": 20.48357,
+        "sales_2023": 19.88798,
+        "change_pct": 2.99,
+        "rank": 189
+    },
+    {
+        "name": "NEXT ENERGIA XXI SL",
+        "sales_gwh": 19.935077,
+        "sales_2024": 19.935077,
+        "sales_2023": 2.276287,
+        "change_pct": 775.77,
+        "rank": 190
+    },
+    {
+        "name": "AMPERIOS ENERGY TRADE S.L.",
+        "sales_gwh": 19.817621,
+        "sales_2024": 19.817621,
+        "sales_2023": 1.922339,
+        "change_pct": 930.91,
+        "rank": 191
+    },
+    {
+        "name": "ENERGYSAVE PROJECTS SL",
+        "sales_gwh": 19.791118,
+        "sales_2024": 19.791118,
+        "sales_2023": 7.451291,
+        "change_pct": 165.61,
+        "rank": 192
+    },
+    {
+        "name": "SUNAIR ONE ENERGY SOCIEDAD LIMITADA",
+        "sales_gwh": 19.13,
+        "sales_2024": 19.13,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 193
+    },
+    {
+        "name": "EKHINEO ENERGIA SL",
+        "sales_gwh": 19.055423,
+        "sales_2024": 19.055423,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 194
+    },
+    {
+        "name": "COMERCIALIZADORA LERSA, S.L.",
+        "sales_gwh": 18.837163,
+        "sales_2024": 18.837163,
+        "sales_2023": 17.347528,
+        "change_pct": 8.59,
+        "rank": 195
+    },
+    {
+        "name": "TU ELECTRICA SL",
+        "sales_gwh": 17.989919,
+        "sales_2024": 17.989919,
+        "sales_2023": 3.198167,
+        "change_pct": 462.51,
+        "rank": 196
+    },
+    {
+        "name": "INTELIGENCIA PARA EL AHORRO ENERGETICO, SOCIEDAD\nLIMITADA",
+        "sales_gwh": 17.9,
+        "sales_2024": 17.9,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 197
+    },
+    {
+        "name": "CIMA ENERGIA COMERCIALIZADORA SL",
+        "sales_gwh": 17.758444,
+        "sales_2024": 17.758444,
+        "sales_2023": 19.693,
+        "change_pct": -9.82,
+        "rank": 198
+    },
+    {
+        "name": "QUANTIUM LUX 6.4 SL",
+        "sales_gwh": 17.70031,
+        "sales_2024": 17.70031,
+        "sales_2023": 5.63812,
+        "change_pct": 213.94,
+        "rank": 199
+    },
+    {
+        "name": "EBROENERGIA COMERCIALIZADORA, S.L.",
+        "sales_gwh": 17.414,
+        "sales_2024": 17.414,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 200
+    },
+    {
+        "name": "NUEVA COMERCIALIZADORA ESPAÑOLA SOCIEDAD LIMITADA",
+        "sales_gwh": 17.14381,
+        "sales_2024": 17.14381,
+        "sales_2023": 11.20995,
+        "change_pct": 52.93,
+        "rank": 201
+    },
+    {
+        "name": "GURBTEC ENERGIA, S.L.",
+        "sales_gwh": 17.064,
+        "sales_2024": 17.064,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 202
+    },
+    {
+        "name": "HOY ENERGIA SOCIEDAD LIMITADA",
+        "sales_gwh": 16.97088,
+        "sales_2024": 16.97088,
+        "sales_2023": 7.91319,
+        "change_pct": 114.46,
+        "rank": 203
+    },
+    {
+        "name": "HIDROELECTRICA LUMYMEY SL",
+        "sales_gwh": 16.89,
+        "sales_2024": 16.89,
+        "sales_2023": 15.38,
+        "change_pct": 9.82,
+        "rank": 204
+    },
+    {
+        "name": "EKILUZ ENERGIA COMERCIALIZADORA SL.",
+        "sales_gwh": 16.882316,
+        "sales_2024": 16.882316,
+        "sales_2023": 0.660874,
+        "change_pct": 2454.54,
+        "rank": 205
+    },
+    {
+        "name": "ASTRALCAD ENERGIA SL",
+        "sales_gwh": 16.474612,
+        "sales_2024": 16.474612,
+        "sales_2023": 10.036355,
+        "change_pct": 64.15,
+        "rank": 206
+    },
+    {
+        "name": "RELUZCA ENERGÍA S.L.",
+        "sales_gwh": 16.454937,
+        "sales_2024": 16.454937,
+        "sales_2023": 16.683351,
+        "change_pct": -1.37,
+        "rank": 207
+    },
+    {
+        "name": "HELIOS ENERGÍA INTELIGENTE, S.L.",
+        "sales_gwh": 16.205,
+        "sales_2024": 16.205,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 208
+    },
+    {
+        "name": "ELECTRACOMERCIAL CENTELLES SLU",
+        "sales_gwh": 16.082458,
+        "sales_2024": 16.082458,
+        "sales_2023": 14.593854,
+        "change_pct": 10.2,
+        "rank": 209
+    },
+    {
+        "name": "BEROIL ENERGIA ELÉCTRICA SL",
+        "sales_gwh": 15.897021,
+        "sales_2024": 15.897021,
+        "sales_2023": 6.307982,
+        "change_pct": 152.01,
+        "rank": 210
+    },
+    {
+        "name": "ENERFIA, SOCIEDAD LIMITADA",
+        "sales_gwh": 15.455009,
+        "sales_2024": 15.455009,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 211
+    },
+    {
+        "name": "COMPAÑIA LUMISA ENERGIAS SL",
+        "sales_gwh": 14.967,
+        "sales_2024": 14.967,
+        "sales_2023": 14.277,
+        "change_pct": 4.83,
+        "rank": 212
+    },
+    {
+        "name": "ELECTRA AVELLANA COMERCIAL, SL",
+        "sales_gwh": 14.605313,
+        "sales_2024": 14.605313,
+        "sales_2023": 17.4788,
+        "change_pct": -16.44,
+        "rank": 213
+    },
+    {
+        "name": "REUS SERVEIS MUNICIPALS SA",
+        "sales_gwh": 14.263561,
+        "sales_2024": 14.263561,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 214
+    },
+    {
+        "name": "ENERGETICA DEL ESTE SOCIEDAD LIMITADA",
+        "sales_gwh": 14.0,
+        "sales_2024": 14.0,
+        "sales_2023": 3.27,
+        "change_pct": 328.13,
+        "rank": 215
+    },
+    {
+        "name": "ADS ENERGIA AUDITORES Y CONSULTORES S.L.",
+        "sales_gwh": 13.927716,
+        "sales_2024": 13.927716,
+        "sales_2023": 3.13314,
+        "change_pct": 344.53,
+        "rank": 216
+    },
+    {
+        "name": "SISTEMAS URBANOS DE ENERGIAS RENOVABLES SOCIEDAD\nLIMITADA",
+        "sales_gwh": 13.719,
+        "sales_2024": 13.719,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 217
+    },
+    {
+        "name": "HIDROELECTRICA DE SILLEDA COMERCIALIZADORA S L",
+        "sales_gwh": 13.520589,
+        "sales_2024": 13.520589,
+        "sales_2023": 10.17351,
+        "change_pct": 32.9,
+        "rank": 218
+    },
+    {
+        "name": "WATIO WHOLESALE SL",
+        "sales_gwh": 13.201402,
+        "sales_2024": 13.201402,
+        "sales_2023": 12.84485,
+        "change_pct": 2.78,
+        "rank": 219
+    },
+    {
+        "name": "ENERGY PLUS IBERIA, SL",
+        "sales_gwh": 13.090925,
+        "sales_2024": 13.090925,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 220
+    },
+    {
+        "name": "EPRESA ENERGÍA S.A.U.",
+        "sales_gwh": 12.601141,
+        "sales_2024": 12.601141,
+        "sales_2023": 13.049561,
+        "change_pct": -3.44,
+        "rank": 221
+    },
+    {
+        "name": "MULTIENERGIA VERDE SOCIEDAD LIMITADA",
+        "sales_gwh": 12.6,
+        "sales_2024": 12.6,
+        "sales_2023": 14.0,
+        "change_pct": -10.0,
+        "rank": 222
+    },
+    {
+        "name": "SOLWE ENERGIA SOCIEDAD LIMITADA",
+        "sales_gwh": 12.102709,
+        "sales_2024": 12.102709,
+        "sales_2023": 7.547077,
+        "change_pct": 60.36,
+        "rank": 223
+    },
+    {
+        "name": "HIDROELECTRICA EL CARMEN ENERGIA SL",
+        "sales_gwh": 12.045637,
+        "sales_2024": 12.045637,
+        "sales_2023": 11.719225,
+        "change_pct": 2.79,
+        "rank": 224
+    },
+    {
+        "name": "SUMINISTROS ESPECIALES ALGINETENSE SDADCOOP",
+        "sales_gwh": 11.954553,
+        "sales_2024": 11.954553,
+        "sales_2023": 10.830092,
+        "change_pct": 10.38,
+        "rank": 225
+    },
+    {
+        "name": "QUASAR ENERGIA SL",
+        "sales_gwh": 11.071952,
+        "sales_2024": 11.071952,
+        "sales_2023": 8.00993,
+        "change_pct": 38.23,
+        "rank": 226
+    },
+    {
+        "name": "ENERGY BY COGEN SL",
+        "sales_gwh": 11.0678,
+        "sales_2024": 11.0678,
+        "sales_2023": 13.05,
+        "change_pct": -15.19,
+        "rank": 227
+    },
+    {
+        "name": "ACTIVA COMERCIALIZADORA DE ENERGIA SOCIEDAD LIMITADA",
+        "sales_gwh": 11.04032,
+        "sales_2024": 11.04032,
+        "sales_2023": 7.73861,
+        "change_pct": 42.67,
+        "rank": 228
+    },
+    {
+        "name": "ELECTRICITAT D'ALMENAR S.L.U.",
+        "sales_gwh": 11.0,
+        "sales_2024": 11.0,
+        "sales_2023": 8.0,
+        "change_pct": 37.5,
+        "rank": 229
+    },
+    {
+        "name": "SOCIEDAD ARAGONESA DE COMERCIALIZACION DE ENERGIA\nSL",
+        "sales_gwh": 10.54866,
+        "sales_2024": 10.54866,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 230
+    },
+    {
+        "name": "DIVICONSULTING ENERGIA SOCIEDAD LIMITADA",
+        "sales_gwh": 10.472113,
+        "sales_2024": 10.472113,
+        "sales_2023": 8.89644,
+        "change_pct": 17.71,
+        "rank": 231
+    },
+    {
+        "name": "CLEARVIEW ENERGY S.L.",
+        "sales_gwh": 10.4615,
+        "sales_2024": 10.4615,
+        "sales_2023": 1.7709,
+        "change_pct": 490.74,
+        "rank": 232
+    },
+    {
+        "name": "ELECTRICA DE CALLOSA DE SEGURA COOP V",
+        "sales_gwh": 9.500419,
+        "sales_2024": 9.500419,
+        "sales_2023": 9.362603,
+        "change_pct": 1.47,
+        "rank": 233
+    },
+    {
+        "name": "MEGARA ENERGIA SOC COOP",
+        "sales_gwh": 8.86954,
+        "sales_2024": 8.86954,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 234
+    },
+    {
+        "name": "GABA COMERCIALIZADORA DE ELECTRICIDAD, S.L.",
+        "sales_gwh": 8.802623,
+        "sales_2024": 8.802623,
+        "sales_2023": 3.24522,
+        "change_pct": 171.25,
+        "rank": 235
+    },
+    {
+        "name": "SAMPOL INGENIERIA Y OBRAS SA",
+        "sales_gwh": 8.61986,
+        "sales_2024": 8.61986,
+        "sales_2023": 14.480686,
+        "change_pct": -40.47,
+        "rank": 236
+    },
+    {
+        "name": "COOP. ELECTRICA BENEFICA ALBATERENSE COOPV",
+        "sales_gwh": 8.611605,
+        "sales_2024": 8.611605,
+        "sales_2023": 7.81547,
+        "change_pct": 10.19,
+        "rank": 237
+    },
+    {
+        "name": "AED ENERGIA ELECTRICA SL",
+        "sales_gwh": 8.6062,
+        "sales_2024": 8.6062,
+        "sales_2023": 1.759922,
+        "change_pct": 389.01,
+        "rank": 238
+    },
+    {
+        "name": "LA VALL COMERCIALIZAODRA ELECTRICA SL",
+        "sales_gwh": 8.588696,
+        "sales_2024": 8.588696,
+        "sales_2023": 8.673771,
+        "change_pct": -0.98,
+        "rank": 239
+    },
+    {
+        "name": "GNERA ENERGIA Y TECNOLOGIA SOCIEDAD LIMITADA",
+        "sales_gwh": 8.587,
+        "sales_2024": 8.587,
+        "sales_2023": 7.3318,
+        "change_pct": 17.12,
+        "rank": 240
+    },
+    {
+        "name": "E-LUZ ENERGY SOLUTIONS SL",
+        "sales_gwh": 8.39,
+        "sales_2024": 8.39,
+        "sales_2023": 2.888,
+        "change_pct": 190.51,
+        "rank": 241
+    },
+    {
+        "name": "ECOVERGY RENOVABLES S.L.",
+        "sales_gwh": 8.215056,
+        "sales_2024": 8.215056,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 242
+    },
+    {
+        "name": "ELECBALEAR,S.L.",
+        "sales_gwh": 8.19457,
+        "sales_2024": 8.19457,
+        "sales_2023": 5.32047,
+        "change_pct": 54.02,
+        "rank": 243
+    },
+    {
+        "name": "SERVICIOS ENERGETICOS AVANZADOS SL",
+        "sales_gwh": 7.922671,
+        "sales_2024": 7.922671,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 244
+    },
+    {
+        "name": "ENERGÍA CEUTA XXI COMERCIALIZADORA DE REFERENCIA,\nS.A.U.",
+        "sales_gwh": 7.442394,
+        "sales_2024": 7.442394,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 245
+    },
+    {
+        "name": "TELEFONICA SOLUCIONES DE INFORMATICA Y\nCOMUNICACIONES DE ESPAÑA SAU",
+        "sales_gwh": 7.366093,
+        "sales_2024": 7.366093,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 246
+    },
+    {
+        "name": "LUZ SOLIDARIA, S.L.",
+        "sales_gwh": 7.284799,
+        "sales_2024": 7.284799,
+        "sales_2023": 4.447798,
+        "change_pct": 63.78,
+        "rank": 247
+    },
+    {
+        "name": "SUN POWER SPAIN 365 S.L.",
+        "sales_gwh": 7.244359,
+        "sales_2024": 7.244359,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 248
+    },
+    {
+        "name": "ELECTRICA DE GUADASSUAR COOP. V.",
+        "sales_gwh": 7.218609,
+        "sales_2024": 7.218609,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 249
+    },
+    {
+        "name": "ELECTRICA VAQUER ENERGIA SAU",
+        "sales_gwh": 6.992014,
+        "sales_2024": 6.992014,
+        "sales_2023": 6.6388490000000004,
+        "change_pct": 5.32,
+        "rank": 250
+    },
+    {
+        "name": "GODAY ENERGIA, S.L.",
+        "sales_gwh": 6.90339,
+        "sales_2024": 6.90339,
+        "sales_2023": 6.766,
+        "change_pct": 2.03,
+        "rank": 251
+    },
+    {
+        "name": "ELECTRICA ANTONIO MADRID, SL",
+        "sales_gwh": 6.687632,
+        "sales_2024": 6.687632,
+        "sales_2023": 3.2472,
+        "change_pct": 105.95,
+        "rank": 252
+    },
+    {
+        "name": "ADS ENERGY 8.0 SL",
+        "sales_gwh": 6.5849,
+        "sales_2024": 6.5849,
+        "sales_2023": 9.36,
+        "change_pct": -29.65,
+        "rank": 253
+    },
+    {
+        "name": "SIESTA GREEN ENERGY SL",
+        "sales_gwh": 6.516511,
+        "sales_2024": 6.516511,
+        "sales_2023": 7.364563,
+        "change_pct": -11.52,
+        "rank": 254
+    },
+    {
+        "name": "COMERCIALITZADORA TORRES ENERGIA SL",
+        "sales_gwh": 6.47,
+        "sales_2024": 6.47,
+        "sales_2023": 6.44,
+        "change_pct": 0.47,
+        "rank": 255
+    },
+    {
+        "name": "EFI DUERO ENERGY SOCIEDAD COOP EUROPEA LIMITADA",
+        "sales_gwh": 6.380737,
+        "sales_2024": 6.380737,
+        "sales_2023": 5.885545,
+        "change_pct": 8.41,
+        "rank": 256
+    },
+    {
+        "name": "ELECTRICA BENASQUE SLU",
+        "sales_gwh": 6.30942,
+        "sales_2024": 6.30942,
+        "sales_2023": 5.82963,
+        "change_pct": 8.23,
+        "rank": 257
+    },
+    {
+        "name": "ELECTRA NORTE ENERGIA, SA",
+        "sales_gwh": 6.277687,
+        "sales_2024": 6.277687,
+        "sales_2023": 6.118406,
+        "change_pct": 2.6,
+        "rank": 258
+    },
+    {
+        "name": "ENERGAZE S.L.",
+        "sales_gwh": 6.1022,
+        "sales_2024": 6.1022,
+        "sales_2023": 0.121,
+        "change_pct": 4943.14,
+        "rank": 259
+    },
+    {
+        "name": "ELECTRICA SERRANIA DE RONDA ENERGIA SL",
+        "sales_gwh": 5.930104,
+        "sales_2024": 5.930104,
+        "sales_2023": 6.005665,
+        "change_pct": -1.26,
+        "rank": 260
+    },
+    {
+        "name": "KILOWATIOS VERDES SOCIEDAD LIMITADA",
+        "sales_gwh": 5.889104,
+        "sales_2024": 5.889104,
+        "sales_2023": 4.90023,
+        "change_pct": 20.18,
+        "rank": 261
+    },
+    {
+        "name": "GESTINER INGENIEROS SL",
+        "sales_gwh": 5.883303,
+        "sales_2024": 5.883303,
+        "sales_2023": 6.218415,
+        "change_pct": -5.39,
+        "rank": 262
+    },
+    {
+        "name": "ENERGIAS DE PANTICOSA COMERCIALIZADORA SL",
+        "sales_gwh": 5.832118,
+        "sales_2024": 5.832118,
+        "sales_2023": 5.522532,
+        "change_pct": 5.61,
+        "rank": 263
+    },
+    {
+        "name": "VIRGIN ELECTRIC SL",
+        "sales_gwh": 5.826079,
+        "sales_2024": 5.826079,
+        "sales_2023": 4.541797,
+        "change_pct": 28.28,
+        "rank": 264
+    },
+    {
+        "name": "RONDA OESTE ENERGIA SL",
+        "sales_gwh": 5.77813,
+        "sales_2024": 5.77813,
+        "sales_2023": 6.78757,
+        "change_pct": -14.87,
+        "rank": 265
+    },
+    {
+        "name": "VIVA ENERGIA Y SOLUCIONES SL",
+        "sales_gwh": 5.68387,
+        "sales_2024": 5.68387,
+        "sales_2023": 6.09958,
+        "change_pct": -6.82,
+        "rank": 266
+    },
+    {
+        "name": "ELECTRA CUNTIENSE COMERCIALIZADORA SLU",
+        "sales_gwh": 5.66425,
+        "sales_2024": 5.66425,
+        "sales_2023": 5.777971,
+        "change_pct": -1.97,
+        "rank": 267
+    },
+    {
+        "name": "ELECTRICA NUESTRA SEÑORA DE GRACIA SOC. COOP. V.",
+        "sales_gwh": 5.528945,
+        "sales_2024": 5.528945,
+        "sales_2023": 5.285535,
+        "change_pct": 4.61,
+        "rank": 268
+    },
+    {
+        "name": "LIBERA ENERGIAS RENOVABLES, SOCIEDAD LIMITADA",
+        "sales_gwh": 5.47,
+        "sales_2024": 5.47,
+        "sales_2023": 2.93,
+        "change_pct": 86.69,
+        "rank": 269
+    },
+    {
+        "name": "GERENTA ENERGÍA, S.L.U.",
+        "sales_gwh": 5.459,
+        "sales_2024": 5.459,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 270
+    },
+    {
+        "name": "SUCA SDAD COOP ANDALUZA",
+        "sales_gwh": 5.44783,
+        "sales_2024": 5.44783,
+        "sales_2023": 4.87801,
+        "change_pct": 11.68,
+        "rank": 271
+    },
+    {
+        "name": "COOPERATIVA ELECTRICA DE CASTELLAR, SOCIEDAD\nCOOPERATIVA VALENCIANA",
+        "sales_gwh": 5.426203,
+        "sales_2024": 5.426203,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 272
+    },
+    {
+        "name": "CRECE SOLUCIONES DE ENERGIA SOCIEDAD LIMITADA",
+        "sales_gwh": 5.304499,
+        "sales_2024": 5.304499,
+        "sales_2023": 2.500403,
+        "change_pct": 112.15,
+        "rank": 273
+    },
+    {
+        "name": "OLIVIA COMERCIALIZADORA SL",
+        "sales_gwh": 5.2777,
+        "sales_2024": 5.2777,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 274
+    },
+    {
+        "name": "KODL CAPITAL SOCIEDAD LIMITADA",
+        "sales_gwh": 5.21811,
+        "sales_2024": 5.21811,
+        "sales_2023": 3.91701,
+        "change_pct": 33.22,
+        "rank": 275
+    },
+    {
+        "name": "CANARIAS LUZ ENERGIA RENOVABLE, SOCIEDAD LIMITADA",
+        "sales_gwh": 5.01668,
+        "sales_2024": 5.01668,
+        "sales_2023": 4.71447,
+        "change_pct": 6.41,
+        "rank": 276
+    },
+    {
+        "name": "ELECTRICA DE MELIANA SDAD COOP VALENCIANA",
+        "sales_gwh": 4.994839,
+        "sales_2024": 4.994839,
+        "sales_2023": 5.122135,
+        "change_pct": -2.49,
+        "rank": 277
+    },
+    {
+        "name": "EPAC SOLUCIONES ENERGETICAS SOCIEDAD LIMITADA",
+        "sales_gwh": 4.89,
+        "sales_2024": 4.89,
+        "sales_2023": 3.8,
+        "change_pct": 28.68,
+        "rank": 278
+    },
+    {
+        "name": "KISHOA, S.L.",
+        "sales_gwh": 4.68,
+        "sales_2024": 4.68,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 279
+    },
+    {
+        "name": "CATRALENSE COOP ELECTRICA BENEFICA",
+        "sales_gwh": 4.669495,
+        "sales_2024": 4.669495,
+        "sales_2023": 5.877814,
+        "change_pct": -20.56,
+        "rank": 280
+    },
+    {
+        "name": "CREAENERGIA ECO SL",
+        "sales_gwh": 4.59976,
+        "sales_2024": 4.59976,
+        "sales_2023": 0.16812,
+        "change_pct": 2636.0,
+        "rank": 281
+    },
+    {
+        "name": "Tensina de Energía y Servicios",
+        "sales_gwh": 4.577129,
+        "sales_2024": 4.577129,
+        "sales_2023": 4.5922,
+        "change_pct": -0.33,
+        "rank": 282
+    },
+    {
+        "name": "FLUID ELECTRIC CAMPRODON II, SL",
+        "sales_gwh": 4.516,
+        "sales_2024": 4.516,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 283
+    },
+    {
+        "name": "BSG ENERGIA SL",
+        "sales_gwh": 4.509,
+        "sales_2024": 4.509,
+        "sales_2023": 3.3,
+        "change_pct": 36.64,
+        "rank": 284
+    },
+    {
+        "name": "COMERCIALIZADORA ELECTRICA COMUNIDAD SOLAR S.L.",
+        "sales_gwh": 4.417106,
+        "sales_2024": 4.417106,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 285
+    },
+    {
+        "name": "ENDI ENERGY TRADING SOCIEDAD LIMITADA",
+        "sales_gwh": 4.37608,
+        "sales_2024": 4.37608,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 286
+    },
+    {
+        "name": "LABOR SOLIS COMERCIALIZADORA DE ENERGIA SL",
+        "sales_gwh": 4.336729,
+        "sales_2024": 4.336729,
+        "sales_2023": 0.752813,
+        "change_pct": 476.07,
+        "rank": 287
+    },
+    {
+        "name": "NOSA ENERXIA SOC COOPERATIVA GALEGA",
+        "sales_gwh": 4.145363,
+        "sales_2024": 4.145363,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 288
+    },
+    {
+        "name": "ELECTRICA MUNICIPAL DE SANTA COLOMA DE QUERALT\nCOMERCIALITZADORA SL",
+        "sales_gwh": 3.924629,
+        "sales_2024": 3.924629,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 289
+    },
+    {
+        "name": "FLUIDO ELECTRICO MUSEROS SDAD COOP VACIANA",
+        "sales_gwh": 3.889,
+        "sales_2024": 3.889,
+        "sales_2023": 4.17,
+        "change_pct": -6.74,
+        "rank": 290
+    },
+    {
+        "name": "ELECTRICA DEL POZO S COOP MAD",
+        "sales_gwh": 3.693,
+        "sales_2024": 3.693,
+        "sales_2023": 3.727,
+        "change_pct": -0.91,
+        "rank": 291
+    },
+    {
+        "name": "COMPAÑIA DEL SOL DE ELECTRICIDAD S.L.",
+        "sales_gwh": 3.680285,
+        "sales_2024": 3.680285,
+        "sales_2023": 3.62466,
+        "change_pct": 1.53,
+        "rank": 292
+    },
+    {
+        "name": "GERENCIA ENERGÉTICA",
+        "sales_gwh": 3.56961,
+        "sales_2024": 3.56961,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 293
+    },
+    {
+        "name": "ELECTRICA DE VINALESA SDAD COOP VALENCIANA",
+        "sales_gwh": 3.395392,
+        "sales_2024": 3.395392,
+        "sales_2023": 3.460627,
+        "change_pct": -1.89,
+        "rank": 294
+    },
+    {
+        "name": "LA CORRIENTE SDAD COOP",
+        "sales_gwh": 3.2148,
+        "sales_2024": 3.2148,
+        "sales_2023": 2.629345,
+        "change_pct": 22.27,
+        "rank": 295
+    },
+    {
+        "name": "BARTER SHARING, S.L.",
+        "sales_gwh": 3.193333,
+        "sales_2024": 3.193333,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 296
+    },
+    {
+        "name": "AYLUZ COMERCIALIZADORA ELECTRICA, S. L.",
+        "sales_gwh": 3.136753,
+        "sales_2024": 3.136753,
+        "sales_2023": 2.876616,
+        "change_pct": 9.04,
+        "rank": 297
+    },
+    {
+        "name": "ANTEA ENERGIA COMERCIALIZADORA SL",
+        "sales_gwh": 3.11468,
+        "sales_2024": 3.11468,
+        "sales_2023": 3.75,
+        "change_pct": -16.94,
+        "rank": 298
+    },
+    {
+        "name": "ENERGIA OPERATIVA SL",
+        "sales_gwh": 2.989703,
+        "sales_2024": 2.989703,
+        "sales_2023": 2.785476,
+        "change_pct": 7.33,
+        "rank": 299
+    },
+    {
+        "name": "ACENHOL ENERGIA CANARIAS, S.L",
+        "sales_gwh": 2.978964,
+        "sales_2024": 2.978964,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 300
+    },
+    {
+        "name": "SOLABRIA S.COOP.",
+        "sales_gwh": 2.977028,
+        "sales_2024": 2.977028,
+        "sales_2023": 2.887951,
+        "change_pct": 3.08,
+        "rank": 301
+    },
+    {
+        "name": "GALAPAGO ENERGIA S.L.",
+        "sales_gwh": 2.885339,
+        "sales_2024": 2.885339,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 302
+    },
+    {
+        "name": "ELECTRICA CATRALENSE SL",
+        "sales_gwh": 2.866922,
+        "sales_2024": 2.866922,
+        "sales_2023": 1.569379,
+        "change_pct": 82.68,
+        "rank": 303
+    },
+    {
+        "name": "ELECTRICA POPULAR, S. COOP. MAD.",
+        "sales_gwh": 2.84035,
+        "sales_2024": 2.84035,
+        "sales_2023": 2.612682,
+        "change_pct": 8.71,
+        "rank": 304
+    },
+    {
+        "name": "OCUO ENERGIA, S.L.U.",
+        "sales_gwh": 2.544597,
+        "sales_2024": 2.544597,
+        "sales_2023": 1.78252,
+        "change_pct": 42.75,
+        "rank": 305
+    },
+    {
+        "name": "RECICLAJES ECOLOGICOS CHANDUY",
+        "sales_gwh": 2.51279,
+        "sales_2024": 2.51279,
+        "sales_2023": 0.33169,
+        "change_pct": 657.57,
+        "rank": 306
+    },
+    {
+        "name": "VELETA ENERGIA SL",
+        "sales_gwh": 2.261354,
+        "sales_2024": 2.261354,
+        "sales_2023": 0.002839,
+        "change_pct": 79553.19,
+        "rank": 307
+    },
+    {
+        "name": "MUNICIPAL DE SERVICIOS VILLAHERMOSANA SL",
+        "sales_gwh": 2.234053,
+        "sales_2024": 2.234053,
+        "sales_2023": 2.160746,
+        "change_pct": 3.39,
+        "rank": 308
+    },
+    {
+        "name": "COMERCAST ENERGIAS SOCIEDAD LIMITADA",
+        "sales_gwh": 2.151687,
+        "sales_2024": 2.151687,
+        "sales_2023": 0.967635,
+        "change_pct": 122.37,
+        "rank": 309
+    },
+    {
+        "name": "ENERGIA COSTA DORADA SOCIEDAD LIMITADA",
+        "sales_gwh": 2.072937,
+        "sales_2024": 2.072937,
+        "sales_2023": 2.072937,
+        "change_pct": 0.0,
+        "rank": 310
+    },
+    {
+        "name": "ALTERNA OPERADOR INTEGRAL, S.L",
+        "sales_gwh": 2.071,
+        "sales_2024": 2.071,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 311
+    },
+    {
+        "name": "HIDROCARBUROS ALHAURIN SL",
+        "sales_gwh": 2.055426,
+        "sales_2024": 2.055426,
+        "sales_2023": 0.064348,
+        "change_pct": 3094.23,
+        "rank": 312
+    },
+    {
+        "name": "DINERGETICA 2050 SLU",
+        "sales_gwh": 2.054766,
+        "sales_2024": 2.054766,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 313
+    },
+    {
+        "name": "HAM POWER S.L.",
+        "sales_gwh": 2.0033,
+        "sales_2024": 2.0033,
+        "sales_2023": 1.50342,
+        "change_pct": 33.25,
+        "rank": 314
+    },
+    {
+        "name": "HELIA COOP V",
+        "sales_gwh": 1.907265,
+        "sales_2024": 1.907265,
+        "sales_2023": 1.641776,
+        "change_pct": 16.17,
+        "rank": 315
+    },
+    {
+        "name": "COMERCIALITZADORA ELECTRICA D'ALBATARREC SL",
+        "sales_gwh": 1.87694,
+        "sales_2024": 1.87694,
+        "sales_2023": 2.02641,
+        "change_pct": -7.38,
+        "rank": 316
+    },
+    {
+        "name": "SERMAT FUTURA 2019, S.L.",
+        "sales_gwh": 1.87,
+        "sales_2024": 1.87,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 317
+    },
+    {
+        "name": "COMERCIALITZADORA ELECTRICA DE MONTOLIU DE LLEIDA\nS.L.U",
+        "sales_gwh": 1.86313,
+        "sales_2024": 1.86313,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 318
+    },
+    {
+        "name": "LUX FORUM SL",
+        "sales_gwh": 1.84936,
+        "sales_2024": 1.84936,
+        "sales_2023": 2.89196,
+        "change_pct": -36.05,
+        "rank": 319
+    },
+    {
+        "name": "DX COMERCIALIZADORA ENERGETICA SA",
+        "sales_gwh": 1.82775,
+        "sales_2024": 1.82775,
+        "sales_2023": 4.27965,
+        "change_pct": -57.29,
+        "rank": 320
+    },
+    {
+        "name": "COMERCIAL Y ASESORA DE ELECTRICIDAD, S.L.",
+        "sales_gwh": 1.817,
+        "sales_2024": 1.817,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 321
+    },
+    {
+        "name": "IBERDESA COMERCIALIZADORA SOCIEDAD LIMITADA",
+        "sales_gwh": 1.81105,
+        "sales_2024": 1.81105,
+        "sales_2023": 1.048821,
+        "change_pct": 72.67,
+        "rank": 322
+    },
+    {
+        "name": "IMPERIUM LUMEN SA",
+        "sales_gwh": 1.80662,
+        "sales_2024": 1.80662,
+        "sales_2023": 0.32111,
+        "change_pct": 462.62,
+        "rank": 323
+    },
+    {
+        "name": "COLORS ENERGY, S.L.,",
+        "sales_gwh": 1.774485,
+        "sales_2024": 1.774485,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 324
+    },
+    {
+        "name": "KARMA ALIMUR SL",
+        "sales_gwh": 1.72452,
+        "sales_2024": 1.72452,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 325
+    },
+    {
+        "name": "ASSENN ENERGY S.L.",
+        "sales_gwh": 1.72127,
+        "sales_2024": 1.72127,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 326
+    },
+    {
+        "name": "ENERGIAS DE ESCARRILLA SL",
+        "sales_gwh": 1.668526,
+        "sales_2024": 1.668526,
+        "sales_2023": 1.536488,
+        "change_pct": 8.59,
+        "rank": 327
+    },
+    {
+        "name": "ALMA LUZ Y GAS, S.L.",
+        "sales_gwh": 1.587267,
+        "sales_2024": 1.587267,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 328
+    },
+    {
+        "name": "COMERCIALITZADORA ELECTRICA SUDANELL SL",
+        "sales_gwh": 1.57925,
+        "sales_2024": 1.57925,
+        "sales_2023": 1.70475,
+        "change_pct": -7.36,
+        "rank": 329
+    },
+    {
+        "name": "FIBERLUZ COMERCIALIZADORA SL",
+        "sales_gwh": 1.54,
+        "sales_2024": 1.54,
+        "sales_2023": 0.395843,
+        "change_pct": 289.04,
+        "rank": 330
+    },
+    {
+        "name": "DISTRIBUIDORA ELECTRICA DE CATOIRA SA",
+        "sales_gwh": 1.519,
+        "sales_2024": 1.519,
+        "sales_2023": 1.516,
+        "change_pct": 0.2,
+        "rank": 331
+    },
+    {
+        "name": "REYSE ENERGIA SL",
+        "sales_gwh": 1.455,
+        "sales_2024": 1.455,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 332
+    },
+    {
+        "name": "ELECTRICA ALGIMIA ALFARA SDAD COOP VALENCIANA",
+        "sales_gwh": 1.382,
+        "sales_2024": 1.382,
+        "sales_2023": 1.434,
+        "change_pct": -3.63,
+        "rank": 333
+    },
+    {
+        "name": "LUCIERNAGA ENERGIA SL",
+        "sales_gwh": 1.340829,
+        "sales_2024": 1.340829,
+        "sales_2023": 1.462228,
+        "change_pct": -8.3,
+        "rank": 334
+    },
+    {
+        "name": "TERAMELCOR SL",
+        "sales_gwh": 1.32859,
+        "sales_2024": 1.32859,
+        "sales_2023": 1.246392,
+        "change_pct": 6.59,
+        "rank": 335
+    },
+    {
+        "name": "SUMA ENERGIA COMERCIALIZADORA SL",
+        "sales_gwh": 1.27847,
+        "sales_2024": 1.27847,
+        "sales_2023": 0.56456,
+        "change_pct": 126.45,
+        "rank": 336
+    },
+    {
+        "name": "PONTS COMERCIALITZADORA MUNICIPAL D’ENERGIA\nELÈCTRICA, S.L.U",
+        "sales_gwh": 1.269,
+        "sales_2024": 1.269,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 337
+    },
+    {
+        "name": "CONSULTING AND MANAGEMENT GREEN ENERGY SOCIEDAD LIMITADA",
+        "sales_gwh": 1.260398,
+        "sales_2024": 1.260398,
+        "sales_2023": 0.091157,
+        "change_pct": 1282.67,
+        "rank": 338
+    },
+    {
+        "name": "SIRAX ENERGY SOCIEDAD LIMITADA",
+        "sales_gwh": 1.192,
+        "sales_2024": 1.192,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 339
+    },
+    {
+        "name": "ELECTRO DISTRBUIDORA DE FUERZA Y ALUMBRADO\nCASABLANCA S. COOP V.",
+        "sales_gwh": 1.186,
+        "sales_2024": 1.186,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 340
+    },
+    {
+        "name": "ZELTRIA ENERGIA SL",
+        "sales_gwh": 1.18,
+        "sales_2024": 1.18,
+        "sales_2023": 1.68,
+        "change_pct": -29.76,
+        "rank": 341
+    },
+    {
+        "name": "ENERGIAS DE LA VILLA DE CAMPO COMERCIALIZADORA, S.L.",
+        "sales_gwh": 1.164,
+        "sales_2024": 1.164,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 342
+    },
+    {
+        "name": "IBERICA IMPULSA SL",
+        "sales_gwh": 1.149545,
+        "sales_2024": 1.149545,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 343
+    },
+    {
+        "name": "PARATIENERGÍA S.L.",
+        "sales_gwh": 1.130221,
+        "sales_2024": 1.130221,
+        "sales_2023": 0.253409,
+        "change_pct": 346.01,
+        "rank": 344
+    },
+    {
+        "name": "ENERGY INTERSOL 15 SL",
+        "sales_gwh": 1.10883,
+        "sales_2024": 1.10883,
+        "sales_2023": 3.49593,
+        "change_pct": -68.28,
+        "rank": 345
+    },
+    {
+        "name": "WIBERLUZYGAS SOCIEDAD LIMITADA",
+        "sales_gwh": 1.02894,
+        "sales_2024": 1.02894,
+        "sales_2023": 0.77139,
+        "change_pct": 33.39,
+        "rank": 346
+    },
+    {
+        "name": "MOVIER ENERGIA SOSTENIBLE SL",
+        "sales_gwh": 0.956927,
+        "sales_2024": 0.956927,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 347
+    },
+    {
+        "name": "SUNAIR ONE HOME SL",
+        "sales_gwh": 0.947,
+        "sales_2024": 0.947,
+        "sales_2023": 1.034,
+        "change_pct": -8.41,
+        "rank": 348
+    },
+    {
+        "name": "ENERGIAREA EUROPE S.L.",
+        "sales_gwh": 0.944578,
+        "sales_2024": 0.944578,
+        "sales_2023": 0.208278,
+        "change_pct": 353.52,
+        "rank": 349
+    },
+    {
+        "name": "NORTELECTRICA ENERGIA SL",
+        "sales_gwh": 0.94092,
+        "sales_2024": 0.94092,
+        "sales_2023": 0.71281,
+        "change_pct": 32.0,
+        "rank": 350
+    },
+    {
+        "name": "COMERCIALIZADORA ENERGÉTICA SOSTENIBLE SOCIDAD\nANÓNIMA",
+        "sales_gwh": 0.871731,
+        "sales_2024": 0.871731,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 351
+    },
+    {
+        "name": "ENERGIAS ZINQUETA COMERCIALIZADORA SLU",
+        "sales_gwh": 0.84983,
+        "sales_2024": 0.84983,
+        "sales_2023": 0.82516,
+        "change_pct": 2.99,
+        "rank": 352
+    },
+    {
+        "name": "CORPOLUX SL",
+        "sales_gwh": 0.824418,
+        "sales_2024": 0.824418,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 353
+    },
+    {
+        "name": "COMERCIALIZADORA ELECTRICA TALAYUELAS SL",
+        "sales_gwh": 0.819175,
+        "sales_2024": 0.819175,
+        "sales_2023": 0.864481,
+        "change_pct": -5.24,
+        "rank": 354
+    },
+    {
+        "name": "ELECTRICA DE CHERA SDAD COOP VALENCIANA",
+        "sales_gwh": 0.810214,
+        "sales_2024": 0.810214,
+        "sales_2023": 0.903584,
+        "change_pct": -10.33,
+        "rank": 355
+    },
+    {
+        "name": "ELECTRICA SALAS DE PALLARS COMERCIALITZADORA",
+        "sales_gwh": 0.80287,
+        "sales_2024": 0.80287,
+        "sales_2023": 0.815907,
+        "change_pct": -1.6,
+        "rank": 356
+    },
+    {
+        "name": "ENERTIA GROUP S.L.",
+        "sales_gwh": 0.758094,
+        "sales_2024": 0.758094,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 357
+    },
+    {
+        "name": "OXPERTA GREEN ENERGY, SOCIEDAD LIMITADA",
+        "sales_gwh": 0.698797,
+        "sales_2024": 0.698797,
+        "sales_2023": 0.12182,
+        "change_pct": 473.63,
+        "rank": 358
+    },
+    {
+        "name": "SIGNO ENERGY SL",
+        "sales_gwh": 0.6623,
+        "sales_2024": 0.6623,
+        "sales_2023": 0.2452,
+        "change_pct": 170.11,
+        "rank": 359
+    },
+    {
+        "name": "ALIO ENERGIA SL",
+        "sales_gwh": 0.63886,
+        "sales_2024": 0.63886,
+        "sales_2023": 0.01,
+        "change_pct": 6288.6,
+        "rank": 360
+    },
+    {
+        "name": "ENGEL COMERCIALIZADORA,S.L.",
+        "sales_gwh": 0.63,
+        "sales_2024": 0.63,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 361
+    },
+    {
+        "name": "ELECTRICA DE SOT DE CHERA, SOCIEDAD COOPERATIVA\nVALENCIANA",
+        "sales_gwh": 0.625719,
+        "sales_2024": 0.625719,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 362
+    },
+    {
+        "name": "RA&AN ELECTRICA SL",
+        "sales_gwh": 0.621702,
+        "sales_2024": 0.621702,
+        "sales_2023": 0.933053,
+        "change_pct": -33.37,
+        "rank": 363
+    },
+    {
+        "name": "ELITE BIOENERGIA, S.L.",
+        "sales_gwh": 0.590994,
+        "sales_2024": 0.590994,
+        "sales_2023": 0.307039,
+        "change_pct": 92.48,
+        "rank": 364
+    },
+    {
+        "name": "IDES ENERGIA SL",
+        "sales_gwh": 0.59,
+        "sales_2024": 0.59,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 365
+    },
+    {
+        "name": "ELECTRICA ALBATERENSE SL",
+        "sales_gwh": 0.575887,
+        "sales_2024": 0.575887,
+        "sales_2023": 4.486676,
+        "change_pct": -87.16,
+        "rank": 366
+    },
+    {
+        "name": "DILUZ COMERCIALIZADORA DE ELECTRICIDAD SOCIEDAD LIMITADA",
+        "sales_gwh": 0.57443,
+        "sales_2024": 0.57443,
+        "sales_2023": 0.12154,
+        "change_pct": 372.63,
+        "rank": 367
+    },
+    {
+        "name": "REPRESENTANTES DE CONSUMIDORES EN EL MERCADO\nELECTRICO, SOCIEDAD LIMITADA",
+        "sales_gwh": 0.502739,
+        "sales_2024": 0.502739,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 368
+    },
+    {
+        "name": "TALARN ENERGIA ELECTRICA SLU",
+        "sales_gwh": 0.399037,
+        "sales_2024": 0.399037,
+        "sales_2023": 0.498393,
+        "change_pct": -19.94,
+        "rank": 369
+    },
+    {
+        "name": "SAPIENS ENERGIA COOP.V",
+        "sales_gwh": 0.391787,
+        "sales_2024": 0.391787,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 370
+    },
+    {
+        "name": "HELIOSFERA SL",
+        "sales_gwh": 0.33,
+        "sales_2024": 0.33,
+        "sales_2023": 0.389,
+        "change_pct": -15.17,
+        "rank": 371
+    },
+    {
+        "name": "SOCIETAT MUNICIPAL DE COMERCIALITZACIO ELECTRICA DE\nTIRVIA, S.L",
+        "sales_gwh": 0.30828,
+        "sales_2024": 0.30828,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 372
+    },
+    {
+        "name": "COOP.V.ELECTRODISTRIBUIDORA FUERZA Y ALUMBRADO\nSERRALLO",
+        "sales_gwh": 0.302569,
+        "sales_2024": 0.302569,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 373
+    },
+    {
+        "name": "COMERCIALIZADORA LA CHISTABINA, SLU",
+        "sales_gwh": 0.24612,
+        "sales_2024": 0.24612,
+        "sales_2023": 0.24417,
+        "change_pct": 0.8,
+        "rank": 374
+    },
+    {
+        "name": "INTERENERGIA ENERGY TRADING COMPANY, S.L.",
+        "sales_gwh": 0.237409,
+        "sales_2024": 0.237409,
+        "sales_2023": 0.106817,
+        "change_pct": 122.26,
+        "rank": 375
+    },
+    {
+        "name": "SHARE YOUR ENERGY SL",
+        "sales_gwh": 0.224,
+        "sales_2024": 0.224,
+        "sales_2023": 0.069,
+        "change_pct": 224.64,
+        "rank": 376
+    },
+    {
+        "name": "EKHI ENERGY MANAGEMENT S.L.",
+        "sales_gwh": 0.21756,
+        "sales_2024": 0.21756,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 377
+    },
+    {
+        "name": "LIMPIEZAS ENERGETICAS 2014, SL",
+        "sales_gwh": 0.211813,
+        "sales_2024": 0.211813,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 378
+    },
+    {
+        "name": "LUZ SOLIDARIA INCLUSIVA, S.L.",
+        "sales_gwh": 0.149437,
+        "sales_2024": 0.149437,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 379
+    },
+    {
+        "name": "ENERGETICA HOTELERA SL",
+        "sales_gwh": 0.127985,
+        "sales_2024": 0.127985,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 380
+    },
+    {
+        "name": "MYLIGHT ENERGY SP SA",
+        "sales_gwh": 0.127353,
+        "sales_2024": 0.127353,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 381
+    },
+    {
+        "name": "GAMBITOENERGY, S.L.",
+        "sales_gwh": 0.121,
+        "sales_2024": 0.121,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 382
+    },
+    {
+        "name": "ZETA ENERXIA GALEGA SL",
+        "sales_gwh": 0.07965,
+        "sales_2024": 0.07965,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 383
+    },
+    {
+        "name": "HIDROBESORA SERVICIOS SL",
+        "sales_gwh": 0.076608,
+        "sales_2024": 0.076608,
+        "sales_2023": 0.081526,
+        "change_pct": -6.03,
+        "rank": 384
+    },
+    {
+        "name": "HYDROEXERGY SOCIEDAD LIMITADA",
+        "sales_gwh": 0.06,
+        "sales_2024": 0.06,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 385
+    },
+    {
+        "name": "COMERCIALIZADORA EUROPEA DE ENERGIA LIMPIA, S.L.",
+        "sales_gwh": 0.038,
+        "sales_2024": 0.038,
+        "sales_2023": 0.307,
+        "change_pct": -87.62,
+        "rank": 386
+    },
+    {
+        "name": "JUST ENERGY PRO LUZ, S.L.",
+        "sales_gwh": 0.031714,
+        "sales_2024": 0.031714,
+        "sales_2023": 0.013204,
+        "change_pct": 140.18,
+        "rank": 387
+    },
+    {
+        "name": "NOVALUZ ENERGÍA, S.L.",
+        "sales_gwh": 0.029732,
+        "sales_2024": 0.029732,
+        "sales_2023": 0.030035,
+        "change_pct": -1.01,
+        "rank": 388
+    },
+    {
+        "name": "MOLALUZ ENERGIA SL",
+        "sales_gwh": 0.02805,
+        "sales_2024": 0.02805,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 389
+    },
+    {
+        "name": "NEMON INTELLINGENCE IN BUSINESS SL",
+        "sales_gwh": 0.022642,
+        "sales_2024": 0.022642,
+        "sales_2023": 0.022112,
+        "change_pct": 2.4,
+        "rank": 390
+    },
+    {
+        "name": "INDAREL KUDEAKETA, SOCIEDAD LIMITADA",
+        "sales_gwh": 0.022057,
+        "sales_2024": 0.022057,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 391
+    },
+    {
+        "name": "VARAENER SL",
+        "sales_gwh": 0.013357,
+        "sales_2024": 0.013357,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 392
+    },
+    {
+        "name": "ENERMIA COMERCIALIZADORA ELECTRICA, S.L.",
+        "sales_gwh": 0.013219,
+        "sales_2024": 0.013219,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 393
+    },
+    {
+        "name": "FRANK ENERGIA IBERIA SL",
+        "sales_gwh": 0.0105,
+        "sales_2024": 0.0105,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 394
+    },
+    {
+        "name": "NATURA ENERGIA RENOVABLE EYG S.L.",
+        "sales_gwh": 0.00575,
+        "sales_2024": 0.00575,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 395
+    },
+    {
+        "name": "KONERY ENERGY SLU",
+        "sales_gwh": 0.004723,
+        "sales_2024": 0.004723,
+        "sales_2023": 0.005259,
+        "change_pct": -10.19,
+        "rank": 396
+    },
+    {
+        "name": "NETON ENERGY SERVICES S.L.",
+        "sales_gwh": 0.004664,
+        "sales_2024": 0.004664,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 397
+    },
+    {
+        "name": "ENCIENDETENERGIA, S.L.",
+        "sales_gwh": 0.003,
+        "sales_2024": 0.003,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 398
+    },
+    {
+        "name": "HOLALUZ GENERACIÓN S.L.",
+        "sales_gwh": 0.0017,
+        "sales_2024": 0.0017,
+        "sales_2023": 0.001849,
+        "change_pct": -8.06,
+        "rank": 399
+    },
+    {
+        "name": "ZUG POWER, S.L.",
+        "sales_gwh": 0.001067,
+        "sales_2024": 0.001067,
+        "sales_2023": 0.0,
+        "change_pct": 100.0,
+        "rank": 400
+    },
+    {
+        "name": "ATLANTIC OIL STAR, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 7.216,
+        "change_pct": -100.0,
+        "rank": 401
+    },
+    {
+        "name": "ATLAS S.A. COMBUSTIBLES Y LUBRIFICANTES",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 245.79,
+        "change_pct": -100.0,
+        "rank": 402
+    },
+    {
+        "name": "AXOIL ENERGY, S. L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 3178.482,
+        "change_pct": -100.0,
+        "rank": 403
+    },
+    {
+        "name": "BDGAS ENERGIA 2018, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 107.708,
+        "change_pct": -100.0,
+        "rank": 404
+    },
+    {
+        "name": "BIOCARBURANTES DE CASTILLA Y LEON SA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 0.374,
+        "change_pct": -100.0,
+        "rank": 405
+    },
+    {
+        "name": "BIOCOM ENERGIA SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 2.06688,
+        "change_pct": -100.0,
+        "rank": 406
+    },
+    {
+        "name": "BIODIESEL ARAGON SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 4.172374,
+        "change_pct": -100.0,
+        "rank": 407
+    },
+    {
+        "name": "BIOMAR OIL SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 16665.720244,
+        "change_pct": -100.0,
+        "rank": 408
+    },
+    {
+        "name": "BIO-ZENITE ENERGY SA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 8491.44486,
+        "change_pct": -100.0,
+        "rank": 409
+    },
+    {
+        "name": "BLANCA PETROLEUM, S.A.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 587.455,
+        "change_pct": -100.0,
+        "rank": 410
+    },
+    {
+        "name": "BONAREA ENERGIA, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 4375.782,
+        "change_pct": -100.0,
+        "rank": 411
+    },
+    {
+        "name": "BP Energía España, S.A.U.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 33107.06655,
+        "change_pct": -100.0,
+        "rank": 412
+    },
+    {
+        "name": "CALORÍFICA DOMÉSTICA S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 21.999,
+        "change_pct": -100.0,
+        "rank": 413
+    },
+    {
+        "name": "CEPSA COMERCIAL PETROLEO, S.A.U.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 76291.363,
+        "change_pct": -100.0,
+        "rank": 414
+    },
+    {
+        "name": "CEPSA GAS COMERCIALIZADORA, S.A.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 3046.18,
+        "change_pct": -100.0,
+        "rank": 415
+    },
+    {
+        "name": "CRINGAS, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 44.538,
+        "change_pct": -100.0,
+        "rank": 416
+    },
+    {
+        "name": "DISA ENERGY, S.L.U",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 1934.927,
+        "change_pct": -100.0,
+        "rank": 417
+    },
+    {
+        "name": "DISA GAS S.A.U.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 1009.366702,
+        "change_pct": -100.0,
+        "rank": 418
+    },
+    {
+        "name": "DISA PENINSULA,  S.L.U",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 12128.443,
+        "change_pct": -100.0,
+        "rank": 419
+    },
+    {
+        "name": "DISA RED DE  SERVICIOS PETROLIFEROS, SAU",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 3359.01,
+        "change_pct": -100.0,
+        "rank": 420
+    },
+    {
+        "name": "DISA RETAIL  ATLANTICO, SLU",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 953.49,
+        "change_pct": -100.0,
+        "rank": 421
+    },
+    {
+        "name": "ECOCARBURANTES ESPAÑOLES, S.A.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 0.32,
+        "change_pct": -100.0,
+        "rank": 422
+    },
+    {
+        "name": "CURENERGIA COMERCIALIZADOR DE ULTIMO RECURSO SA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 8324.334,
+        "change_pct": -100.0,
+        "rank": 423
+    },
+    {
+        "name": "Eni Plenitude Iberia, SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 3514.497,
+        "change_pct": -100.0,
+        "rank": 424
+    },
+    {
+        "name": "TOTALENERGIES CLIENTES SAU (antes EDP COMERCIALIZADORA SAU)",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 2363.0,
+        "change_pct": -100.0,
+        "rank": 425
+    },
+    {
+        "name": "CEPSA GAS Y ELECTRICIDAD S.A.U.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 2342.54,
+        "change_pct": -100.0,
+        "rank": 426
+    },
+    {
+        "name": "TOTALENERGIES MERCADO ESPAÑA SA (antes EDP ENERGIA SA)",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 1428.0,
+        "change_pct": -100.0,
+        "rank": 427
+    },
+    {
+        "name": "IBERDROLA SERVICIOS ENERGETICOS, S.A.U.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 1332.365,
+        "change_pct": -100.0,
+        "rank": 428
+    },
+    {
+        "name": "EMPRESA MUNICIPAL DE TRANSPORTES DE MADRID, S.A.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 731.942,
+        "change_pct": -100.0,
+        "rank": 429
+    },
+    {
+        "name": "ONDEMAND FACILITIES SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 398.371,
+        "change_pct": -100.0,
+        "rank": 430
+    },
+    {
+        "name": "Loop Electricidad y GAS S.L",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 375.156184,
+        "change_pct": -100.0,
+        "rank": 431
+    },
+    {
+        "name": "Enerxía Galega Máis, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 258.435159,
+        "change_pct": -100.0,
+        "rank": 432
+    },
+    {
+        "name": "WATIUM SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 161.42,
+        "change_pct": -100.0,
+        "rank": 433
+    },
+    {
+        "name": "SYDER COMERCIALIZADORA VERDE SOCIEDAD LIMITADA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 146.947,
+        "change_pct": -100.0,
+        "rank": 434
+    },
+    {
+        "name": "Comercializador de Referencia Energético, S.L.U.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 130.671409,
+        "change_pct": -100.0,
+        "rank": 435
+    },
+    {
+        "name": "ENI ESPAÑA COMERCIALIZADORA DE GAS SAU",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 1517.0,
+        "change_pct": -100.0,
+        "rank": 436
+    },
+    {
+        "name": "NIEVES ENERGIA, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 104.006772,
+        "change_pct": -100.0,
+        "rank": 437
+    },
+    {
+        "name": "ESERGUI, S.A.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 4211.220081,
+        "change_pct": -100.0,
+        "rank": 438
+    },
+    {
+        "name": "HELIOELEC ENERGIA ELECTRICA, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 99.793,
+        "change_pct": -100.0,
+        "rank": 439
+    },
+    {
+        "name": "COMERCIALIZADORA DE ELECTRICIDAD Y GAS DEL MEDITERRANEO SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 94.73046,
+        "change_pct": -100.0,
+        "rank": 440
+    },
+    {
+        "name": "EMPRESA DE ALUMBRADO ELÉCTRICO DE CEUTA ENERGIA, S.L.U.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 92.674162,
+        "change_pct": -100.0,
+        "rank": 441
+    },
+    {
+        "name": "EVERTON MAGNIFIC SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 1792.267442,
+        "change_pct": -100.0,
+        "rank": 442
+    },
+    {
+        "name": "Gasiluz Eco Enercia S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 84.15431,
+        "change_pct": -100.0,
+        "rank": 443
+    },
+    {
+        "name": "FORESTAL DEL ATLANTICO, SA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 180.462486,
+        "change_pct": -100.0,
+        "rank": 444
+    },
+    {
+        "name": "CANDELA COMERCIALIZADORA S.L",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 65.889256,
+        "change_pct": -100.0,
+        "rank": 445
+    },
+    {
+        "name": "FUTURA ENERGÍA Y GAS, SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 95.669,
+        "change_pct": -100.0,
+        "rank": 446
+    },
+    {
+        "name": "ATENCO ENERGIA SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 60.533,
+        "change_pct": -100.0,
+        "rank": 447
+    },
+    {
+        "name": "PETRO NAVARRA SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 55.782291,
+        "change_pct": -100.0,
+        "rank": 448
+    },
+    {
+        "name": "GASIB SOCIEDAD IBERICA DE GAS LICUADO, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 2566.614962,
+        "change_pct": -100.0,
+        "rank": 449
+    },
+    {
+        "name": "LIDERA COMERCIALIZADORA ENERGIA SOCIEDAD LIMITADA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 52.81821,
+        "change_pct": -100.0,
+        "rank": 450
+    },
+    {
+        "name": "GASINDUR SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 22.307317,
+        "change_pct": -100.0,
+        "rank": 451
+    },
+    {
+        "name": "GASLOW ABASTECIMIENTOS SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 744.07835,
+        "change_pct": -100.0,
+        "rank": 452
+    },
+    {
+        "name": "ISLA LUZ DE CANARIAS",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 49.53689,
+        "change_pct": -100.0,
+        "rank": 453
+    },
+    {
+        "name": "CAPITAL ENERGY COMERCIALIZADORA S.L.U.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 44.8,
+        "change_pct": -100.0,
+        "rank": 454
+    },
+    {
+        "name": "GOG IBERIA SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 1.791,
+        "change_pct": -100.0,
+        "rank": 455
+    },
+    {
+        "name": "GRAN ZUFARIA, S.A.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 261.016,
+        "change_pct": -100.0,
+        "rank": 456
+    },
+    {
+        "name": "GRUPO ENERGETICO BARCELO SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 18.38,
+        "change_pct": -100.0,
+        "rank": 457
+    },
+    {
+        "name": "GUNVOR BIODIESEL BERANTEVILLA, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 9.728,
+        "change_pct": -100.0,
+        "rank": 458
+    },
+    {
+        "name": "GUNVOR MARKETING (ESPAñA) SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 389.482,
+        "change_pct": -100.0,
+        "rank": 459
+    },
+    {
+        "name": "GYC COMBUS SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 767.980427,
+        "change_pct": -100.0,
+        "rank": 460
+    },
+    {
+        "name": "HAFESA ENERGIA SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 6275.291,
+        "change_pct": -100.0,
+        "rank": 461
+    },
+    {
+        "name": "HATTA ENERGY, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 2651.663,
+        "change_pct": -100.0,
+        "rank": 462
+    },
+    {
+        "name": "Conecta Energía Verde, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 38.145806,
+        "change_pct": -100.0,
+        "rank": 463
+    },
+    {
+        "name": "DRK ENERGY SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 35.34657,
+        "change_pct": -100.0,
+        "rank": 464
+    },
+    {
+        "name": "Alquiler Seguro Energía SA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 33.205,
+        "change_pct": -100.0,
+        "rank": 465
+    },
+    {
+        "name": "Energía Nórdica Gas y Electricidad SLU",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 32.715144,
+        "change_pct": -100.0,
+        "rank": 466
+    },
+    {
+        "name": "SUNAIR ONE ENERGY S.L",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 32.242,
+        "change_pct": -100.0,
+        "rank": 467
+    },
+    {
+        "name": "ENERFIA, SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 30.477,
+        "change_pct": -100.0,
+        "rank": 468
+    },
+    {
+        "name": "ENERGY DIAGONAL DOS S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 27.30753,
+        "change_pct": -100.0,
+        "rank": 469
+    },
+    {
+        "name": "AUSARTA PRIMA SOCIEDAD LIMITADA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 27.147959,
+        "change_pct": -100.0,
+        "rank": 470
+    },
+    {
+        "name": "ELECTRA ALTO MIÑO COMERCIALIZADORA DE",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 23.331,
+        "change_pct": -100.0,
+        "rank": 471
+    },
+    {
+        "name": "IMPALA 2.000 SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 1814.276464,
+        "change_pct": -100.0,
+        "rank": 472
+    },
+    {
+        "name": "IN COMMODITIES A/S",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 3.800407,
+        "change_pct": -100.0,
+        "rank": 473
+    },
+    {
+        "name": "INSERIMOS ENERGIA SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 3.36,
+        "change_pct": -100.0,
+        "rank": 474
+    },
+    {
+        "name": "INICIATIVA E. NOVA SLU",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 15.699,
+        "change_pct": -100.0,
+        "rank": 475
+    },
+    {
+        "name": "INTERNACIONAL DE ALCOHOLES, S.A.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 407.929,
+        "change_pct": -100.0,
+        "rank": 476
+    },
+    {
+        "name": "TUNERGIA EFICIENCIA ENERGETICA Y RENOVABLE SOCIEDAD LIMITADA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 14.979801,
+        "change_pct": -100.0,
+        "rank": 477
+    },
+    {
+        "name": "ENDESA ENERGIA RENOVABLE, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 12.86,
+        "change_pct": -100.0,
+        "rank": 478
+    },
+    {
+        "name": "KUWAIT PETROLEUM ESPAÑA SA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 5311.0,
+        "change_pct": -100.0,
+        "rank": 479
+    },
+    {
+        "name": "HELIOS ENERGIA INTELIGENTE SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 12.72007,
+        "change_pct": -100.0,
+        "rank": 480
+    },
+    {
+        "name": "EBROENERGIA COMERCIALIZADORA SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 12.509846,
+        "change_pct": -100.0,
+        "rank": 481
+    },
+    {
+        "name": "SOCIEDAD ARAGONESA DE COMERCIALIZACION DE ENERGIA SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 12.45279,
+        "change_pct": -100.0,
+        "rank": 482
+    },
+    {
+        "name": "LIQUID NATURAL GAZSL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 2164.62679,
+        "change_pct": -100.0,
+        "rank": 483
+    },
+    {
+        "name": "INTELIGENCIA PARA EL AHORRO ENERGETICO, SOCIEDAD LIMITADA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 10.342276,
+        "change_pct": -100.0,
+        "rank": 484
+    },
+    {
+        "name": "SISTEMAS URBANOS DE ENERGIAS RENOVABLES SOCIEDAD LIMITADA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 9.7933,
+        "change_pct": -100.0,
+        "rank": 485
+    },
+    {
+        "name": "LUVON ENERGIA SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 0.772,
+        "change_pct": -100.0,
+        "rank": 486
+    },
+    {
+        "name": "GURBTEC ENERGIA SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 9.166192,
+        "change_pct": -100.0,
+        "rank": 487
+    },
+    {
+        "name": "SOLARPACK ENERGY SOCIEDAD LIMITADA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 9.12486,
+        "change_pct": -100.0,
+        "rank": 488
+    },
+    {
+        "name": "MOSCOSO ENERGIA SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 8.609,
+        "change_pct": -100.0,
+        "rank": 489
+    },
+    {
+        "name": "Ecofutura Luz Energía, SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 8.399237,
+        "change_pct": -100.0,
+        "rank": 490
+    },
+    {
+        "name": "MARKOIL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 0.299437,
+        "change_pct": -100.0,
+        "rank": 491
+    },
+    {
+        "name": "MARTANKSHIP LTD",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 9008.207554,
+        "change_pct": -100.0,
+        "rank": 492
+    },
+    {
+        "name": "MEDOIL ENERGY 2050, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 2027.73329,
+        "change_pct": -100.0,
+        "rank": 493
+    },
+    {
+        "name": "MERCAPETROL, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 721.646811,
+        "change_pct": -100.0,
+        "rank": 494
+    },
+    {
+        "name": "MEROIL, SA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 5382.530159,
+        "change_pct": -100.0,
+        "rank": 495
+    },
+    {
+        "name": "ENERGÍA CEUTA XXI COMERCIALIZADORA DE REFERENCIA, S.A.U.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 7.558995,
+        "change_pct": -100.0,
+        "rank": 496
+    },
+    {
+        "name": "METAWAY COMBUSTIBLES, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 3.783,
+        "change_pct": -100.0,
+        "rank": 497
+    },
+    {
+        "name": "METHANE LOGISTICS SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 681.044,
+        "change_pct": -100.0,
+        "rank": 498
+    },
+    {
+        "name": "MOLGAS ENERGIA SA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 1195.39,
+        "change_pct": -100.0,
+        "rank": 499
+    },
+    {
+        "name": "GERENTA ENERGIA, SOCIEDAD LIMITADA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 7.14861,
+        "change_pct": -100.0,
+        "rank": 500
+    },
+    {
+        "name": "PROFIT ENERGY, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 7.077,
+        "change_pct": -100.0,
+        "rank": 501
+    },
+    {
+        "name": "Telefónica Soluciones de Informática y Comunicaciones de España, S.A.U.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 7.03266,
+        "change_pct": -100.0,
+        "rank": 502
+    },
+    {
+        "name": "ELECTRICA DE  GUADASSUAR COOP. V.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 6.957086,
+        "change_pct": -100.0,
+        "rank": 503
+    },
+    {
+        "name": "MEGARA ENERGIA SOC. COOP",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 6.264,
+        "change_pct": -100.0,
+        "rank": 504
+    },
+    {
+        "name": "NASCOR ENERGIAS SOCIEDAD LIMITADA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 179.723,
+        "change_pct": -100.0,
+        "rank": 505
+    },
+    {
+        "name": "GUNVOR INTERNATIONAL, B.V",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 5.7,
+        "change_pct": -100.0,
+        "rank": 506
+    },
+    {
+        "name": "E.MILUZ SIE, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 5.479138,
+        "change_pct": -100.0,
+        "rank": 507
+    },
+    {
+        "name": "ENDI ENERGY TRADING SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 5.298,
+        "change_pct": -100.0,
+        "rank": 508
+    },
+    {
+        "name": "COOPERATIVA ELECTRICA DE CASTELLAR, SOCIEDAD COOPERATIVA VALENCIANA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 4.871998,
+        "change_pct": -100.0,
+        "rank": 509
+    },
+    {
+        "name": "OLIVIA PETROLEUM SA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 67.303,
+        "change_pct": -100.0,
+        "rank": 510
+    },
+    {
+        "name": "OMEGA FUELS, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 4982.902078,
+        "change_pct": -100.0,
+        "rank": 511
+    },
+    {
+        "name": "FLUID ELECTRIC CAMPRODON II SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 4.374,
+        "change_pct": -100.0,
+        "rank": 512
+    },
+    {
+        "name": "PENINSULA PETROLEUM, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 615.287032,
+        "change_pct": -100.0,
+        "rank": 513
+    },
+    {
+        "name": "PENTAGAS HIDROCARBUROS SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 265.04868,
+        "change_pct": -100.0,
+        "rank": 514
+    },
+    {
+        "name": "PETROINEOS TRADING LIMITED",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 1103.297772,
+        "change_pct": -100.0,
+        "rank": 515
+    },
+    {
+        "name": "PETROLEOS ARCHIPIELAGO, S.A.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 481.137084,
+        "change_pct": -100.0,
+        "rank": 516
+    },
+    {
+        "name": "PETROLIFERA CANARIA SA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 527.106,
+        "change_pct": -100.0,
+        "rank": 517
+    },
+    {
+        "name": "PLAMANVISA, SOCIEDAD LIMITADA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 52.073,
+        "change_pct": -100.0,
+        "rank": 518
+    },
+    {
+        "name": "SUN POWER SPAIN 365 S.L",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 4.070712,
+        "change_pct": -100.0,
+        "rank": 519
+    },
+    {
+        "name": "ELECTRICA MUNICIPAL DE SANTA COLOMA DE QUERALT COMERCIALITZADORA SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 3.983823,
+        "change_pct": -100.0,
+        "rank": 520
+    },
+    {
+        "name": "PRIMAGAS ENERGIA SA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 555.19228,
+        "change_pct": -100.0,
+        "rank": 521
+    },
+    {
+        "name": "PRIO MOVILIDAD, S.L.U.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 217.115606,
+        "change_pct": -100.0,
+        "rank": 522
+    },
+    {
+        "name": "NOSA ENERXIA SCG",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 3.307,
+        "change_pct": -100.0,
+        "rank": 523
+    },
+    {
+        "name": "QUASAR GAS SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 8.507,
+        "change_pct": -100.0,
+        "rank": 524
+    },
+    {
+        "name": "SERMAT FUTURA 2019 S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 3.2281,
+        "change_pct": -100.0,
+        "rank": 525
+    },
+    {
+        "name": "Olivia Comercializadora SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 3.178967,
+        "change_pct": -100.0,
+        "rank": 526
+    },
+    {
+        "name": "ELECTRICA DEL MONTSEC SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 3.12,
+        "change_pct": -100.0,
+        "rank": 527
+    },
+    {
+        "name": "SOLAR EAAS SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 2.911907,
+        "change_pct": -100.0,
+        "rank": 528
+    },
+    {
+        "name": "REPSOL BUTANO SA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 11058.351961,
+        "change_pct": -100.0,
+        "rank": 529
+    },
+    {
+        "name": "Repsol Comercial de Productos Petrolíferos S.A.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 138744.1746,
+        "change_pct": -100.0,
+        "rank": 530
+    },
+    {
+        "name": "REPSOL LNG HOLDING, S.A.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 16322.21,
+        "change_pct": -100.0,
+        "rank": 531
+    },
+    {
+        "name": "REPSOL PETRÓLEO, S.A.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 619.1,
+        "change_pct": -100.0,
+        "rank": 532
+    },
+    {
+        "name": "ALTERNA OPERADOR INTEGRAL, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 2.803844,
+        "change_pct": -100.0,
+        "rank": 533
+    },
+    {
+        "name": "COMERCIAL Y ASESORA DE ELECTRICIDAD SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 2.80287,
+        "change_pct": -100.0,
+        "rank": 534
+    },
+    {
+        "name": "RAINAL INGENIERIA, S.L",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 2.73,
+        "change_pct": -100.0,
+        "rank": 535
+    },
+    {
+        "name": "REUS SERVEIS MUNICIPALS, S.A.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 2.343,
+        "change_pct": -100.0,
+        "rank": 536
+    },
+    {
+        "name": "COMERCIALIZADORA ELÉCTRICA PENINSULAR, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 2.29,
+        "change_pct": -100.0,
+        "rank": 537
+    },
+    {
+        "name": "SARAS ENERGIA SA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 4213.607158,
+        "change_pct": -100.0,
+        "rank": 538
+    },
+    {
+        "name": "SEEIT ENERGIA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 4.636827,
+        "change_pct": -100.0,
+        "rank": 539
+    },
+    {
+        "name": "SMART GAS ENERGY S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 46.439,
+        "change_pct": -100.0,
+        "rank": 540
+    },
+    {
+        "name": "COMERCIALITZADORA ELECTRICA DE MONTOLIU DE LLEIDA S.L.U",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 1.58013,
+        "change_pct": -100.0,
+        "rank": 541
+    },
+    {
+        "name": "Gerencia Energética",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 1.55827,
+        "change_pct": -100.0,
+        "rank": 542
+    },
+    {
+        "name": "PONTS COMERCIALITZADORA MUNICIPAL D’ENERGIA ELÈCTRICA, S.L.U",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 1.324,
+        "change_pct": -100.0,
+        "rank": 543
+    },
+    {
+        "name": "SONATRACH GAS COMERCIALIZADORA SAU",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 396.564075,
+        "change_pct": -100.0,
+        "rank": 544
+    },
+    {
+        "name": "ELECTRO DISTRBUIDORA DE FUERZA Y ALUMBRADO CASABLANCA S. COOP V.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 1.193,
+        "change_pct": -100.0,
+        "rank": 545
+    },
+    {
+        "name": "COMERCIALIZADORA ELECTRICA COMUNIDAD SOLAR, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 1.112,
+        "change_pct": -100.0,
+        "rank": 546
+    },
+    {
+        "name": "REYSE ENERGIA SOCIEDAD LIMITADA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 1.090346,
+        "change_pct": -100.0,
+        "rank": 547
+    },
+    {
+        "name": "EVC COMERCIALIZADORA SLU",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 1.00501,
+        "change_pct": -100.0,
+        "rank": 548
+    },
+    {
+        "name": "Kishoa SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 0.92805,
+        "change_pct": -100.0,
+        "rank": 549
+    },
+    {
+        "name": "CORPOLUX, S.L",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 0.865,
+        "change_pct": -100.0,
+        "rank": 550
+    },
+    {
+        "name": "SUPRA ENERGIA S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 9.298922,
+        "change_pct": -100.0,
+        "rank": 551
+    },
+    {
+        "name": "COMERCIALIZADORA ENERGÉTICA SOSTENIBLE SOCIDAD ANÓNIMA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 0.8,
+        "change_pct": -100.0,
+        "rank": 552
+    },
+    {
+        "name": "TAMOIL ESPAÑA SA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 765.112,
+        "change_pct": -100.0,
+        "rank": 553
+    },
+    {
+        "name": "ALDERAAN ENERGIA SLU",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 0.655575,
+        "change_pct": -100.0,
+        "rank": 554
+    },
+    {
+        "name": "ELECTRICA DE SOT DE CHERA, SOCIEDAD COOPERATIVA VALENCIANA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 0.618807,
+        "change_pct": -100.0,
+        "rank": 555
+    },
+    {
+        "name": "ZULUX ENERGIA SLU",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 0.55034,
+        "change_pct": -100.0,
+        "rank": 556
+    },
+    {
+        "name": "Barter Sharing, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 0.468437,
+        "change_pct": -100.0,
+        "rank": 557
+    },
+    {
+        "name": "TOTALENERGIES MARKETING ESPAÑA SAU",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 42.183814,
+        "change_pct": -100.0,
+        "rank": 558
+    },
+    {
+        "name": "SOCIETAT MUNICIPAL DE COMERCIALITZACIO ELECTRICA DE TIRVIA, S.L",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 0.314937,
+        "change_pct": -100.0,
+        "rank": 559
+    },
+    {
+        "name": "TRADEA GREEN GAS S.L.U.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 12.841,
+        "change_pct": -100.0,
+        "rank": 560
+    },
+    {
+        "name": "COOP.V.ELECTRODISTRIBUIDORA FUERZA Y ALUMBRADO SERRALLO",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 0.300823,
+        "change_pct": -100.0,
+        "rank": 561
+    },
+    {
+        "name": "DALUZ ENERGIA SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 0.283711,
+        "change_pct": -100.0,
+        "rank": 562
+    },
+    {
+        "name": "Ekhi Energy Management S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 0.12488,
+        "change_pct": -100.0,
+        "rank": 563
+    },
+    {
+        "name": "VIKALENDE SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 1888.93019,
+        "change_pct": -100.0,
+        "rank": 564
+    },
+    {
+        "name": "VILLAFUEL, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 7051.886,
+        "change_pct": -100.0,
+        "rank": 565
+    },
+    {
+        "name": "MIGRA ENERGIA, SOCIEDAD LIMITADA",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 0.120843,
+        "change_pct": -100.0,
+        "rank": 566
+    },
+    {
+        "name": "VIROQUE PETROLEUM, S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 210.323,
+        "change_pct": -100.0,
+        "rank": 567
+    },
+    {
+        "name": "VITOGAS ESPAÑA SA SOC UNIPERSONAL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 516.26,
+        "change_pct": -100.0,
+        "rank": 568
+    },
+    {
+        "name": "CIBELES ENERGIA CENTURY21 GO, S.A. UNIPERSONAL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 0.059,
+        "change_pct": -100.0,
+        "rank": 569
+    },
+    {
+        "name": "VIRTUS GLOBAL ENERGY SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 0.015124,
+        "change_pct": -100.0,
+        "rank": 570
+    },
+    {
+        "name": "VIRTUAL POWER PLANT & SMART ENERGY S.L",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 0.013,
+        "change_pct": -100.0,
+        "rank": 571
+    },
+    {
+        "name": "YADE JORMAN ESPAÑA S.L.",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 49.068,
+        "change_pct": -100.0,
+        "rank": 572
+    },
+    {
+        "name": "Q-ENERGY POWER MARKETS, SL",
+        "sales_gwh": 0.0,
+        "sales_2024": 0.0,
+        "sales_2023": 0.001612,
+        "change_pct": -100.0,
+        "rank": 573
+    }
+]

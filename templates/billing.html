@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facturación - Enex Control Center</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            height: 60vh;
+            /* Much bigger height */
+            min-height: 500px;
+            width: 100%;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: none;
+            /* Shadow handled by card */
+        }
+
+        main {
+            display: flex !important;
+            /* Override grid for this page */
+            flex-direction: column;
+            gap: 24px;
+            max-width: 1200px !important;
+            /* Wider container */
+        }
+
+        .back-nav {
+            margin-bottom: 20px;
+        }
+
+        .back-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .back-nav a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="header-container">
+            <img src="{{ url_for('static', filename='logo_enex.png') }}" alt="ENEX Logo" class="header-logo">
+            <div>
+                <h1>Dashboard de Facturación</h1>
+                <div class="subtitle">Datos de Ventas Mensuales</div>
+            </div>
+        </div>
+        <div style="text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 5px;">
+            <button class="btn" style="padding: 8px 16px; font-size: 0.9rem;" onclick="runSync()">
+                ⟳ Sincronizar
+            </button>
+            <small id="sync-status" style="color: #666; font-size: 0.8rem;">Cargando estado...</small>
+        </div>
+    </header>
+
+    <main>
+        <div class="back-nav">
+            <a href="/">← Volver al Inicio</a>
+        </div>
+
+        <div class="card" style="width: 100%; text-align: center; height: auto;">
+            <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+                <div class="toggle-container"
+                    style="display: inline-flex; background: #f0f0f5; padding: 4px; border-radius: 8px;">
+                    <button id="btn-monthly" onclick="setChartMode('monthly')"
+                        style="padding: 8px 16px; border: none; border-radius: 6px; background: white; font-weight: bold; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Mensual</button>
+                    <button id="btn-accumulated" onclick="setChartMode('accumulated')"
+                        style="padding: 8px 16px; border: none; border-radius: 6px; background: transparent; color: #666; cursor: pointer;">Acumulado</button>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="salesChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Invoices Table -->
+        <div class="card" style="width: 100%; height: auto; overflow: hidden; display: block;">
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px;">
+                <h2 style="margin: 0;">Detalle Facturas</h2>
+                <input type="text" id="searchInput" placeholder="Buscar por cliente, nº factura..."
+                    onkeyup="filterTable()"
+                    style="padding: 10px; width: 300px; border-radius: 8px; border: 1px solid #ddd; font-size: 14px;">
+            </div>
+
+            <div
+                style="overflow-x: auto; max-height: 600px; overflow-y: auto; border: 1px solid #eee; border-radius: 8px;">
+                <table id="invoices-table" style="width: 100%; border-collapse: collapse; text-align: left;">
+                    <thead
+                        style="position: sticky; top: 0; background: white; z-index: 10; box-shadow: 0 2px 2px -1px rgba(0,0,0,0.1);">
+                        <tr style="border-bottom: 2px solid #eee;">
+                            <th style="padding: 12px; background: #f9f9f9; cursor: pointer;" onclick="handleSort('id')"
+                                data-key="id">
+                                Factura <span class="sort-icon">▼</span>
+                            </th>
+                            <th style="padding: 12px; background: #f9f9f9; cursor: pointer;"
+                                onclick="handleSort('client')" data-key="client">
+                                Cliente <span class="sort-icon">⇅</span>
+                            </th>
+                            <th style="padding: 12px; background: #f9f9f9; cursor: pointer;"
+                                onclick="handleSort('date')" data-key="date">
+                                Fecha <span class="sort-icon">⇅</span>
+                            </th>
+                            <th style="padding: 12px; text-align: right; background: #f9f9f9; cursor: pointer;"
+                                onclick="handleSort('total')" data-key="total">
+                                Importe (€) <span class="sort-icon">⇅</span>
+                            </th>
+                            <th style="padding: 12px; text-align: right; background: #f9f9f9; cursor: pointer;"
+                                onclick="handleSort('consumption')" data-key="consumption">
+                                Consumo (kWh) <span class="sort-icon">⇅</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <tr>
+                            <td colspan="5" style="padding: 20px; text-align: center;">Cargando...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- Modal Output (Reused) -->
+    <div id="output-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Sincronizando...</h3>
+                <button class="close-btn" onclick="closeModal()">×</button>
+            </div>
+            <div id="output-area" class="output-container">Iniciando...</div>
+        </div>
+    </div>
+
+    <script>
+        // Setup text decoder for streaming response
+        const modal = document.getElementById('output-modal');
+        const outputArea = document.getElementById('output-area');
+        const modalTitle = document.getElementById('modal-title');
+
+        let allInvoices = [];
+        let filteredInvoices = [];
+        let chartInstance = null;
+        let chartData = {};
+        let currentMode = 'monthly';
+
+        // Sorting State
+        let currentSort = { key: 'id', dir: 'desc' }; // Default sort: Factura DESC
+
+        async function fetchBillingData() {
+            try {
+                const response = await fetch('/api/billing-data');
+                chartData = await response.json();
+
+                initChart();
+
+                if (chartData.invoices) {
+                    allInvoices = chartData.invoices;
+                    filteredInvoices = [...allInvoices];
+
+                    // Apply default sort
+                    sortData(currentSort.key, currentSort.dir, false); // false = don't render yet
+                    renderTable();
+                }
+
+                document.getElementById('sync-status').innerText = `Última actualización de datos: ${chartData.last_sync || 'Desconocida'}`;
+
+            } catch (error) {
+                console.error("Error loading data:", error);
+                document.getElementById('sync-status').innerText = "Error al cargar datos.";
+            }
+        }
+
+        // --- Sorting Logic ---
+        function handleSort(key) {
+            // Toggle direction if clicking same header
+            if (currentSort.key === key) {
+                currentSort.dir = currentSort.dir === 'desc' ? 'asc' : 'desc';
+            } else {
+                currentSort.key = key;
+                currentSort.dir = 'desc'; // Default new columns to desc (usually better for numbers/dates)
+            }
+            sortData(currentSort.key, currentSort.dir);
+        }
+
+        function sortData(key, dir, render = true) {
+            filteredInvoices.sort((a, b) => {
+                let valA = a[key];
+                let valB = b[key];
+
+                // Data preprocessing for sort
+                if (key === 'total' || key === 'consumption') {
+                    valA = parseFloat(valA) || 0;
+                    valB = parseFloat(valB) || 0;
+                } else if (key === 'id') {
+                    // Ignore first character (prefix like R, N) and treat as string (or number)
+                    // "R2025..." -> "2025..."
+                    valA = (valA || '').toString().substring(1);
+                    valB = (valB || '').toString().substring(1);
+                } else if (key === 'date') {
+                    // Expecting DD/MM/YYYY
+                    valA = parseDate(valA);
+                    valB = parseDate(valB);
+                } else if (key === 'client') {
+                    // Ignore first digit/character for client sort. Trim leading spaces (e.g. "A Juan" -> "Juan")
+                    valA = (valA || '').toString().substring(1).trim().toLowerCase();
+                    valB = (valB || '').toString().substring(1).trim().toLowerCase();
+                } else {
+                    // String comparison (case insensitive)
+                    valA = (valA || '').toString().toLowerCase();
+                    valB = (valB || '').toString().toLowerCase();
+                }
+
+                if (valA < valB) return dir === 'asc' ? -1 : 1;
+                if (valA > valB) return dir === 'asc' ? 1 : -1;
+                return 0;
+            });
+
+            updateHeaderIcons();
+            if (render) renderTable();
+        }
+
+        function parseDate(dateStr) {
+            if (!dateStr) return 0;
+            const parts = dateStr.split('/');
+            if (parts.length === 3) {
+                // YYYYMMDD for sortable number
+                return parseInt(parts[2] + parts[1] + parts[0]);
+            }
+            return 0;
+        }
+
+        function updateHeaderIcons() {
+            // Reset all icons
+            document.querySelectorAll('th span.sort-icon').forEach(span => span.textContent = '⇅');
+
+            // Set current
+            const currentTh = document.querySelector(`th[data-key="${currentSort.key}"]`);
+            if (currentTh) {
+                const icon = currentTh.querySelector('.sort-icon');
+                if (icon) icon.textContent = currentSort.dir === 'asc' ? '▲' : '▼';
+            }
+        }
+
+        function setChartMode(mode) {
+            currentMode = mode;
+
+            const btnMonthly = document.getElementById('btn-monthly');
+            const btnAcc = document.getElementById('btn-accumulated');
+
+            if (mode === 'monthly') {
+                btnMonthly.style.background = 'white';
+                btnMonthly.style.fontWeight = 'bold';
+                btnMonthly.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+                btnMonthly.style.color = '#333';
+
+                btnAcc.style.background = 'transparent';
+                btnAcc.style.fontWeight = 'normal';
+                btnAcc.style.boxShadow = 'none';
+                btnAcc.style.color = '#666';
+            } else {
+                btnAcc.style.background = 'white';
+                btnAcc.style.fontWeight = 'bold';
+                btnAcc.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+                btnAcc.style.color = '#333';
+
+                btnMonthly.style.background = 'transparent';
+                btnMonthly.style.fontWeight = 'normal';
+                btnMonthly.style.boxShadow = 'none';
+                btnMonthly.style.color = '#666';
+            }
+
+            updateChartData();
+        }
+
+        function initChart() {
+            const ctx = document.getElementById('salesChart').getContext('2d');
+
+            const formattedLabels = (chartData.labels || []).map(label => {
+                const [year, month] = label.split('-');
+                const date = new Date(parseInt(year), parseInt(month) - 1);
+                const monthName = new Intl.DateTimeFormat('es-ES', { month: 'short' }).format(date);
+                const monthCap = monthName.charAt(0).toUpperCase() + monthName.slice(1);
+                const yearShort = year.substring(2);
+                return `${monthCap}-${yearShort}`;
+            });
+
+            const gradientSales = ctx.createLinearGradient(0, 0, 0, 400);
+            gradientSales.addColorStop(0, 'rgba(0, 113, 227, 0.75)');
+            gradientSales.addColorStop(1, 'rgba(0, 113, 227, 0.1)');
+
+            const gradientCons = ctx.createLinearGradient(0, 0, 0, 400);
+            gradientCons.addColorStop(0, 'rgba(255, 149, 0, 0.4)');
+            gradientCons.addColorStop(1, 'rgba(255, 149, 0, 0.0)');
+
+            chartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: formattedLabels,
+                    datasets: [
+                        {
+                            label: 'Ventas (€)',
+                            data: chartData.values,
+                            backgroundColor: gradientSales,
+                            borderColor: '#0071e3',
+                            borderWidth: 3,
+                            pointBackgroundColor: '#ffffff',
+                            pointBorderColor: '#0071e3',
+                            fill: true,
+                            tension: 0.4,
+                            yAxisID: 'y'
+                        },
+                        {
+                            label: 'Consumo (kWh)',
+                            data: chartData.consumption,
+                            backgroundColor: gradientCons,
+                            borderColor: '#ff9500',
+                            borderWidth: 3,
+                            pointBackgroundColor: '#ffffff',
+                            pointBorderColor: '#ff9500',
+                            fill: true,
+                            tension: 0.4,
+                            yAxisID: 'y1'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: { mode: 'index', intersect: false },
+                    plugins: {
+                        legend: { display: true, position: 'top' },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            padding: 12,
+                            cornerRadius: 8,
+                            callbacks: {
+                                label: function (context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) label += ': ';
+                                    if (context.parsed.y !== null) {
+                                        if (context.dataset.yAxisID === 'y') {
+                                            label += new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(context.parsed.y);
+                                        } else {
+                                            label += new Intl.NumberFormat('es-ES').format(context.parsed.y) + ' kWh';
+                                        }
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            beginAtZero: true,
+                            title: { display: true, text: 'Ventas (€)' }
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            beginAtZero: true,
+                            grid: { drawOnChartArea: false },
+                            title: { display: true, text: 'Consumo (kWh)' }
+                        },
+                        x: { grid: { display: false } }
+                    }
+                }
+            });
+        }
+
+        function updateChartData() {
+            if (!chartInstance) return;
+
+            if (currentMode === 'monthly') {
+                chartInstance.data.datasets[0].data = chartData.values;
+                chartInstance.data.datasets[1].data = chartData.consumption;
+            } else {
+                chartInstance.data.datasets[0].data = chartData.accumulated_values;
+                chartInstance.data.datasets[1].data = chartData.accumulated_consumption;
+            }
+            chartInstance.update();
+        }
+
+        function filterTable() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            if (!query) {
+                filteredInvoices = [...allInvoices];
+            } else {
+                filteredInvoices = allInvoices.filter(inv => {
+                    const id = (inv.id || '').toLowerCase();
+                    const client = (inv.client || '').toLowerCase();
+                    const date = (inv.date || '').toLowerCase();
+                    const total = (inv.total || 0).toString();
+                    const consumption = (inv.consumption || 0).toString();
+
+                    return id.includes(query) ||
+                        client.includes(query) ||
+                        date.includes(query) ||
+                        total.includes(query) ||
+                        consumption.includes(query);
+                });
+            }
+            // Re-apply sort after filter
+            sortData(currentSort.key, currentSort.dir, true);
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('table-body');
+            tbody.innerHTML = '';
+
+            if (filteredInvoices.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding:20px;">No hay coincidencias</td></tr>';
+                return;
+            }
+
+            // Using Fragment for performance
+            const fragment = document.createDocumentFragment();
+
+            filteredInvoices.forEach(inv => {
+                const tr = document.createElement('tr');
+                tr.style.borderBottom = '1px solid #eee';
+
+                const fmtEuro = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(inv.total);
+                const fmtKwh = new Intl.NumberFormat('es-ES').format(inv.consumption || 0);
+
+                tr.innerHTML = `
+                    <td style="padding: 12px;">${inv.id}</td>
+                    <td style="padding: 12px;">${inv.client || '-'}</td>
+                    <td style="padding: 12px;">${inv.date}</td>
+                    <td style="padding: 12px; text-align: right; font-weight: bold;">${fmtEuro}</td>
+                    <td style="padding: 12px; text-align: right;">${fmtKwh}</td>
+                `;
+                fragment.appendChild(tr);
+            });
+
+            tbody.appendChild(fragment);
+        }
+
+        async function runSync() {
+            modal.style.display = 'flex';
+            modalTitle.innerHTML = `Sincronizando Holded <div class="spinner"></div>`;
+            outputArea.textContent = 'Solicitando sincronización...\n';
+
+            try {
+                const response = await fetch('/run/sync_divakia_sales.py');
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder("utf-8");
+
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+                    const text = decoder.decode(value, { stream: true });
+                    outputArea.textContent += text;
+                    outputArea.scrollTop = outputArea.scrollHeight;
+                }
+
+                modalTitle.textContent = `Sincronización Finalizada`;
+                // Reload chart after sync
+                setTimeout(() => {
+                    location.reload();
+                }, 2000);
+
+            } catch (error) {
+                outputArea.textContent += `\n[ERROR] ${error.message}`;
+                modalTitle.textContent = 'Error en Ejecución';
+            }
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) closeModal();
+        }
+
+        // Initialize
+        fetchBillingData();
+    </script>
+
+</body>
+
+</html>

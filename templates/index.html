@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enex Control Center</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <img src="{{ url_for('static', filename='logo_enex.png') }}" alt="ENEX Logo" class="header-logo">
+            <div>
+                <h1>Enex EMS</h1>
+                <div class="subtitle">Centro de Control</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section: Scripts -->
+        <h2 class="section-title">Scripts</h2>
+        <div class="cards-grid">
+            <!-- Card 1: Omie Holded -->
+            <div class="card">
+                <div>
+                    <div class="card-icon">⚡</div>
+                    <h2>OMIE</h2>
+                    <p>Ejecutar proceso de descarga y actualización de datos de Omie a Holded.</p>
+                </div>
+                <button class="btn" onclick="runScript('omie_holded.py')">Ejecutar</button>
+            </div>
+
+            <!-- Card 2: Divakia ATR -->
+            <div class="card">
+                <div>
+                    <div class="card-icon">📊</div>
+                    <h2>ATR</h2>
+                    <p>Procesamiento de archivos ATR y gestión de datos Divakia.</p>
+                </div>
+                <button class="btn" onclick="runScript('divakia_atr.py')">Ejecutar</button>
+            </div>
+
+            <!-- Card 3: Facturas Emitidas -->
+            <div class="card">
+                <div>
+                    <div class="card-icon">🧾</div>
+                    <h2>Facturas Emitidas</h2>
+                    <p>Generación y control de facturas emitidas.</p>
+                </div>
+                <button class="btn" onclick="runScript('facturas_emitidas.py')">Ejecutar</button>
+            </div>
+        </div>
+
+        <!-- Section: Pages -->
+        <h2 class="section-title">Paneles de Visualización</h2>
+        <div class="cards-grid">
+            <!-- Card 4: Facturación Graph -->
+            <div class="card">
+                <div>
+                    <div class="card-icon">📈</div>
+                    <h2>Facturación</h2>
+                    <p>Ver gráficas de ventas mensuales.</p>
+                </div>
+                <a href="/billing" class="btn"
+                    style="text-decoration: none; display: inline-block; text-align: center;">Ver Dashboard</a>
+            </div>
+
+            <!-- Card 5: Ranking -->
+            <div class="card">
+                <div>
+                    <div class="card-icon">🏆</div>
+                    <h2>Ranking</h2>
+                    <p>Ranking de comercializadoras y posición de ENEX.</p>
+                </div>
+                <a href="/ranking" class="btn"
+                    style="text-decoration: none; display: inline-block; text-align: center;">Ver Ranking</a>
+            </div>
+
+            <!-- Card 6: Visualizador SIPS -->
+            <div class="card">
+                <div>
+                    <div class="card-icon">👁️</div>
+                    <h2>Visualizador SIPS</h2>
+                    <p>Consultar datos técnicos y de consumo (CUPS).</p>
+                </div>
+                <a href="/sips" class="btn"
+                    style="text-decoration: none; display: inline-block; text-align: center;">Ver Dashboard</a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modal Output -->
+    <div id="output-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Ejecutando...</h3>
+                <button class="close-btn" onclick="closeModal()">×</button>
+            </div>
+            <div id="output-area" class="output-container">Esperando inicio...</div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('output-modal');
+        const outputArea = document.getElementById('output-area');
+        const modalTitle = document.getElementById('modal-title');
+
+        async function runScript(scriptName) {
+            // Show modal
+            modal.style.display = 'flex';
+            modalTitle.innerHTML = `Ejecutando ${scriptName} <div class="spinner"></div>`;
+            outputArea.textContent = 'Iniciando proceso...';
+
+            try {
+                const response = await fetch(`/run/${scriptName}`);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder("utf-8");
+
+                outputArea.textContent = ''; // Clear previous
+
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+                    // stream: true handles multi-byte characters correctly across chunks
+                    const text = decoder.decode(value, { stream: true });
+                    outputArea.textContent += text;
+                    // Auto scroll to bottom
+                    outputArea.scrollTop = outputArea.scrollHeight;
+                }
+
+                modalTitle.textContent = `${scriptName} Finalizado`;
+
+            } catch (error) {
+                console.error("Execution error:", error);
+                outputArea.textContent += `\n[FATAL ERROR] ${error.name}: ${error.message}`;
+                if (error.stack) outputArea.textContent += `\n${error.stack}`;
+                modalTitle.textContent = 'Error en Ejecución';
+            }
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        // Close on click outside
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+
+</html>
