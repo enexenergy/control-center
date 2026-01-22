@@ -215,8 +215,31 @@ def main():
     logger.info("Iniciando proceso de extracción de facturas ATR...")
     
     # 1. Configuración de Salida
-    # 1. Configuración de Salida
     archivo_salida = os.path.join(common.get_downloads_dir(), "facturas_resultados.xlsx")
+
+    # 2. Configuración Holded
+    holded_key = os.getenv("HOLDED_API_KEY")
+
+    # 3. Datos Holded
+    facturas_holded = set()
+    if holded_key:
+        logger.info("Obteniendo facturas de Holded (últimos 3 meses)...")
+        facturas_holded = obtener_compras_holded(holded_key)
+    else:
+        logger.info("No se configuró HOLDED_API_KEY. Se omitirá el filtrado.")
+
+    # 4. Obtención de Datos Divakia con common
+    token = common.get_orka_token()
+    
+    if not token:
+        logger.error("No se pudo obtener token de ORKA. Verifica credenciales en .env.")
+        return
+
+    data_facturas = obtener_facturas(token)
+    
+    if not data_facturas:
+        logger.error("No se obtuvieron datos de facturas. Abortando.")
+        return
 
     # 5. Procesamiento
     registros = procesar_datos(data_facturas)
@@ -236,7 +259,6 @@ def main():
                     if dt >= fecha_limite:
                         registros_filtrados.append(r)
                 else:
-                    # Sin fecha, ¿guardamos o descartamos? Pandas coerce -> NaT -> False. Descartamos.
                     pass
             except:
                 pass
@@ -259,33 +281,6 @@ def main():
     
     # Trigger download
     common.trigger_download_via_stdout(archivo_salida)
-
-    # 2. Configuración Holded
-    holded_key = os.getenv("HOLDED_API_KEY")
-
-    # 3. Datos Holded
-    facturas_holded = set()
-    if holded_key:
-        logger.info("Obteniendo facturas de Holded (últimos 3 meses)...")
-        facturas_holded = obtener_compras_holded(holded_key)
-    else:
-        logger.info("No se configuró HOLDED_API_KEY. Se omitirá el filtrado.")
-
-    # 4. Obtención de Datos Divakia con common
-    token = common.get_orka_token()
-    
-    if not token:
-        logger.error("No se pudo obtener token de ORKA. Verifica credenciales en .env.")
-        sys.exit(1)
-
-    data_facturas = obtener_facturas(token)
-    
-    if not data_facturas:
-        logger.error("No se obtuvieron datos de facturas. Abortando.")
-        sys.exit(1)
-
-    # 6. Guardado eliminado en el bloque anterior
-
     
     logger.info("Proceso finalizado.")
 

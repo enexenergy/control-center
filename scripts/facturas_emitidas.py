@@ -3,6 +3,7 @@ import csv
 from datetime import datetime, timedelta
 import os
 import sys
+import unicodedata
 
 # Ensure we can import common
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
@@ -21,6 +22,14 @@ def _ts():
     return datetime.now().strftime("%Y%m%d_%H-%M-%S")
 
 # === FUNCIONES ===
+
+def normalize_text(text):
+    """Normalize text to ASCII (remove accents/diacritics)."""
+    if not text:
+        return ""
+    # Normalize unicode characters to closest ASCII equivalent
+    return ''.join(c for c in unicodedata.normalize('NFD', str(text))
+                   if unicodedata.category(c) != 'Mn')
 
 def convertir_a_float(valor):
     try:
@@ -146,6 +155,7 @@ def generar_csv_facturas(facturas, facturas_holded, output_path):
                     f.get("segundo_apellido", "")
                 ]
                 nombre_contacto = " ".join([p for p in parts if p and p.strip()])
+                nombre_contacto = normalize_text(nombre_contacto) # Normalize name
 
                 importe_total = convertir_a_float(fc.get("importe_total_cliente_euros"))
                 iva_euros = convertir_a_float(fc.get("iva_euros"))
@@ -171,11 +181,11 @@ def generar_csv_facturas(facturas, facturas_holded, output_path):
                     "Descripcion": descripcion,
                     "Nombre del contacto": nombre_contacto,
                     "NIF del contacto": f.get("identificador", ""),
-                    "Direccion": f.get("direccion_punto_suministro", ""),
-                    "Poblacion": f.get("poblacion", ""),
+                    "Direccion": normalize_text(f.get("direccion_punto_suministro", "")),
+                    "Poblacion": normalize_text(f.get("poblacion", "")),
                     "Codigo postal": f.get("codigo_postal", ""),
-                    "Provincia": f.get("provincia", ""),
-                    "Pais": f.get("pais", ""),
+                    "Provincia": normalize_text(f.get("provincia", "")),
+                    "Pais": normalize_text(f.get("pais", "")),
                     "Concepto": "",
                     "Descripcion del producto": "",
                     "SKU": "",
