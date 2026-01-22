@@ -32,8 +32,26 @@ COLUMNAS = [
 
 # ==== FUNCIONES ====
 def limpiar_y_convertir(valor):
-    # Usamos common.clean_float pero mantenemos la logica especifica si es necesaria
-    return common.clean_float(valor)
+    if valor is None:
+        return 0.0
+    if isinstance(valor, (int, float)):
+        return float(valor)
+        
+    val_str = str(valor).strip()
+    if not val_str:
+        return 0.0
+        
+    try:
+        # Si tiene coma, asumimos formato Español (1.000,00 o 1000,00)
+        if ',' in val_str:
+            return common.clean_float(val_str)
+        
+        # Si NO tiene coma, asumimos formato Estándar (1000.00)
+        # common.clean_float elimina puntos, lo cual rompe 1000.00 -> 100000.
+        # Así que aquí usamos conversión directa.
+        return float(val_str)
+    except (ValueError, TypeError):
+        return 0.0
 
 def encontrar_zip_mas_reciente():
     try:
