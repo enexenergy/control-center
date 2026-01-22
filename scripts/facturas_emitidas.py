@@ -1,7 +1,5 @@
-import requests
-import pandas as pd
+import csv
 from datetime import datetime, timedelta
-import io
 import os
 import sys
 
@@ -89,7 +87,7 @@ def obtener_facturas_holded():
         print(f"Excepción conectando a Holded: {e}")
         return set()
 
-def generar_excel_facturas(facturas, facturas_holded):
+def generar_csv_facturas(facturas, facturas_holded, output_path):
     columnas = [
         "Num factura", "Formato de numeración", "Fecha dd/mm/yyyy", "Fecha de vencimiento dd/mm/yyyy", "Descripción", 
         "Nombre del contacto", "NIF del contacto", "Dirección", "Población", "Código postal", "Provincia", "País", 
@@ -98,19 +96,15 @@ def generar_excel_facturas(facturas, facturas_holded):
         "Cuenta de pago", "Tags separados por -", "Nombre canal de venta", "Cuenta canal de venta", "Moneda", "Cambio de moneda", "Almacén"
     ]
 
-    # Filtrar por prefijo 'N2026' (o el año actual dinámico si se prefiere, pero el original era hardcoded)
-    # EL original decía 'N2026', asumimos que es correcto para este año.
+    # Filtrar facturas
     facturas_filtradas = []
     
     current_year = datetime.now().year
-    # Detect if we should update N2026 to N{current_year} or keep strictly N2026?
-    # Original code had N2026. Let's keep strict to avoid breaking logic, 
-    # but maybe N2025 was intended? Let's check original.
-    # Original: `if f.get("codigo_factura_cliente", "").startswith("N2026")]`
-    # Warning: Current year is 2026 (per system time). So N2026 is correct.
     
     for f in facturas:
         code = f.get("codigo_factura_cliente", "")
+        # Mantener filtro estricto por ahora, asumiendo N{current_year} o N2026?
+        # Original code was "N2026". 
         if not code.startswith("N2026"):
             continue
             
@@ -122,89 +116,91 @@ def generar_excel_facturas(facturas, facturas_holded):
             
         facturas_filtradas.append(f)
 
-    datos_facturas = []
-    for f in facturas_filtradas:
-        fc = f.get("factura_cliente", {})
-        fecha_emision = fc.get("fecha_emision", "")
-        
-        # Calculo vencimiento +5 dias
-        fecha_venc = ""
-        if fecha_emision:
-            try:
-                dt_emision = datetime.strptime(fecha_emision, "%d/%m/%Y")
-                fecha_venc = (dt_emision + timedelta(days=5)).strftime("%d/%m/%Y")
-            except:
-                pass
+    # Escribir CSV
+    try:
+        with open(output_path, 'w', newline='', encoding='utf-8') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=columnas, delimiter=';') # Excel friendly delimiter
+            writer.writeheader()
+            
+            for f in facturas_filtradas:
+                fc = f.get("factura_cliente", {})
+                fecha_emision = fc.get("fecha_emision", "")
                 
-        descripcion = f"Período de medida: {fc.get('fecha_desde', '')} - {fc.get('fecha_hasta', '')}"
-        
-        # Unir nombre
-        parts = [
-            f.get("nombre_razon_social", ""), 
-            f.get("nombre", ""), 
-            f.get("primer_apellido", ""), 
-            f.get("segundo_apellido", "")
-        ]
-        nombre_contacto = " ".join([p for p in parts if p and p.strip()])
+                # Calculo vencimiento +5 dias
+                fecha_venc = ""
+                if fecha_emision:
+                    try:
+                        dt_emision = datetime.strptime(fecha_emision, "%d/%m/%Y")
+                        fecha_venc = (dt_emision + timedelta(days=5)).strftime("%d/%m/%Y")
+                    except:
+                        pass
+                        
+                descripcion = f"Período de medida: {fc.get('fecha_desde', '')} - {fc.get('fecha_hasta', '')}"
+                
+                # Unir nombre
+                parts = [
+                    f.get("nombre_razon_social", ""), 
+                    f.get("nombre", ""), 
+                    f.get("primer_apellido", ""), 
+                    f.get("segundo_apellido", "")
+                ]
+                nombre_contacto = " ".join([p for p in parts if p and p.strip()])
 
-        importe_total = convertir_a_float(fc.get("importe_total_cliente_euros"))
-        iva_euros = convertir_a_float(fc.get("iva_euros"))
-        iva_reducido = convertir_a_float(fc.get("iva_reducido_euros"))
+                importe_total = convertir_a_float(fc.get("importe_total_cliente_euros"))
+                iva_euros = convertir_a_float(fc.get("iva_euros"))
+                iva_reducido = convertir_a_float(fc.get("iva_reducido_euros"))
 
-        precio_unidad = 0
-        iva_valor = 0
+                precio_unidad = 0.0
+                iva_valor = 0
 
-        # Lógica de desglose IVA inverso
-        if importe_total > 0:
-            if iva_euros > 0:
-                iva_valor = 21
-                precio_unidad = round(importe_total / (1 + iva_valor / 100), 2)
-            elif iva_reducido > 0:
-                iva_valor = 10
-                precio_unidad = round(importe_total / (1 + iva_valor / 100), 2)
+                # Lógica de desglose IVA inverso
+                if importe_total > 0:
+                    if iva_euros > 0:
+                        iva_valor = 21
+                        precio_unidad = round(importe_total / (1 + iva_valor / 100.0), 2)
+                    elif iva_reducido > 0:
+                        iva_valor = 10
+                        precio_unidad = round(importe_total / (1 + iva_valor / 100.0), 2)
 
-        datos_factura = {
-            "Num factura": f.get("codigo_factura_cliente", ""),
-            "Formato de numeración": f"{datetime.now().year}%%%%", 
-            "Fecha dd/mm/yyyy": fecha_emision,
-            "Fecha de vencimiento dd/mm/yyyy": fecha_venc,
-            "Descripción": descripcion,
-            "Nombre del contacto": nombre_contacto,
-            "NIF del contacto": f.get("identificador", ""),
-            "Dirección": f.get("direccion_punto_suministro", ""),
-            "Población": f.get("poblacion", ""),
-            "Código postal": f.get("codigo_postal", ""),
-            "Provincia": f.get("provincia", ""),
-            "País": f.get("pais", ""),
-            "Concepto": "",
-            "Descripción del producto": "",
-            "SKU": "",
-            "Precio unidad": precio_unidad,
-            "Unidades": 1,
-            "Descuento %": "",
-            "IVA %": iva_valor,
-            "Retención %": "",
-            "Rec. de eq. %": "",
-            "Operación": "",
-            "Forma de pago (ID)": "",
-            "Cantidad cobrada": "",
-            "Fecha de cobro": "",
-            "Cuenta de pago": "",
-            "Tags separados por -": "",
-            "Nombre canal de venta": "",
-            "Cuenta canal de venta": "",
-            "Moneda": "eur",
-            "Cambio de moneda": 1,
-            "Almacén": ""
-        }
-        datos_facturas.append(datos_factura)
-
-    df = pd.DataFrame(datos_facturas, columns=columnas)
-    output = io.BytesIO()
-    with pd.ExcelWriter(output, engine='openpyxl') as writer:
-        df.to_excel(writer, sheet_name="Facturas Emitidas", index=False)
-    output.seek(0)
-    return output
+                row = {
+                    "Num factura": f.get("codigo_factura_cliente", ""),
+                    "Formato de numeración": f"{datetime.now().year}%%%%", 
+                    "Fecha dd/mm/yyyy": fecha_emision,
+                    "Fecha de vencimiento dd/mm/yyyy": fecha_venc,
+                    "Descripción": descripcion,
+                    "Nombre del contacto": nombre_contacto,
+                    "NIF del contacto": f.get("identificador", ""),
+                    "Dirección": f.get("direccion_punto_suministro", ""),
+                    "Población": f.get("poblacion", ""),
+                    "Código postal": f.get("codigo_postal", ""),
+                    "Provincia": f.get("provincia", ""),
+                    "País": f.get("pais", ""),
+                    "Concepto": "",
+                    "Descripción del producto": "",
+                    "SKU": "",
+                    "Precio unidad": str(precio_unidad).replace('.', ','), # Excel esp format
+                    "Unidades": "1",
+                    "Descuento %": "",
+                    "IVA %": str(iva_valor),
+                    "Retención %": "",
+                    "Rec. de eq. %": "",
+                    "Operación": "",
+                    "Forma de pago (ID)": "",
+                    "Cantidad cobrada": "",
+                    "Fecha de cobro": "",
+                    "Cuenta de pago": "",
+                    "Tags separados por -": "",
+                    "Nombre canal de venta": "",
+                    "Cuenta canal de venta": "",
+                    "Moneda": "eur",
+                    "Cambio de moneda": "1",
+                    "Almacén": ""
+                }
+                writer.writerow(row)
+        return True
+    except Exception as e:
+        print(f"Error escribiendo CSV: {e}")
+        return False
 
 # Alias de compatibilidad
 generar_excel_emitidas = generar_excel_facturas
@@ -223,14 +219,13 @@ if __name__ == "__main__":
             facturas_holded = obtener_facturas_holded()
             print(f"Facturas recuperadas de HOLDED: {len(facturas_holded)}")
             
-            excel_output = generar_excel_facturas(facturas, facturas_holded)
-
             os.makedirs(DOWNLOADS_DIR, exist_ok=True)
-            out_path = os.path.join(DOWNLOADS_DIR, f"facturas_emitidas_{_ts()}.xlsx")
+            out_path = os.path.join(DOWNLOADS_DIR, f"facturas_emitidas_{_ts()}.csv")
             
-            with open(out_path, "wb") as f:
-                f.write(excel_output.read())
-            print(f"✅ Archivo Excel generado con éxito: {out_path}")
+            if generar_csv_facturas(facturas, facturas_holded, out_path):
+                print(f"✅ Archivo CSV generado con éxito: {out_path}")
+            else:
+                print("❌ Fallo al generar el archivo CSV")
         else:
             print("ℹ️ No se encontraron facturas en el rango de fechas.")
     else:

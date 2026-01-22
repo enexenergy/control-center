@@ -1,5 +1,5 @@
+import csv
 import json
-import pandas as pd
 import zipfile
 import requests
 import os
@@ -38,6 +38,10 @@ def limpiar_y_convertir(valor):
 
 def encontrar_zip_mas_reciente():
     try:
+        # Check if directory exists
+        if not os.path.exists(CARPETA_DESCARGAS):
+             raise FileNotFoundError(f"La carpeta {CARPETA_DESCARGAS} no existe.")
+
         archivos = [
             f for f in os.listdir(CARPETA_DESCARGAS)
             if f.startswith(PREFIJO_ARCHIVO) and f.endswith(".zip")
@@ -109,10 +113,10 @@ def procesar_zip(ruta_zip):
             "Concepto": concepto_str,
             "Descripción del producto": "",
             "SKU": "",
-            "Precio unidad": precio_unidad,
-            "Unidades": 1,
+            "Precio unidad": str(precio_unidad).replace('.', ','), # Excel esp format
+            "Unidades": "1",
             "Descuento %": "",
-            "IVA %": iva_porcentaje,
+            "IVA %": str(iva_porcentaje).replace('.', ','),
             "Retención %": "",
             "Inv. Suj. Pasivo (1/0)": "",
             "Operación": "general",
@@ -123,7 +127,7 @@ def procesar_zip(ruta_zip):
             "Nombre cuenta de gasto": "Compras OMIE",
             "Num. Cuenta de gasto": "60000002",
             "Moneda": "EUR",
-            "Cambio de moneda": 1
+            "Cambio de moneda": "1"
         }
         facturas_data.append(datos_factura)
 
@@ -162,10 +166,14 @@ if __name__ == "__main__":
             print("⚠️ HOLDED_API_KEY no configurado. No se filtrarán duplicados.")
 
         if facturas:
-            df = pd.DataFrame(facturas, columns=COLUMNAS)
-            output_filename = os.path.join(CARPETA_DESCARGAS, "compras_omie.xlsx")
-            df.to_excel(output_filename, sheet_name="Todas las Facturas", index=False)
-            print(f"✅ Excel generado en: {output_filename}")
+            output_filename = os.path.join(CARPETA_DESCARGAS, "compras_omie.csv")
+            
+            with open(output_filename, 'w', newline='', encoding='utf-8') as csvfile:
+                writer = csv.DictWriter(csvfile, fieldnames=COLUMNAS, delimiter=';')
+                writer.writeheader()
+                writer.writerows(facturas)
+                
+            print(f"✅ CSV generado en: {output_filename}")
         else:
             print("ℹ️ No hay facturas nuevas para procesar.")
             

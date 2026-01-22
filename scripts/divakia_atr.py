@@ -2,7 +2,7 @@ import os
 import sys
 import base64
 import logging
-import pandas as pd
+import csv
 import requests
 from datetime import datetime, timedelta
 from decimal import Decimal, ROUND_HALF_UP
@@ -132,7 +132,7 @@ def procesar_datos(data):
     
     if not lista_facturas:
         logger.warning("No se encontraron facturas en la respuesta.")
-        return pd.DataFrame()
+        return []
 
     for factura in lista_facturas:
         factura_atr = factura.get("factura_atr", {})
@@ -183,37 +183,79 @@ def procesar_datos(data):
         }
         registros.append(registro)
         
-    return pd.DataFrame(registros)
+    return registros
 
-def guardar_en_excel(dataframe, archivo_salida):
-    """Guarda el DataFrame en un archivo Excel con formato de fechas corregido."""
-    if dataframe.empty:
-        logger.warning("DataFrame vacío, no se generará archivo Excel.")
+def guardar_en_csv(datos, archivo_salida):
+    """Guarda los datos en un archivo CSV."""
+    if not datos:
+        logger.warning("Lista de datos vacía, no se generará archivo CSV.")
         return
 
     try:
         output_dir = os.path.dirname(archivo_salida)
         os.makedirs(output_dir, exist_ok=True)
 
-        df_export = dataframe.copy()
+        # Obtener columnas del primer registro o definir fijas
+        if datos:
+            columnas = list(datos[0].keys())
+        else:
+            return
 
-        for col in ["Fecha dd/mm/yyyy", "Fecha de vencimiento dd/mm/yyyy"]:
-            if col in df_export.columns:
-                df_export[col] = pd.to_datetime(
-                    df_export[col], dayfirst=True, errors="coerce"
-                ).dt.strftime("%d/%m/%Y")
-
-        df_export.to_excel(archivo_salida, index=False, sheet_name="Facturas")
-        logger.info(f"Archivo Excel guardado exitosamente en: {archivo_salida}")
+        with open(archivo_salida, 'w', newline='', encoding='utf-8') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=columnas, delimiter=';')
+            writer.writeheader()
+            writer.writerows(datos)
+            
+        logger.info(f"Archivo CSV guardado exitosamente en: {archivo_salida}")
 
     except Exception as e:
-        logger.error(f"Error al guardar el archivo Excel: {e}")
+        logger.error(f"Error al guardar el archivo CSV: {e}")
 
 def main():
     logger.info("Iniciando proceso de extracción de facturas ATR...")
     
     # 1. Configuración de Salida
+    # 1. Configuración de Salida
     archivo_salida = os.path.join(common.get_downloads_dir(), "facturas_resultados.xlsx")
+
+    # 5. Procesamiento
+    registros = procesar_datos(data_facturas)
+    
+    if registros:
+        logger.info("Filtrando facturas antiguas (más de 3 meses de antigüedad)...")
+        fecha_limite = datetime.now() - timedelta(days=90)
+        inicial_cnt = len(registros)
+        
+        registros_filtrados = []
+        for r in registros:
+            d_str = r.get("Fecha dd/mm/yyyy", "")
+            try:
+                # Intentar parsear fecha
+                if d_str:
+                    dt = datetime.strptime(d_str, "%d/%m/%Y")
+                    if dt >= fecha_limite:
+                        registros_filtrados.append(r)
+                else:
+                    # Sin fecha, ¿guardamos o descartamos? Pandas coerce -> NaT -> False. Descartamos.
+                    pass
+            except:
+                pass
+        
+        registros = registros_filtrados
+        final_cnt = len(registros)
+        
+        logger.info(f"Se descartaron {inicial_cnt - final_cnt} facturas anteriores a {fecha_limite.strftime('%d/%m/%Y')}.")
+
+    if registros and facturas_holded:
+        logger.info("Filtrando facturas ya existentes en Holded...")
+        inicial_cnt = len(registros)
+        registros = [r for r in registros if r["Num factura"] not in facturas_holded]
+        final_cnt = len(registros)
+        logger.info(f"Se filtraron {inicial_cnt - final_cnt} facturas que ya existían en Holded.")
+
+    # 6. Guardado (cambiar extensión a csv)
+    archivo_salida = archivo_salida.replace(".xlsx", ".csv")
+    guardar_en_csv(registros, archivo_salida)
 
     # 2. Configuración Holded
     holded_key = os.getenv("HOLDED_API_KEY")
@@ -239,29 +281,8 @@ def main():
         logger.error("No se obtuvieron datos de facturas. Abortando.")
         sys.exit(1)
 
-    # 5. Procesamiento
-    df_resultados = procesar_datos(data_facturas)
-    
-    if not df_resultados.empty:
-        logger.info("Filtrando facturas antiguas (más de 3 meses de antigüedad)...")
-        temp_dates = pd.to_datetime(df_resultados["Fecha dd/mm/yyyy"], dayfirst=True, errors="coerce")
-        fecha_limite = datetime.now() - timedelta(days=90)
-        
-        inicial_fecha = len(df_resultados)
-        df_resultados = df_resultados[temp_dates >= fecha_limite]
-        final_fecha = len(df_resultados)
-        
-        logger.info(f"Se descartaron {inicial_fecha - final_fecha} facturas anteriores a {fecha_limite.strftime('%d/%m/%Y')}.")
+    # 6. Guardado eliminado en el bloque anterior
 
-    if not df_resultados.empty and facturas_holded:
-        logger.info("Filtrando facturas ya existentes en Holded...")
-        inicial = len(df_resultados)
-        df_resultados = df_resultados[~df_resultados["Num factura"].isin(facturas_holded)]
-        final = len(df_resultados)
-        logger.info(f"Se filtraron {inicial - final} facturas que ya existían en Holded.")
-
-    # 6. Guardado
-    guardar_en_excel(df_resultados, archivo_salida)
     
     logger.info("Proceso finalizado.")
 

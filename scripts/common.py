@@ -113,4 +113,6 @@ def get_downloads_dir():
     """
     Return the path to the user's Downloads directory.
     """
+    if os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME"):
+        return "/tmp"
     return os.path.join(os.path.expanduser("~"), "Downloads")
