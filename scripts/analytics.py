@@ -4,8 +4,15 @@ from datetime import datetime
 
 def get_billing_data(base_dir):
     try:
-        data_path = os.path.join(base_dir, 'divakia_sales_data.json')
-        if not os.path.exists(data_path):
+        # Check /tmp first (for Vercel runtime updates)
+        temp_data_path = os.path.join('/tmp', 'divakia_sales_data.json')
+        repo_data_path = os.path.join(base_dir, 'divakia_sales_data.json')
+        
+        if os.path.exists(temp_data_path):
+            data_path = temp_data_path
+        elif os.path.exists(repo_data_path):
+            data_path = repo_data_path
+        else:
             return {"labels": [], "values": [], "last_sync": "No data found"}
         
         with open(data_path, 'r', encoding='utf-8') as f:

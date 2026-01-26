@@ -129,7 +129,13 @@ def main():
             data = procesar_facturas(facturas)
             
             # Save to JSON
-            out_file = "divakia_sales_data.json" # Saved in root
+            # Check for Vercel/Lambda environment
+            if os.environ.get('VERCEL') or os.environ.get('AWS_LAMBDA_FUNCTION_NAME') or os.path.exists('/tmp'):
+                out_dir = '/tmp'
+            else:
+                out_dir = '.'
+                
+            out_file = os.path.join(out_dir, "divakia_sales_data.json")
             with open(out_file, "w", encoding="utf-8") as f:
                 json.dump(data, f, indent=2, ensure_ascii=False)
                 
