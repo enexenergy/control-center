@@ -114,7 +114,7 @@ def procesar_facturas(facturas):
         
     return datos_export
 
-if __name__ == "__main__":
+def main():
     print("Iniciando sincronización de ventas (Divakia > JSON)...")
     
     token = common.get_orka_token()
@@ -136,3 +136,6 @@ if __name__ == "__main__":
             
     else:
         print("❌ Error de autenticación.")
+
+if __name__ == "__main__":
+    main()
