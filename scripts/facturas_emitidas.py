@@ -33,12 +33,13 @@ def normalize_text(text):
 
 def convertir_a_float(valor):
     try:
-        # Usamos la lógica local simple que funcionaba, o podemos usar common.clean_float
-        # La original era: valor = str(valor).replace(",", ".") -> float(valor)
-        # Mantendremos la lógica simple de Python standard para evitar sorpresas si no hay miles.
         if not valor: return 0.0
-        valor = str(valor).replace(",", ".")
-        return float(valor)
+        # Assume Spanish format: 1.234,56
+        # Remove thousands separator (.) first
+        val_str = str(valor).replace('.', '')
+        # Replace decimal separator (,) with (.)
+        val_str = val_str.replace(',', '.')
+        return float(val_str)
     except (ValueError, TypeError):
         return 0.0
 
@@ -189,7 +190,7 @@ def generar_csv_facturas(facturas, facturas_holded, output_path):
                     "Concepto": "",
                     "Descripcion del producto": "",
                     "SKU": "",
-                    "Precio unidad": str(precio_unidad).replace('.', ','), # Excel esp format
+                    "Precio unidad": f"{precio_unidad:.2f}".replace('.', ','), # Excel esp format
                     "Unidades": "1",
                     "Descuento %": "",
                     "IVA %": str(iva_valor),
