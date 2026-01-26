@@ -20,7 +20,10 @@ def obtener_facturas(token):
     hoy = datetime.today()
     hace_dias = hoy - timedelta(days=730) 
     fecha_desde = hace_dias.strftime("%d/%m/%Y")
-    fecha_hasta = hoy.strftime("%d/%m/%Y")
+    
+    # Extend to tomorrow to include full current day if API is exclusive
+    manana = hoy + timedelta(days=1)
+    fecha_hasta = manana.strftime("%d/%m/%Y")
 
     all_facturas = []
     offset = 0
