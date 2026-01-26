@@ -190,7 +190,7 @@ def generar_csv_facturas(facturas, facturas_holded, output_path):
                     "Concepto": "",
                     "Descripcion del producto": "",
                     "SKU": "",
-                    "Precio unidad": f"{precio_unidad:.2f}".replace('.', ','), # Excel esp format
+                    "Precio unidad": f"{precio_unidad:.2f}", # Dot decimal format
                     "Unidades": "1",
                     "Descuento %": "",
                     "IVA %": str(iva_valor),
