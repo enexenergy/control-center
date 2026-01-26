@@ -414,20 +414,16 @@ def ranking_data():
 
 # --- SIPS / Orka Logic ---
 
-def load_env():
-    """Simple .env loader"""
-    # Use BASE_DIR
-    env_path = os.path.join(BASE_DIR, '.env')
-    if os.path.exists(env_path):
-        with open(env_path, 'r') as f:
-            for line in f:
-                line = line.strip()
-                if line and not line.startswith('#') and '=' in line:
-                    key, value = line.split('=', 1)
-                    if key not in os.environ:
-                        os.environ[key] = value
+# --- Environment Setup ---
+from dotenv import load_dotenv
 
-load_env()
+# Load environment variables from .env file securely
+env_path = os.path.join(BASE_DIR, '.env')
+if os.path.exists(env_path):
+    try:
+        load_dotenv(env_path)
+    except Exception as e:
+        print(f"Warning: Failed to load .env file: {e}")
 
 orka_token_cache = {
     "token": None,
