@@ -1,10 +1,138 @@
 [
   {
-    "id": "N20260092",
+    "id": "N20260107",
+    "date": "26/01/2026",
+    "total": 57.54,
+    "consumption": 188.57,
+    "client": "CB Hermanos Peláez Morales",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260093",
+    "date": "26/01/2026",
+    "total": 181.45,
+    "consumption": 831.95,
+    "client": "Remedios Toro Cejudo",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260094",
+    "date": "26/01/2026",
+    "total": 218.49,
+    "consumption": 793.67,
+    "client": "CB Hermanos Peláez Morales",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260095",
+    "date": "26/01/2026",
+    "total": 32.54,
+    "consumption": 99.36,
+    "client": "María del Carmen Peláez Morales",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260096",
+    "date": "26/01/2026",
+    "total": 97.72,
+    "consumption": 326.56,
+    "client": "Carlos Hernando Molina",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260097",
+    "date": "26/01/2026",
+    "total": 16.56,
+    "consumption": 8.98,
+    "client": "Duque Cervantes S.L.",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260098",
+    "date": "26/01/2026",
+    "total": 4884.59,
+    "consumption": 22981.0,
+    "client": "Moreno Ruiz Hermanos SL",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260099",
+    "date": "26/01/2026",
+    "total": 34.73,
+    "consumption": 106.11,
+    "client": "Tecnomédica Málaga SL",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260100",
+    "date": "26/01/2026",
+    "total": 78.03,
+    "consumption": 251.13,
+    "client": "CB Hermanos Peláez Morales",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260108",
+    "date": "26/01/2026",
+    "total": 1197.42,
+    "consumption": 4725.71,
+    "client": "Nevada Imagen 2020 S.L.",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260101",
+    "date": "26/01/2026",
+    "total": 45.21,
+    "consumption": 98.89,
+    "client": "Miguel Ángel Rando Hurtado",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260102",
+    "date": "26/01/2026",
+    "total": 125.16,
+    "consumption": 506.48,
+    "client": "Ascensión Manzano Muñoz",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260103",
+    "date": "26/01/2026",
+    "total": 38.27,
+    "consumption": 46.79,
+    "client": "Moreno Ruiz Hermanos SL",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260104",
+    "date": "26/01/2026",
+    "total": 73.56,
+    "consumption": 239.59,
+    "client": "María Belén Manzano Muñoz",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260105",
+    "date": "26/01/2026",
+    "total": 96.09,
+    "consumption": 348.04,
+    "client": "Ramon Luis Banchs Sandoval",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260106",
+    "date": "26/01/2026",
+    "total": 22.43,
+    "consumption": 0.0,
+    "client": "Colegio Oficial de Arquitectos de Málaga",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260087",
     "date": "19/01/2026",
-    "total": 86.35,
-    "consumption": 265.0,
-    "client": "Eddie Joseph Wilson",
+    "total": 34.32,
+    "consumption": 88.73,
+    "client": "Kostyantiyn Herontidi",
     "status": "Factura cliente emitida"
   },
   {
@@ -40,22 +168,6 @@
     "status": "Factura cliente emitida"
   },
   {
-    "id": "N20260086",
-    "date": "19/01/2026",
-    "total": 21.95,
-    "consumption": 31.64,
-    "client": "María Isabel de Hita Fernández",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260087",
-    "date": "19/01/2026",
-    "total": 34.32,
-    "consumption": 88.73,
-    "client": "Kostyantiyn Herontidi",
-    "status": "Factura cliente emitida"
-  },
-  {
     "id": "N20260088",
     "date": "19/01/2026",
     "total": 75.06,
@@ -80,6 +192,22 @@
     "status": "Factura cliente emitida"
   },
   {
+    "id": "N20260092",
+    "date": "19/01/2026",
+    "total": 86.35,
+    "consumption": 265.0,
+    "client": "Eddie Joseph Wilson",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260086",
+    "date": "19/01/2026",
+    "total": 21.95,
+    "consumption": 31.64,
+    "client": "María Isabel de Hita Fernández",
+    "status": "Factura cliente emitida"
+  },
+  {
     "id": "N20260091",
     "date": "19/01/2026",
     "total": 63.02,
@@ -96,6 +224,46 @@
     "status": "Factura cliente emitida"
   },
   {
+    "id": "N20260047",
+    "date": "12/01/2026",
+    "total": 95.61,
+    "consumption": 258.79,
+    "client": "Coty Inmuebles SA",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260060",
+    "date": "12/01/2026",
+    "total": 267.89,
+    "consumption": 1210.6,
+    "client": "Impos Patrimonial SL",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260044",
+    "date": "12/01/2026",
+    "total": 121.02,
+    "consumption": 369.77,
+    "client": "Coty Inmuebles SA",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260036",
+    "date": "12/01/2026",
+    "total": 78.5,
+    "consumption": 190.74,
+    "client": "Coty Inmuebles SA",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260045",
+    "date": "12/01/2026",
+    "total": 41.16,
+    "consumption": 82.5,
+    "client": "Coty Inmuebles SA",
+    "status": "Factura cliente emitida"
+  },
+  {
     "id": "N20260061",
     "date": "12/01/2026",
     "total": 117.42,
@@ -104,26 +272,10 @@
     "status": "Factura cliente emitida"
   },
   {
-    "id": "N20260068",
-    "date": "12/01/2026",
-    "total": 41.65,
-    "consumption": 132.52,
-    "client": "Miguel Ángel Rando Hurtado",
-    "status": "Factura cliente emitida"
-  },
-  {
     "id": "N20260046",
     "date": "12/01/2026",
     "total": 88.12,
     "consumption": 225.93,
-    "client": "Coty Inmuebles SA",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260047",
-    "date": "12/01/2026",
-    "total": 95.61,
-    "consumption": 258.79,
     "client": "Coty Inmuebles SA",
     "status": "Factura cliente emitida"
   },
@@ -152,22 +304,6 @@
     "status": "Factura cliente emitida"
   },
   {
-    "id": "N20260050",
-    "date": "12/01/2026",
-    "total": 81.45,
-    "consumption": 258.44,
-    "client": "Coty Inmuebles SA",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260051",
-    "date": "12/01/2026",
-    "total": 140.17,
-    "consumption": 453.31,
-    "client": "Coty Inmuebles SA",
-    "status": "Factura cliente emitida"
-  },
-  {
     "id": "N20260063",
     "date": "12/01/2026",
     "total": 68.34,
@@ -176,75 +312,11 @@
     "status": "Factura cliente emitida"
   },
   {
-    "id": "N20260064",
+    "id": "N20260050",
     "date": "12/01/2026",
-    "total": 179.46,
-    "consumption": 751.11,
-    "client": "Impos Patrimonial SL",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260065",
-    "date": "12/01/2026",
-    "total": 75.31,
-    "consumption": 281.48,
-    "client": "Derves Patrimonial SL",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260066",
-    "date": "12/01/2026",
-    "total": 52.21,
-    "consumption": 142.58,
-    "client": "Tecnomédica Málaga SL",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260067",
-    "date": "12/01/2026",
-    "total": 19.0,
-    "consumption": 12.98,
-    "client": "Vicente De Hita Fernández",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260069",
-    "date": "12/01/2026",
-    "total": 1377.89,
-    "consumption": 6607.0,
-    "client": "Frutas Arias Rubio SL",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260045",
-    "date": "12/01/2026",
-    "total": 41.16,
-    "consumption": 82.5,
+    "total": 81.45,
+    "consumption": 258.44,
     "client": "Coty Inmuebles SA",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260036",
-    "date": "12/01/2026",
-    "total": 78.5,
-    "consumption": 190.74,
-    "client": "Coty Inmuebles SA",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260044",
-    "date": "12/01/2026",
-    "total": 121.02,
-    "consumption": 369.77,
-    "client": "Coty Inmuebles SA",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260060",
-    "date": "12/01/2026",
-    "total": 267.89,
-    "consumption": 1210.6,
-    "client": "Impos Patrimonial SL",
     "status": "Factura cliente emitida"
   },
   {
@@ -344,35 +416,11 @@
     "status": "Factura cliente emitida"
   },
   {
-    "id": "N20260070",
+    "id": "N20260051",
     "date": "12/01/2026",
-    "total": 1617.18,
-    "consumption": 7085.0,
-    "client": "Frederik Andrea Maurice Poelman",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260071",
-    "date": "12/01/2026",
-    "total": 444.42,
-    "consumption": 1544.0,
-    "client": "Estetic Investments Siglo XXI SL",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260072",
-    "date": "12/01/2026",
-    "total": 1585.92,
-    "consumption": 6685.0,
-    "client": "Mar de Pedregalejo SL",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260073",
-    "date": "12/01/2026",
-    "total": 624.71,
-    "consumption": 2765.0,
-    "client": "Frutas Arias Rubio SL",
+    "total": 140.17,
+    "consumption": 453.31,
+    "client": "Coty Inmuebles SA",
     "status": "Factura cliente emitida"
   },
   {
@@ -380,14 +428,6 @@
     "date": "12/01/2026",
     "total": 1.91,
     "consumption": 0.0,
-    "client": "Moreno Ruiz Hermanos SL",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260076",
-    "date": "12/01/2026",
-    "total": 618.42,
-    "consumption": 1612.0,
     "client": "Moreno Ruiz Hermanos SL",
     "status": "Factura cliente emitida"
   },
@@ -400,10 +440,10 @@
     "status": "Factura cliente emitida"
   },
   {
-    "id": "N20260077",
+    "id": "N20260080",
     "date": "12/01/2026",
-    "total": 117.52,
-    "consumption": 98.0,
+    "total": 12362.86,
+    "consumption": 58330.84,
     "client": "Moreno Ruiz Hermanos SL",
     "status": "Factura cliente emitida"
   },
@@ -416,11 +456,11 @@
     "status": "Factura cliente emitida"
   },
   {
-    "id": "N20260080",
+    "id": "N20260053",
     "date": "12/01/2026",
-    "total": 12362.86,
-    "consumption": 58330.84,
-    "client": "Moreno Ruiz Hermanos SL",
+    "total": 253.06,
+    "consumption": 956.51,
+    "client": "Promo Aceite 1980 SL",
     "status": "Factura cliente emitida"
   },
   {
@@ -440,11 +480,99 @@
     "status": "Factura cliente emitida"
   },
   {
-    "id": "N20260053",
+    "id": "N20260077",
     "date": "12/01/2026",
-    "total": 253.06,
-    "consumption": 956.51,
-    "client": "Promo Aceite 1980 SL",
+    "total": 117.52,
+    "consumption": 98.0,
+    "client": "Moreno Ruiz Hermanos SL",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260076",
+    "date": "12/01/2026",
+    "total": 618.42,
+    "consumption": 1612.0,
+    "client": "Moreno Ruiz Hermanos SL",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260073",
+    "date": "12/01/2026",
+    "total": 624.71,
+    "consumption": 2765.0,
+    "client": "Frutas Arias Rubio SL",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260071",
+    "date": "12/01/2026",
+    "total": 444.42,
+    "consumption": 1544.0,
+    "client": "Estetic Investments Siglo XXI SL",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260064",
+    "date": "12/01/2026",
+    "total": 179.46,
+    "consumption": 751.11,
+    "client": "Impos Patrimonial SL",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260070",
+    "date": "12/01/2026",
+    "total": 1617.18,
+    "consumption": 7085.0,
+    "client": "Frederik Andrea Maurice Poelman",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260065",
+    "date": "12/01/2026",
+    "total": 75.31,
+    "consumption": 281.48,
+    "client": "Derves Patrimonial SL",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260066",
+    "date": "12/01/2026",
+    "total": 52.21,
+    "consumption": 142.58,
+    "client": "Tecnomédica Málaga SL",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260069",
+    "date": "12/01/2026",
+    "total": 1377.89,
+    "consumption": 6607.0,
+    "client": "Frutas Arias Rubio SL",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260072",
+    "date": "12/01/2026",
+    "total": 1585.92,
+    "consumption": 6685.0,
+    "client": "Mar de Pedregalejo SL",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260067",
+    "date": "12/01/2026",
+    "total": 19.0,
+    "consumption": 12.98,
+    "client": "Vicente De Hita Fernández",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260068",
+    "date": "12/01/2026",
+    "total": 41.65,
+    "consumption": 132.52,
+    "client": "Miguel Ángel Rando Hurtado",
     "status": "Factura cliente emitida"
   },
   {
@@ -512,11 +640,11 @@
     "status": "Factura cliente emitida"
   },
   {
-    "id": "N20260021",
+    "id": "N20260019",
     "date": "07/01/2026",
-    "total": 5.89,
-    "consumption": 0.0,
-    "client": "María Victoria Peláez Morales",
+    "total": 224.14,
+    "consumption": 992.08,
+    "client": "María Encarnación Porras González",
     "status": "Factura cliente emitida"
   },
   {
@@ -525,6 +653,14 @@
     "total": 0.0,
     "consumption": 1495.0,
     "client": "Amador Chica Moral y Otra C.B.",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260021",
+    "date": "07/01/2026",
+    "total": 5.89,
+    "consumption": 0.0,
+    "client": "María Victoria Peláez Morales",
     "status": "Factura cliente emitida"
   },
   {
@@ -541,14 +677,6 @@
     "total": 49.14,
     "consumption": 158.16,
     "client": "Jean Cristophe De Roland",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260019",
-    "date": "07/01/2026",
-    "total": 224.14,
-    "consumption": 992.08,
-    "client": "María Encarnación Porras González",
     "status": "Factura cliente emitida"
   },
   {
@@ -600,78 +728,6 @@
     "status": "Factura cliente emitida"
   },
   {
-    "id": "N20260007",
-    "date": "07/01/2026",
-    "total": 4046.01,
-    "consumption": 16128.02,
-    "client": "Cdad Prop Málaga Towers - Vision",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260022",
-    "date": "07/01/2026",
-    "total": 254.74,
-    "consumption": 1036.25,
-    "client": "María Pilar Domínguez Alcaide",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260001",
-    "date": "07/01/2026",
-    "total": 110.86,
-    "consumption": 480.74,
-    "client": "Juan Antonio Tomé Toledo",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260002",
-    "date": "07/01/2026",
-    "total": 156.21,
-    "consumption": 654.33,
-    "client": "María Teresa Tomé Vereda",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260023",
-    "date": "07/01/2026",
-    "total": 172.03,
-    "consumption": 784.44,
-    "client": "María Victoria Peláez Morales",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260024",
-    "date": "07/01/2026",
-    "total": 845.11,
-    "consumption": 2776.0,
-    "client": "Manuel Díaz Hurtado",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260013",
-    "date": "07/01/2026",
-    "total": 3292.45,
-    "consumption": 15953.0,
-    "client": "CP Res Málaga Towers Living",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260033",
-    "date": "07/01/2026",
-    "total": 216.87,
-    "consumption": 861.83,
-    "client": "Eva Martín Hurtado de Mendoza",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260034",
-    "date": "07/01/2026",
-    "total": 354.34,
-    "consumption": 1467.0,
-    "client": "Arno Herbert Scherzberg",
-    "status": "Factura cliente emitida"
-  },
-  {
     "id": "N20260025",
     "date": "07/01/2026",
     "total": 88.22,
@@ -680,43 +736,19 @@
     "status": "Factura cliente emitida"
   },
   {
-    "id": "N20260026",
+    "id": "N20260007",
     "date": "07/01/2026",
-    "total": 117.12,
-    "consumption": 358.77,
-    "client": "María Carmen Baena Molina",
+    "total": 4046.01,
+    "consumption": 16128.02,
+    "client": "Cdad Prop Málaga Towers - Vision",
     "status": "Factura cliente emitida"
   },
   {
-    "id": "N20260027",
+    "id": "N20260015",
     "date": "07/01/2026",
-    "total": 1015.6,
-    "consumption": 4286.0,
-    "client": "Ramon Luis Banchs Sandoval",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260028",
-    "date": "07/01/2026",
-    "total": 1037.8,
-    "consumption": 3454.88,
-    "client": "Banchs & Rojas Centros Dentales SLP",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260014",
-    "date": "07/01/2026",
-    "total": 379.66,
-    "consumption": 1272.0,
+    "total": 3451.68,
+    "consumption": 16714.0,
     "client": "CP Res Málaga Towers Living",
-    "status": "Factura cliente emitida"
-  },
-  {
-    "id": "N20260029",
-    "date": "07/01/2026",
-    "total": 592.9,
-    "consumption": 2405.0,
-    "client": "Juan Manuel Alonso Martín",
     "status": "Factura cliente emitida"
   },
   {
@@ -728,11 +760,107 @@
     "status": "Factura cliente emitida"
   },
   {
-    "id": "N20260015",
+    "id": "N20260029",
     "date": "07/01/2026",
-    "total": 3451.68,
-    "consumption": 16714.0,
+    "total": 592.9,
+    "consumption": 2405.0,
+    "client": "Juan Manuel Alonso Martín",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260014",
+    "date": "07/01/2026",
+    "total": 379.66,
+    "consumption": 1272.0,
     "client": "CP Res Málaga Towers Living",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260028",
+    "date": "07/01/2026",
+    "total": 1037.8,
+    "consumption": 3454.88,
+    "client": "Banchs & Rojas Centros Dentales SLP",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260027",
+    "date": "07/01/2026",
+    "total": 1015.6,
+    "consumption": 4286.0,
+    "client": "Ramon Luis Banchs Sandoval",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260026",
+    "date": "07/01/2026",
+    "total": 117.12,
+    "consumption": 358.77,
+    "client": "María Carmen Baena Molina",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260022",
+    "date": "07/01/2026",
+    "total": 254.74,
+    "consumption": 1036.25,
+    "client": "María Pilar Domínguez Alcaide",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260034",
+    "date": "07/01/2026",
+    "total": 354.34,
+    "consumption": 1467.0,
+    "client": "Arno Herbert Scherzberg",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260033",
+    "date": "07/01/2026",
+    "total": 216.87,
+    "consumption": 861.83,
+    "client": "Eva Martín Hurtado de Mendoza",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260013",
+    "date": "07/01/2026",
+    "total": 3292.45,
+    "consumption": 15953.0,
+    "client": "CP Res Málaga Towers Living",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260024",
+    "date": "07/01/2026",
+    "total": 845.11,
+    "consumption": 2776.0,
+    "client": "Manuel Díaz Hurtado",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260023",
+    "date": "07/01/2026",
+    "total": 172.03,
+    "consumption": 784.44,
+    "client": "María Victoria Peláez Morales",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260002",
+    "date": "07/01/2026",
+    "total": 156.21,
+    "consumption": 654.33,
+    "client": "María Teresa Tomé Vereda",
+    "status": "Factura cliente emitida"
+  },
+  {
+    "id": "N20260001",
+    "date": "07/01/2026",
+    "total": 110.86,
+    "consumption": 480.74,
+    "client": "Juan Antonio Tomé Toledo",
     "status": "Factura cliente emitida"
   },
   {
