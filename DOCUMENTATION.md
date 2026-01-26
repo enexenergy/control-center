@@ -12,17 +12,17 @@ Este proyecto es un **Panel de Control y Automatización** diseñado para gestio
 
 ## 🛠 Estructura del Proyecto
 
-*   **`app.py`**: Servidor Web Flask. Gestiona las rutas, la API interna y la ejecución de scripts.
+*   **`api/index.py`**: Entry point Flask (Vercel Serverless Function). Gestiona rutas, API y orquesta la ejecución de scripts.
 *   **`scripts/`**: Lógica de negocio y automatización.
-    *   `common.py`: Funciones compartidas (autenticación Orka, logging).
-    *   `divakia_atr.py`: Descarga facturas de Peajes (ATR) de Orka y genera Excel para importación en Holded.
-    *   `facturas_emitidas.py`: Descarga facturas de clientes de Orka y genera Excel para Holded.
-    *   `omie_holded.py`: Procesa ficheros ZIP de OMIE y los convierte a formato compatible con Holded.
-    *   `sync_divakia_sales.py`: Sincroniza el histórico de ventas desde Orka a un JSON local (`divakia_sales_data.json`) para el dashboard.
+    *   `analytics.py`: Lógica para procesamiento de datos de Billing y Ranking.
+    *   `sips_service.py`: Lógica para consulta de SIPS y autenticación con Orka.
+    *   `common.py`: Funciones compartidas (logging, config).
+    *   `divakia_atr.py`, `facturas_emitidas.py`, `omie_holded.py`: Scripts de automatización y generación de ficheros.
+    *   `sync_divakia_sales.py`: Sincronización de ventas.
 *   **`templates/`**: Vistas HTML (Frontend).
 *   **`static/`**: Estilos CSS y Assets.
-*   **`competitors_ranking.json`**: Datos estáticos de competidores para el ranking.
-*   **`divakia_sales_data.json`**: Cache local de ventas (generado por `sync_divakia_sales.py`).
+*   **`competitors_ranking.json`**: Datos estáticos de competidores.
+*   **`divakia_sales_data.json`**: Cache local de ventas.
 
 ## 🚀 Instalación y Requisitos
 
@@ -55,7 +55,7 @@ Este proyecto es un **Panel de Control y Automatización** diseñado para gestio
 ### Iniciar el Servidor Web
 Ejecutar el siguiente comando en la terminal:
 ```bash
-python app.py
+python api/index.py
 ```
 Acceder en el navegador a: `http://127.0.0.1:5000`
 
