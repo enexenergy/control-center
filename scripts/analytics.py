@@ -19,15 +19,26 @@ def _fetch_invoices():
         return []
         
     try:
-        # Fetch all invoices
-        # Note: If > 1000 rows, supabase limits response. Should verify range.
-        # response = supabase.table('invoices').select('*').limit(5000).execute()
-        # Ensure we get the latest data first, and try to fetch enough
-        response = supabase.table('invoices').select('*').order('issue_date', desc=True).limit(2000).execute()
-        rows = response.data
+        # Fetch all invoices using pagination to overcome limits (usually 1000 per request)
+        all_rows = []
+        offset = 0
+        limit = 1000
+        more = True
         
+        while more:
+            response = supabase.table('invoices').select('*').range(offset, offset + limit - 1).execute()
+            batch = response.data
+            
+            if batch:
+                all_rows.extend(batch)
+                offset += limit
+                if len(batch) < limit:
+                    more = False
+            else:
+                more = False
+                
         invoices = []
-        for r in rows:
+        for r in all_rows:
             # Transform YYYY-MM-DD -> DD/MM/YYYY for legacy compatibility
             date_legacy = ""
             if r.get('issue_date'):

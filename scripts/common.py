@@ -16,22 +16,27 @@ logger = logging.getLogger("EnexCommon")
 
 def load_config():
     """
-    Load environment variables from .env file.
-    Looking in current directory and parent directory.
+    Load environment variables from .env file using absolute paths.
     """
-    # Try current directory
-    if os.path.exists(".env"):
-        load_dotenv(".env")
-    # Try parent directory (useful if running from scripts/)
-    elif os.path.exists("../.env"):
-        load_dotenv("../.env")
-        
+    # .../scripts/common.py -> .../scripts -> .../Enex_Antigravity
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(current_dir)
+    env_path = os.path.join(project_root, ".env")
+    
+    if os.path.exists(env_path):
+        load_dotenv(env_path, override=True)
+    else:
+        # Fallback to CWD logic if needed, or warn
+        if os.path.exists(".env"):
+            load_dotenv(".env")
+        else:
+            logger.warning(f".env not found at {env_path}")
+
     # Verify critical keys
     required_keys = ["ORKA_USER", "ORKA_PASSWORD"]
     missing = [k for k in required_keys if not os.getenv(k)]
     if missing:
         logger.warning(f"Missing environment variables: {', '.join(missing)}")
-        # We don't exit here to allow partial functionality if only some keys are needed
     else:
         logger.debug("Environment variables loaded successfully.")
 
@@ -89,8 +94,8 @@ def get_supabase_client():
     """
     from supabase import create_client, Client
     
-    url = os.getenv("SUPABASE_URL")
-    key = os.getenv("SUPABASE_KEY")
+    url = os.getenv("SUPABASE_URL", "").strip()
+    key = os.getenv("SUPABASE_KEY", "").strip()
     
     if not url or not key:
         logger.error("SUPABASE_URL or SUPABASE_KEY not found in environment.")
