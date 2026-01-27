@@ -113,6 +113,17 @@ def procesar_facturas(facturas):
                 except: continue
 
 
+        # Helper for helpers
+        def _f(val):
+             return float(str(val).replace(",", ".")) if val else 0.0
+             
+        def _d(date_val):
+            if not date_val: return None
+            for fmt_ in ["%d/%m/%Y", "%Y-%m-%d", "%Y/%m/%d"]:
+                try: return datetime.strptime(date_val, fmt_).strftime("%Y-%m-%d")
+                except: continue
+            return None
+
         record = {
             "id": f.get("codigo_factura_cliente", ""),
             "issue_date": issue_date,
@@ -124,8 +135,59 @@ def procesar_facturas(facturas):
             "municipality": f.get("poblacion"),
             "province": f.get("provincia"),
             "status": f.get("estado_factura", ""),
-            "raw_data": f, # STORE FULL API RESPONSE
-            "updated_at": datetime.now().isoformat()
+            "raw_data": f,
+            "updated_at": datetime.now().isoformat(),
+
+            # --- Expanded Schema Fields ---
+            
+            # Suministro
+            "cnae": f.get("cnae"),
+            "cups": f.get("cups"),
+            "price_type": f.get("precio"),
+            "payment_method": f.get("forma_pago"),
+            "access_tariff": f.get("tarifa_atr"),
+            "self_consumption_type": f.get("autoconsumo"),
+            "distributor": f.get("distribuidor"),
+            "fiscal_address": f.get("direccion_fiscal"),
+            "shipping_address": f.get("direccion_envio"),
+            
+            # Contratos Ref
+            "contract_reference_atr": f.get("codigo_contrato_atr"),
+            "contract_reference": f.get("codigo_contrato_cliente"),
+            "invoice_reference_atr": f.get("codigo_factura_atr"),
+            "contract_end_date": _d(f.get("fecha_finalizacion_contrato")),
+
+            # Potencias
+            "p1_kw": _f(f.get("potencia_p1_kW")),
+            "p2_kw": _f(f.get("potencia_p2_kW")),
+            "p3_kw": _f(f.get("potencia_p3_kW")),
+            "p4_kw": _f(f.get("potencia_p4_kW")),
+            "p5_kw": _f(f.get("potencia_p5_kW")),
+            "p6_kw": _f(f.get("potencia_p6_kW")),
+
+            # Factura Cliente (Desglose)
+            "fc_start_date": _d(fc.get("fecha_desde")),
+            "fc_end_date": _d(fc.get("fecha_hasta")),
+            "fc_days": int(fc.get("numero_dias_facturacion", 0)) if fc.get("numero_dias_facturacion") else 0,
+            
+            "fc_invoice_type": fc.get("tipo_factura_cliente"),
+            "fc_energy_cost": _f(fc.get("importe_energia_euros")),
+            "fc_power_cost": _f(fc.get("importe_potencia_euros")),
+            "fc_rental_cost": _f(fc.get("alquileres_euros")),
+            "fc_tax_electricity": _f(fc.get("importe_impuesto_electrico_euros")),
+            "fc_iva_cost": _f(fc.get("iva_euros")),
+            
+            # Totales y Extras
+            "fc_total_energy": _f(fc.get("importe_total_energia_euros")),
+            "fc_total_power": _f(fc.get("importe_total_potencia_euros")),
+            "fc_excess_power": _f(fc.get("excesos_potencia_euros")),
+            "fc_excess_reactive": _f(fc.get("excesos_reactiva_euros")),
+            "fc_surplus_energy": _f(fc.get("autoconsumo_excedentes_euros")),
+            "fc_surplus_compens": _f(fc.get("autoconsumo_compensacion_euros")),
+            "fc_virtual_battery": _f(fc.get("descuento_aplicacion_bateria_virtual_euros")),
+            "fc_social_bonus": _f(fc.get("importe_financiacion_bono_social_euros")),
+            "fc_other_services": _f(fc.get("otros_servicios_euros")),
+            "fc_invoice_total": _f(fc.get("importe_factura_euros"))
         }
         datos_export.append(record)
         
