@@ -78,7 +78,6 @@ def procesar_facturas(facturas):
         fc = f.get("factura_cliente", {})
         
         # Unify Name Logic
-        # User requested: concatenation of nombre_razon_social + primer_apellido + segundo_apellido
         nombre_razon = f.get("nombre_razon_social", "").strip()
         apellido1 = f.get("primer_apellido", "").strip()
         apellido2 = f.get("segundo_apellido", "").strip()
@@ -90,7 +89,6 @@ def procesar_facturas(facturas):
         
         full_name = " ".join(full_name_parts)
             
-        # Fallback if empty
         if not full_name:
             full_name = f.get("nombre", "").strip() or "Desconocido"
             
@@ -100,51 +98,75 @@ def procesar_facturas(facturas):
         except: total = 0.0
         
         try:
-            # Extract consumption from 'consumo_total_kWh'
             consumo_raw = fc.get("consumo_total_kWh", "0")
             consumption = float(str(consumo_raw).replace(",", "."))
         except: consumption = 0.0
 
+        # Date Parsing for DB (DD/MM/YYYY -> YYYY-MM-DD)
+        date_str = fc.get("fecha_emision", "")
+        issue_date = None
+        if date_str:
+            try:
+                issue_date = datetime.strptime(date_str, "%d/%m/%Y").strftime("%Y-%m-%d")
+            except: pass
+
         record = {
             "id": f.get("codigo_factura_cliente", ""),
-            "date": fc.get("fecha_emision", ""),
-            "total": total,
-            "consumption": consumption,
-            "client": full_name or "Desconocido",
-            "status": f.get("estado_factura", "")
+            "issue_date": issue_date,
+            "amount": total,
+            "consumption_kwh": consumption,
+            "client_name": full_name or "Desconocido",
+            "nif": f.get("identificador"),
+            "address": f.get("direccion_punto_suministro"),
+            "municipality": f.get("poblacion"),
+            "province": f.get("provincia"),
+            "status": f.get("estado_factura", ""),
+            "raw_data": f, # STORE FULL API RESPONSE
+            "updated_at": datetime.now().isoformat()
         }
         datos_export.append(record)
         
     return datos_export
 
 def main():
-    print("Iniciando sincronización de ventas (Divakia > JSON)...")
+    print("Iniciando sincronización de ventas (Divakia > Supabase)...")
     
     token = common.get_orka_token()
-    if token:
-        facturas = obtener_facturas(token)
-        print(f"Facturas obtenidas: {len(facturas)}")
+    if not token:
+        print("❌ Error de autenticación Orka.")
+        return
+
+    supabase = common.get_supabase_client()
+    if not supabase:
+        print("❌ Error de configuración Supabase (SUPABASE_URL/KEY faltantes).")
+        return
+
+    facturas = obtener_facturas(token)
+    print(f"Facturas obtenidas: {len(facturas)}")
+    
+    if facturas:
+        data = procesar_facturas(facturas)
         
-        if facturas:
-            data = procesar_facturas(facturas)
-            
-            # Save to JSON
-            # Check for Vercel/Lambda environment
-            if os.environ.get('VERCEL') or os.environ.get('AWS_LAMBDA_FUNCTION_NAME') or os.path.exists('/tmp'):
-                out_dir = '/tmp'
-            else:
-                out_dir = '.'
+        if not data:
+             print("No hay facturas procesables.")
+             return
+
+        print(f"Upserting {len(data)} facturas a Supabase...")
+        
+        # Supabase upsert batching
+        BATCH_SIZE = 100
+        for i in range(0, len(data), BATCH_SIZE):
+            batch = data[i:i+BATCH_SIZE]
+            try:
+                # upsert matches on PRIMARY KEY (id)
+                supabase.table("invoices").upsert(batch).execute()
+                print(f"  Lote {i}-{i+len(batch)} enviado.")
+            except Exception as e:
+                print(f"❌ Error enviando lote {i}: {e}")
                 
-            out_file = os.path.join(out_dir, "divakia_sales_data.json")
-            with open(out_file, "w", encoding="utf-8") as f:
-                json.dump(data, f, indent=2, ensure_ascii=False)
-                
-            print(f"✅ Datos guardados en {out_file}")
-        else:
-            print("No se encontraron facturas.")
-            
+        print(f"✅ Sincronización completada.")
     else:
-        print("❌ Error de autenticación.")
+        print("No se encontraron facturas.")
 
 if __name__ == "__main__":
     main()

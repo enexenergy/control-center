@@ -79,9 +79,27 @@ def get_orka_token():
         else:
             logger.error("Token not found in login response.")
             return None
-            
     except Exception as e:
         logger.error(f"Error during Orka login: {e}")
+        return None
+
+def get_supabase_client():
+    """
+    Initialize and return Supabase client.
+    """
+    from supabase import create_client, Client
+    
+    url = os.getenv("SUPABASE_URL")
+    key = os.getenv("SUPABASE_KEY")
+    
+    if not url or not key:
+        logger.error("SUPABASE_URL or SUPABASE_KEY not found in environment.")
+        return None
+        
+    try:
+        return create_client(url, key)
+    except Exception as e:
+        logger.error(f"Failed to initialize Supabase client: {e}")
         return None
 
 def clean_float(value):

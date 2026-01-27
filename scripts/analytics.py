@@ -1,22 +1,63 @@
 import json
 import os
+import sys
 from datetime import datetime
+
+# Ensure we can import common
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+import common
+
+def _fetch_invoices():
+    """
+    Fetch invoices from Supabase and transform to legacy format.
+    """
+    supabase = common.get_supabase_client()
+    if not supabase:
+        # Fallback to local file if Supabase fails or not configured (dev mode)
+        # Or just return empty/error. Let's return empty list but log error.
+        print("Error: Supabase client not initialized in analytics.")
+        return []
+        
+    try:
+        # Fetch all invoices
+        # Note: If > 1000 rows, supabase limits response. Should verify range.
+        # For now assuming < 1000 or default limit is enough for MVP.
+        response = supabase.table('invoices').select('*').limit(5000).execute()
+        rows = response.data
+        
+        invoices = []
+        for r in rows:
+            # Transform YYYY-MM-DD -> DD/MM/YYYY for legacy compatibility
+            date_legacy = ""
+            if r.get('issue_date'):
+                try:
+                    date_legacy = datetime.strptime(r['issue_date'], "%Y-%m-%d").strftime("%d/%m/%Y")
+                except: 
+                    pass
+            
+            # Map fields
+            inv = {
+                "id": r.get('id'),
+                "date": date_legacy,
+                "total": float(r.get('amount') or 0),
+                "consumption": float(r.get('consumption_kwh') or 0),
+                "status": r.get('status'),
+                "client": r.get('client_name')
+            }
+            invoices.append(inv)
+            
+        return invoices
+        
+    except Exception as e:
+        print(f"Error fetching from Supabase: {e}")
+        return []
 
 def get_billing_data(base_dir):
     try:
-        # Check /tmp first (for Vercel runtime updates)
-        temp_data_path = os.path.join('/tmp', 'divakia_sales_data.json')
-        repo_data_path = os.path.join(base_dir, 'divakia_sales_data.json')
+        invoices = _fetch_invoices()
         
-        if os.path.exists(temp_data_path):
-            data_path = temp_data_path
-        elif os.path.exists(repo_data_path):
-            data_path = repo_data_path
-        else:
-            return {"labels": [], "values": [], "last_sync": "No data found"}
-        
-        with open(data_path, 'r', encoding='utf-8') as f:
-            invoices = json.load(f)
+        if not invoices:
+            return {"labels": [], "values": [], "last_sync": "No data (Supabase empty or error)"}
             
         # Aggregate by month
         monthly_sales = {}
@@ -96,13 +137,9 @@ def get_ranking_data(base_dir):
         with open(ranking_path, 'r', encoding='utf-8') as f:
             competitors = json.load(f)
             
-        # 2. Load User Data using BASE_DIR
-        user_data_path = os.path.join(base_dir, 'divakia_sales_data.json')
-        user_invoices = []
-        if os.path.exists(user_data_path):
-             with open(user_data_path, 'r', encoding='utf-8') as f:
-                user_invoices = json.load(f)
-
+        # 2. Load User Data using Supabase Helper
+        user_invoices = _fetch_invoices()
+        
         # 3. Process Invoices into Monthly Buckets
         monthly_map = {}
         min_date = datetime.now()
