@@ -97,7 +97,11 @@ def get_billing_data(base_dir):
             month_key = dt.strftime('%Y-%m')
             
             # Sum up 'total' and 'consumption'
-            amount = inv.get('total', 0)
+            # Sum up 'total' and 'consumption'
+            # Remove VAT (21%) from total amount
+            amount_with_iva = inv.get('total', 0)
+            amount = amount_with_iva / 1.21
+            
             consumo = inv.get('consumption', 0)
             
             monthly_sales[month_key] = monthly_sales.get(month_key, 0) + amount
