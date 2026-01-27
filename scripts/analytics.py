@@ -21,8 +21,9 @@ def _fetch_invoices():
     try:
         # Fetch all invoices
         # Note: If > 1000 rows, supabase limits response. Should verify range.
-        # For now assuming < 1000 or default limit is enough for MVP.
-        response = supabase.table('invoices').select('*').limit(5000).execute()
+        # response = supabase.table('invoices').select('*').limit(5000).execute()
+        # Ensure we get the latest data first, and try to fetch enough
+        response = supabase.table('invoices').select('*').order('issue_date', desc=True).limit(2000).execute()
         rows = response.data
         
         invoices = []

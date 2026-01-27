@@ -32,6 +32,15 @@ def verify():
         response = supabase.table("invoices").select("count", count="exact").limit(1).execute()
         
         print(f"✅ Conexión exitosa. Filas actuales en tabla 'invoices': {response.count}")
+        
+        # Check for bad dates
+        bad_dates = supabase.table("invoices").select("id").is_("issue_date", "null").execute()
+        if len(bad_dates.data) > 0:
+            print(f"⚠️ ATENCIÓN: Hay {len(bad_dates.data)} facturas con fecha inválida (NULL).")
+            print("   -> Tip: Ejecuta de nuevo el script de sincronización para corregirlas.")
+        else:
+            print("✅ Todas las facturas tienen fecha válida.")
+            
         print("La integración parece correcta.")
         
     except Exception as e:

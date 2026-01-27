@@ -102,13 +102,16 @@ def procesar_facturas(facturas):
             consumption = float(str(consumo_raw).replace(",", "."))
         except: consumption = 0.0
 
-        # Date Parsing for DB (DD/MM/YYYY -> YYYY-MM-DD)
+        # Date Parsing for DB (Try multiple formats)
         date_str = fc.get("fecha_emision", "")
         issue_date = None
         if date_str:
-            try:
-                issue_date = datetime.strptime(date_str, "%d/%m/%Y").strftime("%Y-%m-%d")
-            except: pass
+            for fmt in ["%d/%m/%Y", "%Y-%m-%d", "%Y/%m/%d"]:
+                try:
+                    issue_date = datetime.strptime(date_str, fmt).strftime("%Y-%m-%d")
+                    break
+                except: continue
+
 
         record = {
             "id": f.get("codigo_factura_cliente", ""),
